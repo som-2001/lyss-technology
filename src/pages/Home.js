@@ -80,7 +80,7 @@ export const Home = () => {
 
         <img src="./images/picture1.jpg" alt="" style={{ width: "280px" }} />
       </Box>
-      <Box sx={{ width: "100vw", textAlign: "center", marginTop:'12rem'}}>
+      <Box sx={{ width: "100vw", textAlign: "center", marginTop:'17rem'}}>
         <p style={{ fontSize: "2.3rem", fontWeight: "600" }} id="text00" ref={scrollRef1}>Our Domains</p>
         
         <Slider/>

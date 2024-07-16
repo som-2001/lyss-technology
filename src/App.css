@@ -35,3 +35,11 @@ body {
 body::-webkit-scrollbar {
   display: none; /* Hide default scrollbar */
 }
+
+.hoverCard {
+  transition: transform 5s ease-in-out 1s; /* Apply transition to transform property */
+}
+
+.hoverCard:hover {
+  transform: scale(1.05); /* Scale the card on hover */
+}

@@ -5,6 +5,7 @@ import 'swiper/css';
 import { styled } from '@mui/system';
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
+import '../App.css'
 
 const SliderContainer = styled('div')({
   width: '100%',
@@ -32,9 +33,9 @@ const Slider = () => {
   };
 
   const images = [
-    'https://www.atplc.in/Assets/Illustrator/Training.png',
-    'https://www.atplc.in/Assets/Illustrator/Training.png',
-    'https://www.atplc.in/Assets/Illustrator/Training.png',
+    'https://dealersupport.co.uk/wp-content/uploads/2023/05/iStock-1358023415.jpg',
+    'https://indiacompanyincorporation.com/wp-content/uploads/2020/07/ICI-VECTORS-PLC-1024x1024.png',
+    'https://www.smartcampuses.com/wp-content/uploads/2022/10/school-software.png',
   ];
 
   const Cards = [
@@ -60,17 +61,31 @@ const Slider = () => {
             <SwiperSlide key={index}>
               <Grid container justifyContent="center">
                 <Grid item xs={11} sm={11} md={6} lg={9}>
-                  <Card>
-                    <CardMedia
+                  <Card className='hoverCard'>
+                    <center>
+                        <CardMedia
                       component="img"
                       alt={`Card ${index + 1}`}
-                      height="300"
+                      
                       image={image}
-                      sx={{ objectFit: "contain" }}
+                      sx={{ objectFit: "cover",
+                        height:{
+                            xs:230,
+                            lg:290,
+                            md:400,
+                            sm:300
+                        },
+                        width:{
+                            xs:350,
+                            lg:490,
+                            md:400,
+                            sm:300
+                        }
+                       }}
                       onError={() => console.error(`Failed to load image: ${image}`)}
-                    />
+                    /></center>
                     <CardContent>
-                      <Typography gutterBottom variant="h5" component="div">
+                      <Typography gutterBottom variant="p" color="text.secondary" sx={{fontSize:'1.4rem'}}>
                         {Cards[index]}
                       </Typography>
                     
