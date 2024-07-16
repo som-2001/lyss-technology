@@ -1,19 +1,21 @@
 /* Customize the scrollbar for webkit browsers (Chrome, Safari, Edge) */
 ::-webkit-scrollbar {
-  width: 2px; /* Width of the scrollbar */
-  height: 5px; /* Height of the scrollbar */
+  width: 0px; /* Width of the scrollbar */
+  height: 0px; /* Height of the scrollbar */
 }
 
 /* Track of the scrollbar */
 ::-webkit-scrollbar-track {
   background: #f1f1f1; /* Color of the track */
-  border-radius: 10px; /* Round the corners */
+  border-radius: 10px;
+  width: 2px; /* Round the corners */
 }
 
 /* Handle of the scrollbar */
 ::-webkit-scrollbar-thumb {
   background: #888; /* Color of the handle */
   border-radius: 10px; /* Round the corners */
+  width: 2px;
 }
 
 /* Handle hover effect */
@@ -25,6 +27,7 @@
 html {
   scrollbar-width: thin; /* Thin scrollbar */
   scrollbar-color: #888 #f1f1f1; /* Handle color and track color */
+  scroll-behavior: smooth;
 }
 
 /* For Edge and Internet Explorer */

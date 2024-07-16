@@ -37,13 +37,14 @@ export const Navbar=()=> {
 
   return (
     <AppBar position="static" sx={{
-        backgroundColor:"#6c757d"
+        backgroundColor:"#ffffff",
+       
     }}>
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" >
         <Toolbar disableGutters>
           
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -52,7 +53,7 @@ export const Navbar=()=> {
               onClick={handleOpenNavMenu}
               color="inherit"
             >
-              <MenuIcon />
+              <MenuIcon style={{color:"black"}}/>
             </IconButton>
             <Menu
               id="menu-appbar"
@@ -70,11 +71,12 @@ export const Navbar=()=> {
               onClose={handleCloseNavMenu}
               sx={{
                 display: { xs: 'block', md: 'none' },
+              
               }}
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Typography textAlign="center" >{page}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -85,7 +87,7 @@ export const Navbar=()=> {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, color: 'black', display: 'block' }}
               >
                 {page}
               </Button>
@@ -116,7 +118,7 @@ export const Navbar=()=> {
             >
               {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+                  <Typography textAlign="center" >{setting}</Typography>
                 </MenuItem>
               ))}
             </Menu>
