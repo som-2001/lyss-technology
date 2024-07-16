@@ -99,8 +99,8 @@ export const Navbar=()=> {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+            <Tooltip title="Lyss Technology">
+              <IconButton  sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src="./images/logo.jpg" sx={{width:"50px",height:"50px"}} />
               </IconButton>
             </Tooltip>
