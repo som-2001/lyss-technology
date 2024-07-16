@@ -3,8 +3,25 @@ import Footer from "../components/Footer";
 import { Box, Typography } from "@mui/material";
 import "../App.css";
 import Slider from "../components/Slider";
+import { useGSAP } from "@gsap/react";
+import gsap from 'gsap';
+
 
 export const Home = () => {
+
+    useGSAP(() => {
+
+        gsap.fromTo("#hero", {
+            opacity: 0,
+            y: -50
+        }, {
+            opacity: 1,
+            y: 0,
+            delay: 0.5
+        })
+    
+    }, [])
+    
   return (
     <Box
       style={{
@@ -15,7 +32,7 @@ export const Home = () => {
       }}
     >
       <Navbar />
-      <Box sx={{ width: "100vw", textAlign: "center", marginTop: "100px" }}>
+      <Box sx={{ width: "100vw", textAlign: "center", marginTop: "100px" }} id="hero">
         <p style={{ fontSize: "2.3rem", fontWeight: "600" }}>Lyss Technology</p>
         <p
           style={{ marginTop: "-18px", fontSize: "1.0rem", fontWeight: "600" }}
@@ -42,6 +59,12 @@ export const Home = () => {
       </Box>
       <Box sx={{ width: "100vw", textAlign: "center", marginTop: "100px" }}>
         <p style={{ fontSize: "2.3rem", fontWeight: "600" }}>Our Domains</p>
+        
+        <Slider/>
+      </Box>
+
+      <Box sx={{ width: "100vw", textAlign: "center", marginTop: "100px" }}>
+        <p style={{ fontSize: "2.3rem", fontWeight: "600" }}>Our Clients</p>
         
         <Slider/>
       </Box>
