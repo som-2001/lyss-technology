@@ -9,6 +9,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useEffect, useRef, useState } from "react";
 import ClientSlider from "../components/ClientSlider";
 import { IoMdArrowRoundUp } from "react-icons/io";
+import { CustomerSlider } from "../components/CustomerSlider";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -135,7 +136,7 @@ export const Home = () => {
       {scrollPosition>150 && 
       <Button sx={{
         position:"fixed",
-        bottom:"10px",
+        bottom:"20px",
         right:"10px",
         zIndex:'10',
         fontSize:"1.5rem"
@@ -290,6 +291,13 @@ export const Home = () => {
             </Box>
           </Grid>
         </Grid>
+      </Box>
+
+      <Box sx={{ width: "100vw", textAlign: "center", marginTop: "100px" }}>
+      <p style={{ fontSize: "2.3rem", fontWeight: "600" }}>Our Clients</p>
+      <Box ref={scrollRef2} id="text01">
+        <CustomerSlider />
+        </Box>
       </Box>
 
       <Box sx={{ width: "100vw", textAlign: "center", marginTop: "100px" }}>
