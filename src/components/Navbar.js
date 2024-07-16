@@ -38,6 +38,10 @@ export const Navbar=()=> {
   return (
     <AppBar position="static" sx={{
         backgroundColor:"#ffffff",
+        position:"fixed",
+        top:"0px",
+        zIndex:"100",
+       
        
     }}>
       <Container maxWidth="xl" >

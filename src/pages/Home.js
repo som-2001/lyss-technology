@@ -1,19 +1,34 @@
 import { Navbar } from "../components/Navbar";
 import Footer from "../components/Footer";
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Button, Grid, Typography } from "@mui/material";
 import "../App.css";
 import Slider from "../components/Slider";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import ClientSlider from "../components/ClientSlider";
+import { IoMdArrowRoundUp } from "react-icons/io";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export const Home = () => {
   const scrollRef1 = useRef(null);
   const scrollRef2 = useRef(null);
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const position = window.scrollY;
+      setScrollPosition(position);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   useGSAP(
     () => {
@@ -106,6 +121,7 @@ export const Home = () => {
     );
   }, []);
 
+
   return (
     <Box
       style={{
@@ -114,9 +130,27 @@ export const Home = () => {
         color: "#113",
         fontFamily: "math",
       }}
+      
     >
+      {scrollPosition>150 && 
+      <Button sx={{
+        position:"fixed",
+        bottom:"10px",
+        right:"10px",
+        zIndex:'10',
+        fontSize:"1.5rem"
+      }}
+      onClick={(e)=>{
+       window.scrollTo({
+        top:"0px",
+        behavior:'smooth'
+       })
+      }}
+      ><IoMdArrowRoundUp/>
+      </Button>
+      }
       <Navbar />
-      <Box sx={{ width: "100vw", textAlign: "center" }} >
+      <Box sx={{ width: "100vw", textAlign: "center",marginTop:"50px" }} >
         <Grid
           container
           sx={{
@@ -229,21 +263,23 @@ export const Home = () => {
         </p>
         <Grid container>
           <Grid item lg={5} xs={12} sm={12} md={12}>
-            <Typography variant="h2"
+            <Typography variant="h2" color="text.secondary"
               sx={{
                 fontSize: {lg:"1.4rem",xs:'1.0rem',sm:'1.0rem',md:'1.2rem'},
                 fontWeight: "500",
-               
+                
                 margin:{
                   lg:"130px 0px 20px 30px",
                   xs:'30px 0px 20px 0px',
                   md:"30px 0px 0px 0px",
-                  sm:'30px 0px 0px 0px'
-                }
+                  sm:'30px 0px 0px 0px',
+                
+                },
+                padding:'10px'
               }}
             >
               
-              <br /> Our domain encompasses a diverse range of services designed
+              Our domain encompasses a diverse range of services designed
               to cater to the evolving needs of businesses and individuals in
               today's dynamic environment. Here’s an overview of what we offer:
             </Typography>
