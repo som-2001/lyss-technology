@@ -2,7 +2,7 @@ import { Navbar } from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Box, Typography } from "@mui/material";
 import "../App.css";
-// import Slider from "../components/Slider";
+import Slider from "../components/Slider";
 
 export const Home = () => {
   return (
@@ -43,7 +43,7 @@ export const Home = () => {
       <Box sx={{ width: "100vw", textAlign: "center", marginTop: "100px" }}>
         <p style={{ fontSize: "2.3rem", fontWeight: "600" }}>Our Domains</p>
         
-        {/* <Slider/> */}
+        <Slider/>
       </Box>
 
       <Footer />
