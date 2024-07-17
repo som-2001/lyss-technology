@@ -200,7 +200,7 @@ export const Home = () => {
               >
                 A hybrid(Product+Service) based company{" "}
               </p>
-              <p>
+              <p style={{fontSize:"1.2rem"}}>
                 At LYSS Technology, we actively find existing social problems
                 either by itself or by communicating with different classes of
                 people,
@@ -215,6 +215,7 @@ export const Home = () => {
                       sm: "none",
                       xs: "none",
                     },
+                    fontSize:"1.2rem"
                   }}
                 >
                   do market research and based on that we discuss and plan to
@@ -303,9 +304,11 @@ export const Home = () => {
 
       <Box sx={{ width: "100vw", textAlign: "center", marginTop: "100px" }}>
         <p style={{ fontSize: "2.3rem", fontWeight: "600" }}>Clients Testimonials</p>
-        <Box ref={scrollRef2} id="text01">
+       
+        <Box ref={scrollRef2} id="text01" >
         <ClientSlider />
         </Box>
+      
       </Box>
 
       <Footer />

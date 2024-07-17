@@ -1,4 +1,4 @@
-import { Box, Button, Grid } from "@mui/material";
+import { Box, Button, Grid, Typography } from "@mui/material";
 import { Navbar } from "../components/Navbar";
 import Footer from "../components/Footer";
 import AboutCards from "../components/AboutCards";
@@ -149,18 +149,30 @@ export const About = () => {
         <Grid container>
           <Grid item xs={12} sm={12} lg={6} md={6}>
             <p style={{ fontSize: "3.9rem", }} id="hero">About us</p>
-            <p style={{ paddingBottom: "20px", fontSize: "1.2rem",marginLeft:"20px",fontWeight:"500" }} id="hero1">
+            <Typography variant="h1" sx={{ paddingBottom: "20px", fontSize: "1.2rem",marginLeft:{
+                lg:"20px",
+                xs:'0px',
+                sm:'0px',
+                md:'20px'
+            },
+            padding:{
+                lg:'0px',
+                xs:'20px',
+                sm:'10px',
+                md:"0px"
+            },
+            fontWeight:"500" }} id="hero1">
               We are a team of passionate individuals working towards adding
               value to your life and business endeavors. Since the inception of
               Lyss Technology pvt. ltd. , we have been the reliable spot for our clients
               in terms of their needs.
-            </p>
+            </Typography>
           </Grid>
-          <center> 
+          
           <Grid item xs={12} sm={12} lg={6} md={6}>
-           <img src="./images/aboutPic.png" alt="" id="hero2"/>
+           <img src="./images/aboutPic.png" alt="" id="hero2" style={{width:"330px"}}/>
           </Grid>
-          </center>
+          
         </Grid>
       </Box>
 
@@ -177,7 +189,7 @@ export const About = () => {
         <center>
           <Grid container rowGap={2}>
             {item.map((data, index) => (
-              <Grid item xs={12} sm={12} md={6} lg={4}>
+              <Grid item xs={12} sm={12} md={6} lg={4} sx={{padding:"10px"}}>
                 <AboutCards item={data} key={index} />
               </Grid>
             ))}

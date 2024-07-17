@@ -3,6 +3,7 @@ import { Box, Container, Grid, Link, Typography } from '@mui/material';
 import { styled } from '@mui/system';
 import { FaGithub, FaLinkedin, FaTelegram, FaFacebook, FaYoutube } from 'react-icons/fa';
 import { MdEmail, MdPhone } from 'react-icons/md';
+import { useNavigate } from 'react-router-dom';
 
 const FooterContainer = styled('footer')({
   padding: '40px 0px 30px 0px',
@@ -18,6 +19,7 @@ const FooterGrid = styled(Grid)({
 const FooterLink = styled(Link)({
   marginRight: '20px',
   color: '#6c757d',
+  cursor:"pointer",
   textDecoration: 'none',
   '&:hover': {
     color: '#007bff',
@@ -26,6 +28,8 @@ const FooterLink = styled(Link)({
 });
 
 const Footer = () => {
+  const navigate=useNavigate();
+  
   return (
     <FooterContainer >
       <Container>
@@ -45,9 +49,9 @@ const Footer = () => {
             <Typography variant="h6" color="textPrimary" mb={2}>
               Quick Links
             </Typography>
-            <FooterLink href="#">Home</FooterLink>
-            <FooterLink href="#">About</FooterLink>
-            <FooterLink href="#">Contact Us</FooterLink>
+            <FooterLink onClick={(e)=>navigate('/')}>Home</FooterLink>
+            <FooterLink onClick={(e)=>navigate('/about')}>About</FooterLink>
+            <FooterLink onClick={(e)=>navigate('/contact')}>Contact Us</FooterLink>
             <FooterLink href="#">Feedback</FooterLink>
           </Grid>
          
