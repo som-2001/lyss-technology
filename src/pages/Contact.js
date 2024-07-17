@@ -99,7 +99,7 @@ export const Contact = () => {
           width: "100vw",
           textAlign: "center",
           marginTop: "50px",
-          backgroundImage: "url(./images/about.png)",
+          backgroundImage: "url(https://images.unsplash.com/photo-1612831197310-ff5cf7a211b6?fm=jpg&w=3000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundSize: "cover",
@@ -129,7 +129,7 @@ export const Contact = () => {
         )}
         <Grid container>
           <Grid item xs={12} sm={12} lg={6} md={6}>
-            <p style={{ fontSize: "3.9rem" }} id="hero">
+            <p style={{ fontSize: "3.9rem",color:"white" }} id="hero" >
               Contact us
             </p>
             <Typography
@@ -150,6 +150,7 @@ export const Contact = () => {
                   md: "0px",
                 },
                 fontWeight: "500",
+                color:"white"
               }}
               id="hero1"
             >
@@ -160,14 +161,7 @@ export const Contact = () => {
           </Grid>
 
           <Grid item xs={12} sm={12} lg={6} md={6}>
-            <center>
-              <img
-                src="./images/aboutPic.png"
-                alt=""
-                id="hero2"
-                style={{ width: "330px", maxWidth: "100%" }}
-              />
-            </center>
+           
           </Grid>
         </Grid>
       </Box>

@@ -1,4 +1,4 @@
-import { Box, Button, Grid, Typography } from "@mui/material";
+import { Box, Button, Card, CardMedia, Grid, Typography } from "@mui/material";
 import { Navbar } from "../components/Navbar";
 import Footer from "../components/Footer";
 import AboutCards from "../components/AboutCards";
@@ -10,11 +10,10 @@ import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-
 gsap.registerPlugin(ScrollTrigger);
 
 export const About = () => {
-    const [scrollPosition, setScrollPosition] = useState(0);
+  const [scrollPosition, setScrollPosition] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,10 +21,10 @@ export const About = () => {
       setScrollPosition(position);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -77,7 +76,7 @@ export const About = () => {
   const item = [
     {
       image:
-        "https://media.licdn.com/dms/image/D4D12AQEQS7imGyPM9A/article-cover_image-shrink_600_2000/0/1688547852720?e=2147483647&v=beta&t=2m3uyCC6cv_mjLJZ0vIaM6i73K69W3KDNMAJLzsaOko",
+        "https://st2.depositphotos.com/5240153/44928/v/450/depositphotos_449286268-stock-illustration-business-requirements-analysis-team-working.jpg",
       title: "Requirement gathering",
       body: "The initial step is to gather the needs and expectations of the client regarding the project.",
     },
@@ -125,82 +124,98 @@ export const About = () => {
           backgroundPosition: "center",
           backgroundSize: "cover",
           overflowX: "none",
-          paddingTop: "12vw",
-          paddingBottom:"10vw"
+          paddingTop: "8vw",
+
+          height: "100vh",
         }}
       >
-          {scrollPosition>150 && 
-      <Button sx={{
-        position:"fixed",
-        bottom:"20px",
-        right:"10px",
-        zIndex:'10',
-        fontSize:"1.5rem"
-      }}
-      onClick={(e)=>{
-       window.scrollTo({
-        top:"0px",
-        behavior:'smooth'
-       })
-      }}
-      ><IoMdArrowRoundUp/>
-      </Button>
-      }
+        {scrollPosition > 150 && (
+          <Button
+            sx={{
+              position: "fixed",
+              bottom: "20px",
+              right: "10px",
+              zIndex: "10",
+              fontSize: "1.5rem",
+            }}
+            onClick={(e) => {
+              window.scrollTo({
+                top: "0px",
+                behavior: "smooth",
+              });
+            }}
+          >
+            <IoMdArrowRoundUp />
+          </Button>
+        )}
         <Grid container>
           <Grid item xs={12} sm={12} lg={6} md={6}>
-            <p style={{ fontSize: "3.9rem", }} id="hero">About us</p>
-            <Typography variant="h1" sx={{ paddingBottom: "20px", fontSize: "1.2rem",marginLeft:{
-                lg:"20px",
-                xs:'0px',
-                sm:'0px',
-                md:'20px'
-            },
-            padding:{
-                lg:'0px',
-                xs:'20px',
-                sm:'10px',
-                md:"0px"
-            },
-            fontWeight:"500" }} id="hero1">
+            <p style={{ fontSize: "3.9rem" }} id="hero">
+              About us
+            </p>
+            <Typography
+              variant="h1"
+              sx={{
+                paddingBottom: "20px",
+                fontSize: "1.2rem",
+                marginLeft: {
+                  lg: "20px",
+                  xs: "0px",
+                  sm: "0px",
+                  md: "20px",
+                },
+                padding: {
+                  lg: "0px",
+                  xs: "20px",
+                  sm: "10px",
+                  md: "0px",
+                },
+                fontWeight: "500",
+              }}
+              id="hero1"
+            >
               We are a team of passionate individuals working towards adding
               value to your life and business endeavors. Since the inception of
-              Lyss Technology pvt. ltd. , we have been the reliable spot for our clients
-              in terms of their needs.
+              Lyss Technology pvt. ltd. , we have been the reliable spot for our
+              clients in terms of their needs.
             </Typography>
           </Grid>
-          
+
           <Grid item xs={12} sm={12} lg={6} md={6}>
-           <img src="./images/aboutPic.png" alt="" id="hero2" style={{width:"330px"}}/>
+            
+             <center> <CardMedia component="img" alt="" image="./images/aboutPic.png" sx={{
+                width:{lg:"430px",xs:"320px",md:"400px",sm:"400px"},
+              
+              }} id="hero2"/>
+           </center>
           </Grid>
-          
         </Grid>
       </Box>
 
-      <Box sx={{ width: "100vw", textAlign: "center", marginTop: "50px"}}>
-            <p style={{fontSize:"3.4rem"}}>Our Culture</p>
-        <AboutSlider/>
+      <Box sx={{ width: "100vw", textAlign: "center", marginTop: "50px" }}>
+        <p style={{ fontSize: "3.4rem", marginTop: "20px" }}>Our Culture</p>
+        <AboutSlider />
       </Box>
       <Box sx={{ width: "100vw", textAlign: "center", marginTop: "50px" }}>
         <span style={{ color: "blue", fontSize: "1.2rem" }}>
-          5 STEP WORK PROCESS
+          5 STEPS WORK PROCESS
         </span>
         <br />
         <p style={{ fontSize: "3rem", marginTop: "15px" }}>Working Process</p>
         <center>
           <Grid container rowGap={2}>
             {item.map((data, index) => (
-              <Grid item xs={12} sm={12} md={6} lg={4} sx={{padding:"10px"}}>
+              <Grid item xs={12} sm={12} md={6} lg={4} sx={{ padding: "10px" }}>
                 <AboutCards item={data} key={index} />
               </Grid>
             ))}
-
           </Grid>
         </center>
       </Box>
       <Box sx={{ width: "100vw", textAlign: "center", marginTop: "100px" }}>
-      <p style={{ fontSize: "2.3rem", fontWeight: "600" }}>Our Clients</p>
-      <Box id="text01">
-        <CustomerSlider />
+        <p style={{ fontSize: "2.3rem", fontWeight: "600" }}>Our Clients</p>
+        <Box id="text01">
+          <CustomerSlider />
         </Box>
       </Box>
       <Footer />

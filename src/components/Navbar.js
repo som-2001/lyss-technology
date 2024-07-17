@@ -28,10 +28,6 @@ export const Navbar = () => {
     setAnchorElNav(null);
   };
 
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
@@ -97,7 +93,7 @@ export const Navbar = () => {
           </Box>
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Lyss Technology">
-              <IconButton sx={{ p: 0 }} onClick={handleOpenUserMenu}>
+              <IconButton sx={{ p: 0 }} >
                 <Avatar alt="Remy Sharp" src="./images/logo.jpg" sx={{ width: "50px", height: "50px" }} />
               </IconButton>
             </Tooltip>

@@ -58,7 +58,7 @@ const AboutSlider = () => {
 
     'Be it an achievement or a celebration, a team that celebrates together stays together. We believe in this culture, and hence, our team celebrates every occasion together. It creates a strong bond between us.',
 
-    "Maintaining thorough and excellent employee communication is one of the major parts of our company culture. Our management ensures to have frequent communication with employees to know them better.  Solutions transformed our business operations. The customized software and innovative strategies boosted our productivity significantly. Their team's expertise and dedication to our success were evident throughout the process.",
+    "Maintaining thorough and excellent employee communication is one of the major parts of our company culture. Our management ensures to have frequent communication with employees to know them better.  Solutions transformed our business operations. ",
 
     'Our team leads ensure to provide proper training and guidance to the new and junior team members. It keeps them abreast with the latest evolvement of the market and also improves their proficiency.',
   ];
