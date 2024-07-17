@@ -23,10 +23,12 @@ import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import '../App.css'
 
+
 gsap.registerPlugin(ScrollTrigger);
 
 export const Contact = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
+  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -191,6 +193,7 @@ export const Contact = () => {
               type="text"
               placeholder="Name..."
               fullWidth
+              required
               InputProps={{
                 startAdornment: (
                   <InputAdornment position="start">
@@ -201,6 +204,7 @@ export const Contact = () => {
             />
             <TextField
               type="text"
+              required
               placeholder="Email..."
               fullWidth
               InputProps={{
@@ -213,6 +217,7 @@ export const Contact = () => {
             />
             <TextField
               type="number"
+              required
               placeholder="Phone..."
               fullWidth
               InputProps={{
@@ -225,6 +230,7 @@ export const Contact = () => {
             />
             <TextField
               type="text"
+              required
               placeholder="Subject..."
               fullWidth
               InputProps={{
@@ -237,6 +243,7 @@ export const Contact = () => {
             />
             <TextField
               type="text"
+              required
               multiline
               rows={4}
               placeholder="Message..."
@@ -253,6 +260,7 @@ export const Contact = () => {
                   borderRadius:"25px",
                   backgroundColor:"#5656b9"
                 }}
+               
               >
                 Send Message
               </Button>

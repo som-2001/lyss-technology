@@ -1,12 +1,6 @@
 import { Navbar } from "../components/Navbar";
 import Footer from "../components/Footer";
-import {
-  Box,
-  Button,
-  CardMedia,
-  Grid,
-  Typography,
-} from "@mui/material";
+import { Box, Button, CardMedia, Grid, Typography } from "@mui/material";
 import "../App.css";
 import Slider from "../components/Slider";
 import { useGSAP } from "@gsap/react";
@@ -16,10 +10,12 @@ import { useEffect, useRef, useState } from "react";
 import ClientSlider from "../components/ClientSlider";
 import { IoMdArrowRoundUp } from "react-icons/io";
 import { CustomerSlider } from "../components/CustomerSlider";
+import { useNavigate } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export const Home = () => {
+  const navigate=useNavigate();
   const scrollRef1 = useRef(null);
   const scrollRef2 = useRef(null);
   const scrollRef3 = useRef(null);
@@ -66,12 +62,11 @@ export const Home = () => {
       gsap.fromTo(
         "#text003",
         {
-         
-          opacity:0,
+          opacity: 0,
         },
         {
           opacity: 1,
-         
+
           scrollTrigger: {
             trigger: "#text003",
             start: "top bottom",
@@ -347,27 +342,26 @@ export const Home = () => {
           alt="Web Design & Development"
           sx={{ width: "100vw", height: "auto" }}
         />
-        <Typography variant="span"
-         id="text003"
-         ref={scrollRef3}
+        <Typography
+          variant="span"
+          id="text003"
+          ref={scrollRef3}
           sx={{
-            fontSize: {xs:"20.4pt",lg:"30pt",sm:"23pt",md:"26pt"},
-            fontWeight:"900",
-            position:"relative",
-            top:{lg:"-120px",xs:"0px",sm:"0px",md:"-120px"},
-            left:{lg:"-360px",xs:"0px",sm:"0px",md:"-260px"}
+            fontSize: { xs: "20.4pt", lg: "30pt", sm: "23pt", md: "26pt" },
+            fontWeight: "900",
+            position: "relative",
+            top: { lg: "-120px", xs: "0px", sm: "0px", md: "-120px" },
+            left: { lg: "-360px", xs: "0px", sm: "0px", md: "-260px" },
           }}
         >
-          Top-Notch Product Plus<br />
+          Top-Notch Product Plus
+          <br />
           Service Based Company
         </Typography>
       </Box>
-      
 
       <Box sx={{ width: "100vw", textAlign: "center" }}>
-        <p
-          style={{ fontSize: "2.3rem", fontWeight: "600", marginTop: "70px" }}
-        >
+        <p style={{ fontSize: "2.3rem", fontWeight: "600", marginTop: "70px" }}>
           Our Clients
         </p>
         <Box ref={scrollRef2} id="text01" sx={{ marginTop: "60px" }}>
@@ -383,6 +377,38 @@ export const Home = () => {
         <Box ref={scrollRef2} id="text01">
           <ClientSlider />
         </Box>
+      </Box>
+
+      <Box sx={{padding:{xs:"3%",lg:"10%",md:"10%",sm:"10%"}, 
+            fontSize: { xs: "20.4pt", lg: "20pt", sm: "23pt", md: "26pt" },
+            fontWeight: "900",
+           
+          }}>
+      <p style={{color:"blue",textAlign:'center',fontSize:"1.2rem"}}>WANT TO WORK WITH US?</p>
+        <p style={{fontSize:"2.5rem",textAlign:'center'}}>Curious to Know How We Transform<br/> Businesses?</p>
+        <p style={{textAlign:"center",fontSize:"1.2rem",lineClamp:2}}>Our
+        team of designers, and  developers are always there to
+        provide you with the best-in-class services. Further, we also have the
+        best project managers who are very cooperative and hear your needs
+        before getting oto work with the project.
+        </p>
+
+        <center>
+              <Button
+                variant="contained"
+                id="button"
+                sx={{
+                  width: { lg: "30%", md: "40%", xs: "55%", sm: "40%" },
+                  padding:"10px",
+                  borderRadius:"25px",
+                  backgroundColor:"#5656b9",
+                  marginTop:"60px"
+                }}
+                onClick={(e)=>window.location.href='/contact'}
+              >
+                Let's Connect
+              </Button>
+            </center>
       </Box>
 
       <Footer />
