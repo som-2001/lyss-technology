@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 const FooterContainer = styled('footer')({
   padding: '40px 0px 30px 0px',
-  backgroundColor: '#f8f9fa',
+  backgroundColor: '#aeb1b3',
   marginTop:"50px"
 });
 
@@ -18,7 +18,7 @@ const FooterGrid = styled(Grid)({
 
 const FooterLink = styled(Link)({
   marginRight: '20px',
-  color: '#6c757d',
+  color: 'black',
   cursor:"pointer",
   textDecoration: 'none',
   '&:hover': {
@@ -35,10 +35,10 @@ const Footer = () => {
       <Container>
         <FooterGrid container spacing={2}>
           <Grid item xs={12} sm={4}>
-            <Typography variant="h6" color="textPrimary" mb={2}>
+            <Typography variant="h6" color="black" mb={2}>
               Address
             </Typography>
-            <Typography variant="body1" color="textSecondary">
+            <Typography variant="body1" color="black">
               3/365, Aryan Bhawan<br />
               Lakho Binda Campus, Santunagar,<br />
               Madhubani (Bihar)-India<br />

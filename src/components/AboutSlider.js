@@ -85,7 +85,7 @@ const AboutSlider = () => {
             <SwiperSlide key={index}>
               <center>
                 <Box>
-                  <Card sx={{ maxWidth: "880px" }}>
+                  <Card sx={{ maxWidth: "880px" }} variant="outlined">
                     <Grid container>
                       <Grid item lg={4} sm={12} xs={12} md={12}>
                         <center>

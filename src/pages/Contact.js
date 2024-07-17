@@ -1,7 +1,22 @@
-import { Box, Button, Grid } from "@mui/material";
+import {
+  Box,
+  Button,
+  Divider,
+  Grid,
+  TextField,
+  Typography,
+  InputAdornment,
+} from "@mui/material";
 import { Navbar } from "../components/Navbar";
 import Footer from "../components/Footer";
 import { IoMdArrowRoundUp } from "react-icons/io";
+import {
+  MdEmail,
+  MdLocationOn,
+  MdPhone,
+  MdPerson,
+  MdSubject,
+} from "react-icons/md";
 import { useEffect, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap/dist/gsap";
@@ -22,19 +37,6 @@ export const Contact = () => {
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const position = window.scrollY;
-      setScrollPosition(position);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -64,6 +66,20 @@ export const Contact = () => {
         opacity: 1,
         y: 0,
         delay: 1.8,
+      }
+    );
+  }, []);
+  useGSAP(() => {
+    gsap.fromTo(
+      "#hero2",
+      {
+        opacity: 0,
+        y: -150,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        delay: 2.2,
       }
     );
   }, []);
@@ -116,26 +132,222 @@ export const Contact = () => {
             <p style={{ fontSize: "3.9rem" }} id="hero">
               Contact us
             </p>
-            <p
-              style={{
+            <Typography
+              variant="h1"
+              sx={{
                 paddingBottom: "20px",
                 fontSize: "1.2rem",
-                marginLeft: "20px",
+                marginLeft: {
+                  lg: "20px",
+                  xs: "0px",
+                  sm: "0px",
+                  md: "20px",
+                },
+                padding: {
+                  lg: "0px",
+                  xs: "20px",
+                  sm: "10px",
+                  md: "0px",
+                },
                 fontWeight: "500",
               }}
               id="hero1"
             >
-              If you have any questions, suggestions, or require assistance, please do not hesitate to reach out to us. We are here to help and look forward to hearing from you.
-            </p>
+              If you have any questions, suggestions, or require assistance,
+              please do not hesitate to reach out to us. We are here to help and
+              look forward to hearing from you.
+            </Typography>
           </Grid>
-          <center>
-            <Grid item xs={12} sm={12} lg={6} md={6}>
-              <img src="./images/aboutPic.png" alt="" id="hero2" />
-            </Grid>
-          </center>
+
+          <Grid item xs={12} sm={12} lg={6} md={6}>
+            <center>
+              <img
+                src="./images/aboutPic.png"
+                alt=""
+                id="hero2"
+                style={{ width: "330px", maxWidth: "100%" }}
+              />
+            </center>
+          </Grid>
         </Grid>
       </Box>
+
+      <Box sx={{ width: "100vw", textAlign: "center", marginTop: "50px" }}>
+        <span style={{ color: "blue", fontSize: "1.2rem" }}>Let's Connect</span>
+        <br />
+        <p style={{ fontSize: "3rem", marginTop: "15px" }}>Contact Us</p>
+
+        <Grid container spacing={6} sx={{ padding: "10px" }}>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={6}
+            lg={6}
+            sx={{
+              flexDirection: "column",
+              display: "flex",
+              gap: "10px",
+              position: { lg: "relative" },
+              left: { lg: "10px" },
+            }}
+          >
+            <TextField
+              type="text"
+              placeholder="Name..."
+              fullWidth
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <MdPerson />
+                  </InputAdornment>
+                ),
+              }}
+            />
+            <TextField
+              type="text"
+              placeholder="Email..."
+              fullWidth
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <MdEmail />
+                  </InputAdornment>
+                ),
+              }}
+            />
+            <TextField
+              type="number"
+              placeholder="Phone..."
+              fullWidth
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <MdPhone />
+                  </InputAdornment>
+                ),
+              }}
+            />
+            <TextField
+              type="text"
+              placeholder="Subject..."
+              fullWidth
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <MdSubject />
+                  </InputAdornment>
+                ),
+              }}
+            />
+            <TextField
+              type="text"
+              multiline
+              rows={4}
+              placeholder="Message..."
+              fullWidth
+            />
+
+            <center>
+              <Button
+                variant="contained"
+                sx={{
+                  width: { lg: "70%", md: "70%", xs: "100%", sm: "90%" },
+                }}
+              >
+                Send Message
+              </Button>
+            </center>
+          </Grid>
+
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={6}
+            lg={6}
+            sx={{ flexDirection: "column", textAlign: "initial" }}
+          >
+            <Typography variant="h4" color="textPrimary" mb={2}>
+              Get in touch
+            </Typography>
+            <Divider
+              sx={{
+                backgroundColor: "blue",
+                width: { lg: "30vw", xs: "70vw", md: "40vw" },
+                fontWeight: "700",
+              }}
+            />
+            <Box my={2}>
+              <Typography variant="h6" color="textPrimary">
+                <Box
+                  style={{
+                    display: "flex",
+                    justifyContent: "flex-start",
+                    gap: "10px",
+                  }}
+                >
+                  <Box>
+                    <MdLocationOn />
+                  </Box>
+                  <Box style={{ marginTop: "-3px" }}>Address</Box>
+                </Box>
+              </Typography>
+              <Typography variant="body1" color="textSecondary">
+                3/365, Aryan Bhawan
+                <br />
+                Lakho Binda Campus, Santunagar,
+                <br />
+                Madhubani (Bihar)-India
+                <br />
+                Pin-847211
+              </Typography>
+            </Box>
+            <Box my={2}>
+              <Typography variant="h6" color="textPrimary">
+                <Box
+                  style={{
+                    display: "flex",
+                    justifyContent: "flex-start",
+                    gap: "10px",
+                  }}
+                >
+                  <Box>
+                    <MdEmail />
+                  </Box>
+                  <Box style={{ marginTop: "-3px" }}>Email</Box>
+                </Box>
+              </Typography>
+              <Typography variant="body1" color="textSecondary">
+                contact2atplc@gmail.com
+              </Typography>
+            </Box>
+            <Box my={2}>
+              <Typography variant="h6" color="textPrimary">
+                <Box
+                  style={{
+                    display: "flex",
+                    justifyContent: "flex-start",
+                    gap: "10px",
+                  }}
+                >
+                  <Box>
+                    <MdPhone />
+                  </Box>
+                  <Box style={{ marginTop: "-3px" }}>Phone</Box>
+                </Box>
+              </Typography>
+              <Typography variant="body1" color="textSecondary">
+                +91 6205695667
+              </Typography>
+            </Box>
+          </Grid>
+        </Grid>
+      </Box>
+
+
       
+
       <Footer />
     </Box>
   );

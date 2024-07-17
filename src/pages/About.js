@@ -176,7 +176,7 @@ export const About = () => {
         </Grid>
       </Box>
 
-      <Box sx={{ width: "100vw", textAlign: "center", marginTop: "50px" }}>
+      <Box sx={{ width: "100vw", textAlign: "center", marginTop: "50px"}}>
             <p style={{fontSize:"3.4rem"}}>Our Culture</p>
         <AboutSlider/>
       </Box>
