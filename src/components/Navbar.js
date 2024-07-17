@@ -13,8 +13,8 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { useNavigate } from 'react-router-dom';
 
-const pages = ['Contact Us', 'About', 'Home', 'Login'];
-const settings = ['Contact Us', 'About', 'Home', 'Login'];
+const pages = ['Home','About','Contact Us'];
+const settings = ['Home','About','Contact Us' ];
 
 export const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
