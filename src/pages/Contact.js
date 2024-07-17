@@ -21,6 +21,7 @@ import { useEffect, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import '../App.css'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -245,8 +246,12 @@ export const Contact = () => {
             <center>
               <Button
                 variant="contained"
+                id="button"
                 sx={{
-                  width: { lg: "70%", md: "70%", xs: "100%", sm: "90%" },
+                  width: { lg: "30%", md: "40%", xs: "50%", sm: "40%" },
+                  padding:"10px",
+                  borderRadius:"25px",
+                  backgroundColor:"#5656b9"
                 }}
               >
                 Send Message

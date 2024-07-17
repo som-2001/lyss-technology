@@ -46,3 +46,8 @@ body::-webkit-scrollbar {
 .hoverCard:hover {
   transform: scale(1.05); /* Scale the card on hover */
 }
+
+#button:hover{
+  background-color:#113;
+  transition: 1s ease-out;
+}

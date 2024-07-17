@@ -1,6 +1,12 @@
 import { Navbar } from "../components/Navbar";
 import Footer from "../components/Footer";
-import { Box, Button, Grid, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  CardMedia,
+  Grid,
+  Typography,
+} from "@mui/material";
 import "../App.css";
 import Slider from "../components/Slider";
 import { useGSAP } from "@gsap/react";
@@ -16,6 +22,7 @@ gsap.registerPlugin(ScrollTrigger);
 export const Home = () => {
   const scrollRef1 = useRef(null);
   const scrollRef2 = useRef(null);
+  const scrollRef3 = useRef(null);
   const [scrollPosition, setScrollPosition] = useState(0);
 
   useEffect(() => {
@@ -24,10 +31,10 @@ export const Home = () => {
       setScrollPosition(position);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -52,6 +59,29 @@ export const Home = () => {
       );
     },
     { scope: scrollRef1 }
+  );
+
+  useGSAP(
+    () => {
+      gsap.fromTo(
+        "#text003",
+        {
+         
+          opacity:0,
+        },
+        {
+          opacity: 1,
+         
+          scrollTrigger: {
+            trigger: "#text003",
+            start: "top bottom",
+            end: "top 10%",
+            scrub: true,
+          },
+        }
+      );
+    },
+    { scope: scrollRef3 }
   );
 
   useGSAP(
@@ -122,7 +152,6 @@ export const Home = () => {
     );
   }, []);
 
-
   return (
     <Box
       style={{
@@ -131,27 +160,28 @@ export const Home = () => {
         color: "#113",
         fontFamily: "math",
       }}
-      
     >
-      {scrollPosition>150 && 
-      <Button sx={{
-        position:"fixed",
-        bottom:"20px",
-        right:"10px",
-        zIndex:'10',
-        fontSize:"1.5rem"
-      }}
-      onClick={(e)=>{
-       window.scrollTo({
-        top:"0px",
-        behavior:'smooth'
-       })
-      }}
-      ><IoMdArrowRoundUp/>
-      </Button>
-      }
+      {scrollPosition > 150 && (
+        <Button
+          sx={{
+            position: "fixed",
+            bottom: "20px",
+            right: "10px",
+            zIndex: "10",
+            fontSize: "1.5rem",
+          }}
+          onClick={(e) => {
+            window.scrollTo({
+              top: "0px",
+              behavior: "smooth",
+            });
+          }}
+        >
+          <IoMdArrowRoundUp />
+        </Button>
+      )}
       <Navbar />
-      <Box sx={{ width: "100vw", textAlign: "center",marginTop:"50px" }} >
+      <Box sx={{ width: "100vw", textAlign: "center", marginTop: "50px" }}>
         <Grid
           container
           sx={{
@@ -160,7 +190,7 @@ export const Home = () => {
             backgroundPosition: "center",
             backgroundSize: "cover",
             padding: "4.3vw",
-            height:"100%"
+            height: "100%",
           }}
         >
           <Grid
@@ -200,7 +230,7 @@ export const Home = () => {
               >
                 A hybrid(Product+Service) based company{" "}
               </p>
-              <p style={{fontSize:"1.2rem"}}>
+              <p style={{ fontSize: "1.2rem" }}>
                 At LYSS Technology, we actively find existing social problems
                 either by itself or by communicating with different classes of
                 people,
@@ -215,7 +245,7 @@ export const Home = () => {
                       sm: "none",
                       xs: "none",
                     },
-                    fontSize:"1.2rem"
+                    fontSize: "1.2rem",
                   }}
                 >
                   do market research and based on that we discuss and plan to
@@ -256,6 +286,7 @@ export const Home = () => {
           </Grid>
         </Grid>
       </Box>
+
       <Box sx={{ width: "100vw", textAlign: "center", marginTop: "7rem" }}>
         <p
           style={{ fontSize: "2.3rem", fontWeight: "600" }}
@@ -266,28 +297,42 @@ export const Home = () => {
         </p>
         <Grid container>
           <Grid item lg={5} xs={12} sm={12} md={12}>
-            <Typography variant="h2" color="text.secondary"
+            <Typography
+              variant="h2"
+              color="text.secondary"
               sx={{
-                fontSize: {lg:"1.4rem",xs:'1.0rem',sm:'1.0rem',md:'1.2rem'},
-                fontWeight: "500",
-                
-                margin:{
-                  lg:"130px 0px 20px 30px",
-                  xs:'30px 0px 20px 0px',
-                  md:"30px 0px 0px 0px",
-                  sm:'30px 0px 0px 0px',
-                
+                fontSize: {
+                  lg: "1.4rem",
+                  xs: "1.0rem",
+                  sm: "1.0rem",
+                  md: "1.2rem",
                 },
-                padding:'10px'
+                fontWeight: "500",
+
+                margin: {
+                  lg: "130px 0px 20px 30px",
+                  xs: "30px 0px 20px 0px",
+                  md: "30px 0px 0px 0px",
+                  sm: "30px 0px 0px 0px",
+                },
+                padding: "10px",
               }}
             >
-              
-              Our domain encompasses a diverse range of services designed
-              to cater to the evolving needs of businesses and individuals in
+              Our domain encompasses a diverse range of services designed to
+              cater to the evolving needs of businesses and individuals in
               today's dynamic environment. Here’s an overview of what we offer:
             </Typography>
           </Grid>
-          <Grid item lg={7} sm={12} xs={12} md={12} sx={{marginTop:{xs:"20px",md:"20px",sm:"20px",lg:"0px"}}}>
+          <Grid
+            item
+            lg={7}
+            sm={12}
+            xs={12}
+            md={12}
+            sx={{
+              marginTop: { xs: "20px", md: "20px", sm: "20px", lg: "0px" },
+            }}
+          >
             <Box ref={scrollRef1} id="text00">
               <Slider />
             </Box>
@@ -295,20 +340,49 @@ export const Home = () => {
         </Grid>
       </Box>
 
-      <Box sx={{ width: "100vw", textAlign: "center", marginTop: "100px" }}>
-      <p style={{ fontSize: "2.3rem", fontWeight: "600" }}>Our Clients</p>
-      <Box ref={scrollRef2} id="text01">
-        <CustomerSlider />
+      <Box sx={{ width: "100vw", textAlign: "center", marginTop: "0rem" }}>
+        <CardMedia
+          component="img"
+          src="./images/picture2.png"
+          alt="Web Design & Development"
+          sx={{ width: "100vw", height: "auto" }}
+        />
+        <Typography variant="span"
+         id="text003"
+         ref={scrollRef3}
+          sx={{
+            fontSize: {xs:"20.4pt",lg:"30pt",sm:"23pt",md:"26pt"},
+            fontWeight:"900",
+            position:"relative",
+            top:{lg:"-120px",xs:"0px",sm:"0px",md:"-120px"},
+            left:{lg:"-360px",xs:"0px",sm:"0px",md:"-260px"}
+          }}
+        >
+          Top-Notch Product Plus<br />
+          Service Based Company
+        </Typography>
+      </Box>
+      
+
+      <Box sx={{ width: "100vw", textAlign: "center" }}>
+        <p
+          style={{ fontSize: "2.3rem", fontWeight: "600", marginTop: "70px" }}
+        >
+          Our Clients
+        </p>
+        <Box ref={scrollRef2} id="text01" sx={{ marginTop: "60px" }}>
+          <CustomerSlider />
         </Box>
       </Box>
 
       <Box sx={{ width: "100vw", textAlign: "center", marginTop: "100px" }}>
-        <p style={{ fontSize: "2.3rem", fontWeight: "600" }}>Clients Testimonials</p>
-       
-        <Box ref={scrollRef2} id="text01" >
-        <ClientSlider />
+        <p style={{ fontSize: "2.3rem", fontWeight: "600" }}>
+          Clients Testimonials
+        </p>
+
+        <Box ref={scrollRef2} id="text01">
+          <ClientSlider />
         </Box>
-      
       </Box>
 
       <Footer />
