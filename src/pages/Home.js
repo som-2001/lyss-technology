@@ -301,7 +301,7 @@ export const Home = () => {
       </Box>
 
       <Box sx={{ width: "100vw", textAlign: "center", marginTop: "100px" }}>
-        <p style={{ fontSize: "2.3rem", fontWeight: "600" }}>Clients Testimonials</p>
+        <p style={{ fontSize: "2.3rem", fontWeight: "600" }}>Clients Testimonial</p>
         <Box ref={scrollRef2} id="text01">
         <ClientSlider />
         </Box>
