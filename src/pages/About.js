@@ -1,4 +1,4 @@
-import { Box, Button, Card, CardMedia, Grid, Typography } from "@mui/material";
+import { Box, Button, CardMedia, Grid, Typography } from "@mui/material";
 import { Navbar } from "../components/Navbar";
 import Footer from "../components/Footer";
 import AboutCards from "../components/AboutCards";
@@ -124,9 +124,9 @@ export const About = () => {
           backgroundPosition: "center",
           backgroundSize: "cover",
           overflowX: "none",
-          paddingTop: "8vw",
+          padding: "5.3rem 0rem 13rem 0rem",
 
-          height: "100vh",
+          height: "100%",
         }}
       >
         {scrollPosition > 150 && (
@@ -184,7 +184,7 @@ export const About = () => {
           <Grid item xs={12} sm={12} lg={6} md={6}>
             
              <center> <CardMedia component="img" alt="" image="./images/aboutPic.png" sx={{
-                width:{lg:"430px",xs:"320px",md:"400px",sm:"400px"},
+                width:{lg:"530px",xs:"320px",md:"400px",sm:"400px"},
               
               }} id="hero2"/>
            </center>

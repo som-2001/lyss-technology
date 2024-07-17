@@ -160,7 +160,7 @@ export const Home = () => {
             backgroundPosition: "center",
             backgroundSize: "cover",
             padding: "4.3vw",
-            height:"100vh"
+            height:"100%"
           }}
         >
           <Grid
