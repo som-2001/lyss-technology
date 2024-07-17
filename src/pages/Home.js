@@ -10,12 +10,12 @@ import { useEffect, useRef, useState } from "react";
 import ClientSlider from "../components/ClientSlider";
 import { IoMdArrowRoundUp } from "react-icons/io";
 import { CustomerSlider } from "../components/CustomerSlider";
-import { useNavigate } from "react-router-dom";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
 export const Home = () => {
-  const navigate=useNavigate();
+  
   const scrollRef1 = useRef(null);
   const scrollRef2 = useRef(null);
   const scrollRef3 = useRef(null);
@@ -383,6 +383,7 @@ export const Home = () => {
       <Box sx={{padding:{xs:"3%",lg:"10%",md:"10%",sm:"10%"}, 
             fontSize: { xs: "20.4pt", lg: "20pt", sm: "23pt", md: "26pt" },
             fontWeight: "900",
+            display:{xs:"none",lg:"block",md:"block",sm:"block"}
            
           }}>
       <p style={{color:"blue",textAlign:'center',fontSize:"1.2rem"}}>WANT TO WORK WITH US?</p>
