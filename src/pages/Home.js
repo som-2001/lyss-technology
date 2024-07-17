@@ -218,7 +218,7 @@ export const Home = () => {
               </p>
               <p
                 style={{
-                  marginTop: "-18px",
+                  marginTop: "-28px",
                   fontSize: "1.0rem",
                   fontWeight: "600",
                 }}
@@ -252,9 +252,10 @@ export const Home = () => {
                 src="./images/picture1.png"
                 alt=""
                 id="hero1"
-                style={{ width: "340px", marginTop: "-30px" }}
+                style={{ width: "340px", marginTop: "-40px" }}
               />
             </center>
+           
           </Grid>
           <Grid
             item
