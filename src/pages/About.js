@@ -3,7 +3,7 @@ import { Navbar } from "../components/Navbar";
 import Footer from "../components/Footer";
 import AboutCards from "../components/AboutCards";
 import { IoMdArrowRoundUp } from "react-icons/io";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import AboutSlider from "../components/AboutSlider";
 import { CustomerSlider } from "../components/CustomerSlider";
 import { useGSAP } from "@gsap/react";
@@ -14,6 +14,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 export const About = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
+  const scrollRef4 = useRef(null);
+  const scrollRef5 = useRef(null);
+  const scrollRef6 = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,6 +30,75 @@ export const About = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  useGSAP(
+    () => {
+      gsap.fromTo(
+        "#text001",
+        {
+          opacity: 0,
+          y: 100,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          scrollTrigger: {
+            trigger: "#text001",
+            start: "top bottom",
+            end: "top 10%",
+            scrub: true,
+          },
+        }
+      );
+    },
+    { scope: scrollRef4 }
+  );
+
+  useGSAP(
+    () => {
+      gsap.fromTo(
+        "#text002",
+        {
+          opacity: 0,
+          y: 100,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          scrollTrigger: {
+            trigger: "#text002",
+            start: "top bottom",
+            end: "top 10%",
+            scrub: true,
+          },
+        }
+      );
+    },
+    { scope: scrollRef5 }
+  );
+
+  useGSAP(
+    () => {
+      gsap.fromTo(
+        "#text004",
+        {
+          opacity: 0,
+          y: 100,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          scrollTrigger: {
+            trigger: "#text004",
+            start: "top bottom",
+            end: "top 10%",
+            scrub: true,
+          },
+        }
+      );
+    },
+    { scope: scrollRef6 }
+  );
 
   useGSAP(() => {
     gsap.fromTo(
@@ -194,7 +266,7 @@ export const About = () => {
       </Box>
 
       <Box sx={{ width: "100vw", textAlign: "center", marginTop: "50px" }}>
-        <p style={{ fontSize: "3.4rem", marginTop: "20px" }}>Our Culture</p>
+        <p style={{ fontSize: "2.5rem", marginTop: "20px" }}>Our Culture</p>
         <AboutSlider />
       </Box>
       <Box sx={{ width: "100vw", textAlign: "center", marginTop: "50px" }}>
@@ -202,13 +274,16 @@ export const About = () => {
           5 STEPS WORK PROCESS
         </span>
         <br />
-        <p style={{ fontSize: "3rem", marginTop: "15px" }}>Working Process</p>
+        <p style={{ fontSize: "2.5rem", marginTop: "15px" }}>Working Process</p>
         <center>
-          <Grid container rowGap={2}>
+          <Grid container rowGap={2} >
             {item.map((data, index) => (
-              <Grid item xs={12} sm={12} md={6} lg={4} sx={{ padding: "10px" }}>
+              
+              <Grid item xs={12} sm={12} md={6} lg={4} sx={{ padding: "10px"}}>
                 <AboutCards item={data} key={index} />
+                
               </Grid>
+             
             ))}
           </Grid>
         </center>
@@ -219,6 +294,87 @@ export const About = () => {
           <CustomerSlider />
         </Box>
       </Box>
+
+      <Box
+        sx={{
+          padding: { xs: "3%", lg: "10%", md: "10%", sm: "10%" },
+          fontSize: { xs: "20.4pt", lg: "20pt", sm: "23pt", md: "26pt" },
+          fontWeight: "900",
+          display: { xs: "none", lg: "block", md: "block", sm: "block" },
+        }}
+      >
+        <p
+          style={{ color: "blue", textAlign: "center", fontSize: "1.2rem" }}
+          id="text001"
+          ref={scrollRef4}
+        >
+          WANT TO WORK WITH US?
+        </p>
+        <p
+          style={{ fontSize: "2.5rem", textAlign: "center" }}
+          id="text002"
+          ref={scrollRef5}
+        >
+          Curious to Know How We Transform
+          <br /> Businesses?
+        </p>
+        <p
+          style={{ textAlign: "center", fontSize: "1.2rem", lineClamp: 2 }}
+          id="text004"
+          ref={scrollRef6}
+        >
+          Our team of designers, and developers are always there to provide you
+          with the best-in-class services. Further, we also have the best
+          project managers who are very cooperative and hear your needs before
+          getting oto work with the project.
+        </p>
+
+        <center>
+          <Button
+            variant="contained"
+            id="button"
+            sx={{
+              width: { lg: "30%", md: "40%", xs: "55%", sm: "40%" },
+              padding: "10px",
+              borderRadius: "25px",
+              backgroundColor: "#5656b9",
+              marginTop: "60px",
+            }}
+            onClick={(e) => (window.location.href = "/contact")}
+          >
+            Let's Connect
+          </Button>
+        </center>
+      </Box>
+
+      <Box
+        sx={{
+          display: { xs: "block", lg: "none", md: "none", sm: "none" },
+          marginTop: "50px",
+        }}
+      >
+        <p style={{ color: "blue", textAlign: "center" }}>
+          WANT TO WORK WITH US?
+        </p>
+       
+        <center>
+          <Button
+            variant="contained"
+            id="button"
+            sx={{
+              width: { lg: "30%", md: "40%", xs: "55%", sm: "40%" },
+              padding: "10px",
+              borderRadius: "25px",
+              backgroundColor: "#5656b9",
+              marginTop: "20px",
+            }}
+            onClick={(e) => (window.location.href = "/contact")}
+          >
+            Let's Connect
+          </Button>
+        </center>
+      </Box>
+
       <Footer />
     </Box>
   );
