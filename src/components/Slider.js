@@ -37,19 +37,22 @@ const Slider = () => {
   const images = [
     'https://dealersupport.co.uk/wp-content/uploads/2023/05/iStock-1358023415.jpg',
     'https://indiacompanyincorporation.com/wp-content/uploads/2020/07/ICI-VECTORS-PLC-1024x1024.png',
-    'https://www.smartcampuses.com/wp-content/uploads/2022/10/school-software.png',
+    'https://freepngimg.com/thumb/business/72892-business-compliance-american-bankers-regulation-regulatory-organization.png',
+    'https://img.freepik.com/free-vector/ui-ux-designers-isometric-composition-with-small-people-creating-custom-design-web-site-3d-vector-illustration_1284-68939.jpg'
   ];
 
   const Cards = [
     'Trainings & Internships',
     'Company Registrations',
-    'SmartOne'
+    'Company Compliances Support',
+    'Hardware & Software Development'
   ];
 
   const Tagline=[
     'Empowering Futures with Skill and Knowledge',
     'Your Gateway to Seamless Business Registration',
-    "Innovative Solutions for Maximum Efficiency"
+    "Compliance Simplified: Your Partner in Navigating Regulations",
+    "Innovating Tomorrow: Cutting-Edge Hardware and Software Solutions."
   ]
 
   return (
