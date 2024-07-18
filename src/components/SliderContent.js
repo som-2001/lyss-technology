@@ -18,7 +18,7 @@ const SliderContainer = styled('div')({
 
 
 
-const Slider = () => {
+const SliderContent = () => {
   const swiperRef = useRef(null);
 
  
@@ -128,4 +128,4 @@ const Slider = () => {
   );
 };
 
-export default Slider;
+export default SliderContent;

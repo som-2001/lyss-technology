@@ -119,6 +119,7 @@ export const Contact = () => {
               right: "10px",
               zIndex: "10",
               fontSize: "1.5rem",
+              backgroundColor:"#7a7ad4"
             }}
             onClick={(e) => {
               window.scrollTo({
@@ -127,7 +128,7 @@ export const Contact = () => {
               });
             }}
           >
-            <IoMdArrowRoundUp />
+            <IoMdArrowRoundUp style={{color:"white"}}/>
           </Button>
         )}
         <Grid container>
