@@ -620,7 +620,7 @@ export const Home = () => {
           id="text003"
           ref={scrollRef3}
           sx={{
-            fontSize: { xs: "20.4pt", lg: "30pt", sm: "23pt", md: "26pt" },
+            fontSize: { xs: "15.4pt", lg: "30pt", sm: "23pt", md: "26pt" },
             fontWeight: "600",
             position: "relative",
             top: { lg: "-120px", xs: "0px", sm: "0px", md: "-120px" },
@@ -734,19 +734,7 @@ export const Home = () => {
         <p style={{ color: "blue", textAlign: "center" }}>
           WANT TO WORK WITH US?
         </p>
-        <p
-          style={{
-            fontSize: "1.9rem",
-            textAlign: "center",
-            lineHeight: "40px",
-          }}
-          id="text002"
-          ref={scrollRef5}
-        >
-          Curious to Know
-          <br />
-          How We Transform Businesses?
-        </p>
+       
         <center>
           <Button
             variant="contained"
