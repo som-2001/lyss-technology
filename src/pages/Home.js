@@ -19,6 +19,10 @@ export const Home = () => {
   const scrollRef1 = useRef(null);
   const scrollRef2 = useRef(null);
   const scrollRef3 = useRef(null);
+  const scrollRef4 = useRef(null);
+  const scrollRef5 = useRef(null);
+  const scrollRef6 = useRef(null);
+  const scrollRef7 =useRef(null);
   const [scrollPosition, setScrollPosition] = useState(0);
 
   useEffect(() => {
@@ -40,7 +44,7 @@ export const Home = () => {
         "#text00",
         {
           opacity: 0,
-          y: -50,
+          y: 100,
         },
         {
           y: 0,
@@ -60,11 +64,106 @@ export const Home = () => {
   useGSAP(
     () => {
       gsap.fromTo(
-        "#text003",
+        "#text001",
         {
           opacity: 0,
+          y: 100,
         },
         {
+          y: 0,
+          opacity: 1,
+          scrollTrigger: {
+            trigger: "#text001",
+            start: "top bottom",
+            end: "top 10%",
+            scrub: true,
+          },
+        }
+      );
+    },
+    { scope: scrollRef4 }
+  );
+
+  useGSAP(
+    () => {
+      gsap.fromTo(
+        "#domainText",
+        {
+          opacity: 0,
+          y: 100,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          scrollTrigger: {
+            trigger: "#domainText",
+            start: "top bottom",
+            end: "top 10%",
+            scrub: true,
+          },
+        }
+      );
+    },
+    { scope: scrollRef7 }
+  );
+
+  useGSAP(
+    () => {
+      gsap.fromTo(
+        "#text002",
+        {
+          opacity: 0,
+          y: 100,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          scrollTrigger: {
+            trigger: "#text002",
+            start: "top bottom",
+            end: "top 10%",
+            scrub: true,
+          },
+        }
+      );
+    },
+    { scope: scrollRef5 }
+  );
+
+  useGSAP(
+    () => {
+      gsap.fromTo(
+        "#text004",
+        {
+          opacity: 0,
+          y: 100,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          scrollTrigger: {
+            trigger: "#text004",
+            start: "top bottom",
+            end: "top 10%",
+            scrub: true,
+          },
+        }
+      );
+    },
+    { scope: scrollRef6 }
+  );
+
+  useGSAP(
+    () => {
+      gsap.fromTo(
+        "#text003",
+        {
+        
+          opacity: 0,
+          y:50,
+        },
+        {
+          y:0,
           opacity: 1,
 
           scrollTrigger: {
@@ -85,7 +184,7 @@ export const Home = () => {
         "#text01",
         {
           opacity: 0,
-          y: -50,
+          y: 100,
         },
         {
           y: 0,
@@ -295,6 +394,8 @@ export const Home = () => {
           <Grid item lg={5} xs={12} sm={12} md={12}>
             <Typography
               variant="h2"
+              id="domainText"
+              ref={scrollRef7}
               color="text.secondary"
               sx={{
                 fontSize: {
@@ -386,9 +487,9 @@ export const Home = () => {
             display:{xs:"none",lg:"block",md:"block",sm:"block"}
            
           }}>
-      <p style={{color:"blue",textAlign:'center',fontSize:"1.2rem"}}>WANT TO WORK WITH US?</p>
-        <p style={{fontSize:"2.5rem",textAlign:'center'}}>Curious to Know How We Transform<br/> Businesses?</p>
-        <p style={{textAlign:"center",fontSize:"1.2rem",lineClamp:2}}>Our
+      <p style={{color:"blue",textAlign:'center',fontSize:"1.2rem"}} id="text001" ref={scrollRef4}>WANT TO WORK WITH US?</p>
+        <p style={{fontSize:"2.5rem",textAlign:'center'}} id="text002" ref={scrollRef5}>Curious to Know How We Transform<br/> Businesses?</p>
+        <p style={{textAlign:"center",fontSize:"1.2rem",lineClamp:2}} id="text004" ref={scrollRef6}>Our
         team of designers, and  developers are always there to
         provide you with the best-in-class services. Further, we also have the
         best project managers who are very cooperative and hear your needs
