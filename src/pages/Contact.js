@@ -273,7 +273,7 @@ export const Contact = () => {
             sm={12}
             md={6}
             lg={6}
-            sx={{ flexDirection: "column", textAlign: "initial" }}
+            sx={{ flexDirection: "column", textAlign: "initial",marginLeft:{xs:"20px",lg:"0px",sm:"30px",md:"0px"} }}
           >
             <Typography variant="h4" color="textPrimary" mb={2}>
               Get in touch
@@ -285,7 +285,7 @@ export const Contact = () => {
                 fontWeight: "700",
               }}
             />
-            <Box my={2}>
+            <Box my={2} >
               <Typography variant="h6" color="textPrimary">
                 <Box
                   style={{
@@ -351,10 +351,6 @@ export const Contact = () => {
           </Grid>
         </Grid>
       </Box>
-
-
-      
-
       <Footer />
     </Box>
   );

@@ -511,8 +511,33 @@ export const Home = () => {
               >
                 Let's Connect
               </Button>
-            </center>
+        </center>
       </Box>
+      
+      <Box sx={{display:{xs:"block",lg:"none",md:"none",sm:"none"},
+      marginTop:"50px"
+    }}>
+
+           <p style={{color:'blue',textAlign:"center"}}>WANT TO WORK WITH US?</p>
+           <p style={{fontSize:"1.9rem",textAlign:'center',lineHeight:"40px"}} id="text002" ref={scrollRef5}>Curious to Know<br/>How We Transform Businesses?</p> 
+           <center>
+              <Button
+                variant="contained"
+                id="button"
+                sx={{
+                  width: { lg: "30%", md: "40%", xs: "55%", sm: "40%" },
+                  padding:"10px",
+                  borderRadius:"25px",
+                  backgroundColor:"#5656b9",
+                  marginTop:"20px"
+                }}
+                onClick={(e)=>window.location.href='/contact'}
+              >
+                Let's Connect
+              </Button>
+        </center>    
+      </Box>
+
 
       <Footer />
     </Box>
