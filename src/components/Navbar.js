@@ -134,11 +134,11 @@ export const Navbar = () => {
                     width: "83px",
                     color: "white",
                     }}
-                    onClick={(e) => navigate("/login")}  
+                    onClick={(e) => window.location.href="/login"}  
                   >
                   Login
                 </Button>
-                <IconButton sx={{ p: 0 }}>
+                <IconButton sx={{ p: 0 }}  onClick={(e) => window.location.href="/"} >
                   <Avatar
                     alt="Remy Sharp"
                     src="./images/logo.jpg"
@@ -181,9 +181,10 @@ export const Navbar = () => {
                 display: { xs: "none", sm: "none", lg: "block", md: "block" },
               }}
             >
-              <Tooltip title="Lyss Technology">
+              <Tooltip >
                 <Button
                 id="button"
+                title="Login"
                   sx={{
                     
                     marginRight: "20px",
@@ -194,11 +195,13 @@ export const Navbar = () => {
                     color: "white",
                    
                   }}
-                  onClick={(e) => navigate("/login")}
+                  onClick={(e) => window.location.href="/login"}  
                 >
                   Login
                 </Button>
-                <IconButton sx={{ p: 0 }}>
+                <IconButton sx={{ p: 0 }} title="Lyss Technology" 
+                 onClick={(e) => window.location.href="/"} 
+                >
                   <Avatar
                     alt="Remy Sharp"
                     src="./images/logo.jpg"
