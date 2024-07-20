@@ -113,6 +113,7 @@ export const Contact = () => {
       >
         {scrollPosition > 150 && (
           <Button
+            id="button"
             sx={{
               position: "fixed",
               bottom: "20px",
@@ -133,7 +134,7 @@ export const Contact = () => {
         )}
         <Grid container>
           <Grid item xs={12} sm={12} lg={6} md={6}>
-            <p style={{ fontSize: "3.9rem",color:"white" }} id="hero" >
+            <p style={{ fontSize: "3.9rem" }} id="hero" className="header">
               Contact us
             </p>
             <Typography
@@ -173,7 +174,7 @@ export const Contact = () => {
       <Box sx={{ width: "100vw", textAlign: "center", marginTop: "50px" }}>
         <span style={{ color: "blue", fontSize: "1.2rem" }}>Let's Connect</span>
         <br />
-        <p style={{ fontSize: "3rem", marginTop: "15px" }}>Contact Us</p>
+        <p style={{ fontSize: "3rem", marginTop: "15px" }} className="header">Contact Us</p>
 
         <Grid container spacing={6} sx={{ padding: "10px" }}>
           <Grid
@@ -276,7 +277,7 @@ export const Contact = () => {
             lg={6}
             sx={{ flexDirection: "column", textAlign: "initial",marginLeft:{xs:"20px",lg:"0px",sm:"30px",md:"0px"} }}
           >
-            <Typography variant="h4" color="textPrimary" mb={2}>
+            <Typography variant="h4"  mb={2} className="header">
               Get in touch
             </Typography>
             <Divider

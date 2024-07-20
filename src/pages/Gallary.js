@@ -1,14 +1,29 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Button, Grid, Typography } from "@mui/material";
 import { Navbar } from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { IoMdArrowRoundUp } from "react-icons/io";
+import { useEffect, useState } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export const Gallary = () => {
 
+  const [scrollPosition, setScrollPosition] = useState(0);
+  useEffect(() => {
+    const handleScroll = () => {
+      const position = window.scrollY;
+      setScrollPosition(position);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
     useGSAP(() => {
         gsap.fromTo(
@@ -64,6 +79,27 @@ export const Gallary = () => {
       }}
     >
       <Navbar />
+      {scrollPosition > 150 && (
+          <Button
+            id="button"
+            sx={{
+              position: "fixed",
+              bottom: "20px",
+              right: "10px",
+              zIndex: "10",
+              fontSize: "1.5rem",
+              backgroundColor:"#7a7ad4"
+            }}
+            onClick={(e) => {
+              window.scrollTo({
+                top: "0px",
+                behavior: "smooth",
+              });
+            }}
+          >
+            <IoMdArrowRoundUp style={{color:"white"}}/>
+          </Button>
+        )}
       <Box
         sx={{
           backgroundImage: "url(./images/chairs.jpg)",
@@ -92,7 +128,7 @@ export const Gallary = () => {
           textAlign: { xs: "center", lg: "center" },
         }}
       >
-        <Typography variant="h4" sx={{ fontSize: {lg:"3.5rem",xs:"2.0rem",md:"3.5rem",sm:"2.0rem" }}}  id="text00">
+        <Typography variant="h4" sx={{ fontSize: {lg:"3.5rem",xs:"2.0rem",md:"3.5rem",sm:"2.0rem" }}}  id="text00" >
         Lyss Technology Gallery
         </Typography>
 
@@ -106,7 +142,8 @@ export const Gallary = () => {
       </Box>
 
       <Box>
-        <p style={{marginTop:"-0%",textAlign:"center",fontSize:"2.5rem",fontWeight:"600"}} id="text001" >Showroom</p>
+        <p style={{marginTop:"-0%",textAlign:"center",fontSize:"2.5rem",fontWeight:"600"}} id="text001" className="header">Showroom</p>
+        <p style={{marginTop:"-2%",textAlign:"center",fontSize:"1.2rem",fontWeight:"600"}} id="text001">A Visual Journey Through Our World.</p>
       </Box>
 
       <Box  id="text001">

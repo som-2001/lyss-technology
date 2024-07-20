@@ -51,3 +51,7 @@ body::-webkit-scrollbar {
   background-color:#113;
   transition: 1s ease-out;
 }
+
+.header{
+  color:rgb(79 79 138);
+}

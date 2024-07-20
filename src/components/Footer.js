@@ -3,11 +3,13 @@ import { Box, Container, Grid, Link, Typography } from '@mui/material';
 import { styled } from '@mui/system';
 import { FaGithub, FaLinkedin, FaTelegram, FaFacebook, FaYoutube } from 'react-icons/fa';
 import { MdEmail, MdPhone } from 'react-icons/md';
-import { useNavigate } from 'react-router-dom';
+
 
 const FooterContainer = styled('footer')({
   padding: '40px 0px 30px 0px',
-  backgroundColor: '#aeb1b3',
+  // backgroundColor: '#aeb1b3',
+   backgroundColor: 'rgb(48 48 91)',
+   color:"white",
   marginTop:"50px"
 });
 
@@ -18,7 +20,7 @@ const FooterGrid = styled(Grid)({
 
 const FooterLink = styled(Link)({
   marginRight: '20px',
-  color: 'black',
+  color: 'white',
   cursor:"pointer",
   textDecoration: 'none',
   '&:hover': {
@@ -28,17 +30,16 @@ const FooterLink = styled(Link)({
 });
 
 const Footer = () => {
-  const navigate=useNavigate();
-  
+ 
   return (
     <FooterContainer >
       <Container>
         <FooterGrid container spacing={2}>
           <Grid item xs={12} sm={4}>
-            <Typography variant="h6" color="black" mb={2}>
+            <Typography variant="h6" color="white" mb={2}>
               Address
             </Typography>
-            <Typography variant="body1" color="black">
+            <Typography variant="body1" color="white">
               3/365, Aryan Bhawan<br />
               Lakho Binda Campus, Santunagar,<br />
               Madhubani (Bihar)-India<br />
@@ -46,17 +47,19 @@ const Footer = () => {
             </Typography>
           </Grid>
           <Grid item xs={12} sm={4}>
-            <Typography variant="h6" color="textPrimary" mb={2}>
+            <Typography variant="h6" color="textPrimary" mb={2} sx={{color:"white"}}>
               Quick Links
             </Typography>
-            <FooterLink onClick={(e)=>navigate('/')}>Home</FooterLink>
-            <FooterLink onClick={(e)=>navigate('/about')}>About</FooterLink>
-            <FooterLink onClick={(e)=>navigate('/contact')}>Contact Us</FooterLink>
-            <FooterLink href="#">Feedback</FooterLink>
+            <FooterLink onClick={(e)=>window.location.href='/'}>Home</FooterLink>
+            <FooterLink onClick={(e)=>window.location.href='/about'}>About</FooterLink>
+            <FooterLink onClick={(e)=>window.location.href='/contact'}>Contact Us</FooterLink>
+            <FooterLink onClick={(e)=>window.location.href='/gallary'}>Gallary</FooterLink>
+
+            
           </Grid>
          
         <Grid item xs={12} sm={4}>
-          <Typography variant="h6" color="textPrimary" mb={2}>
+          <Typography variant="h6" color="textPrimary" mb={2} sx={{color:"white"}}>
             Social Links
           </Typography>
           <Box display="flex" alignItems="center" mb={1}>
@@ -106,6 +109,9 @@ const Footer = () => {
 
         </FooterGrid>
       </Container>
+      <Typography variant="h6" align='center' color="text.secondary" mt={2} sx={{color:"white"}}>
+            © Copyright {new Date().getFullYear()}. All Rights Reserved.
+            </Typography>
     </FooterContainer>
   );
 };

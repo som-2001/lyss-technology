@@ -38,7 +38,7 @@ const OurTeam = () => {
   '../images/amarnath.jpg',
   '../images/someswar.jpg',
   '../images/siddharth.jpg',
-  'https://via.placeholder.com/300'
+  '../images/md.jpg'
   ];
 
   const Cards = [

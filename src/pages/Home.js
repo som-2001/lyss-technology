@@ -18,7 +18,7 @@ import { useEffect, useRef, useState } from "react";
 import ClientSlider from "../components/ClientSlider";
 import { IoMdArrowRoundUp } from "react-icons/io";
 import { CustomerSlider } from "../components/CustomerSlider";
-
+import '../App.css'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -352,7 +352,7 @@ export const Home = () => {
           </Grid>
           <Grid item lg={6} md={12} xs={12} sm={12} id="hero1">
             <center>
-              <p style={{ fontSize: "2.3rem", fontWeight: "600",color:'#5e5eee' }}>
+              <p style={{ fontSize: "2.3rem", fontWeight: "600" }} className="header">
                 Lyss Technology
               </p>
               <p
@@ -360,8 +360,9 @@ export const Home = () => {
                   marginTop: "-28px",
                   fontSize: "1.0rem",
                   fontWeight: "600",
-                  color:'#5e5eee'
+                  
                 }}
+                className="header"
               >
                 A hybrid(Product+Service) based company{" "}
               </p>
@@ -424,7 +425,7 @@ export const Home = () => {
 
       <Box sx={{ width: "100vw", textAlign: "center", marginTop: "7rem" }}>
         <p
-          style={{ fontSize: "2.3rem", fontWeight: "600",color:'#7a7ad4' }}
+          style={{ fontSize: "2.3rem", fontWeight: "600",color:'rgb(79 79 138)' }}
           ref={scrollRef1}
           id="text00"
         >
@@ -510,6 +511,7 @@ export const Home = () => {
                 marginLeft: { lg: "100px", xs: "0px", md: "50px", sm: "0px" },
                 marginTop: "10px",
               }}
+              className="header"
             >
               Where Technology Meets Passion
             </Typography>
@@ -610,7 +612,7 @@ export const Home = () => {
         </Grid>
       </Box>
 
-      <Box sx={{ width: "100vw", textAlign: "center", marginTop: "0rem" }}>
+      <Box sx={{ width: "100vw", textAlign: "center", marginTop: "0rem" }} className="header">
         <CardMedia
           component="img"
           src="./images/picture2.png"
@@ -627,7 +629,7 @@ export const Home = () => {
             position: "relative",
             top: { lg: "-120px", xs: "0px", sm: "0px", md: "-120px" },
             left: { lg: "460px", xs: "0px", sm: "0px", md: "-260px" },
-            color:"#5e5eee"
+            
           }}
         >
           Top-Notch Product Plus
@@ -646,8 +648,9 @@ export const Home = () => {
             position: "relative",
             top: { lg: "-620px", xs: "-250px", sm: "-395px", md: "-500px" },
             left: { lg: "-360px", xs: "0px", sm: "0px", md: "-100px" },
-            color:"#7a7ad4"
+          
           }}
+          className="header"
         >
           We offer efficient and 
           <br />
@@ -656,8 +659,8 @@ export const Home = () => {
         </Box>
       </Box>
 
-      <Box sx={{ width: "100vw", textAlign: "center" }}>
-        <Typography variant="h5" style={{ fontSize: "2.6rem", fontWeight: "600", marginTop: "-10px",color:"#7a7ad4" }}>
+      <Box sx={{ width: "100vw", textAlign: "center" }} className="header">
+        <Typography variant="h5" style={{ fontSize: "2.6rem", fontWeight: "600", marginTop: "-10px",}}>
           Our Clients
         </Typography>
         <Box ref={scrollRef2} id="text01" sx={{ marginTop: "60px" }}>
@@ -665,8 +668,8 @@ export const Home = () => {
         </Box>
       </Box>
 
-      <Box sx={{ width: "100vw", textAlign: "center", marginTop: "100px" }}>
-        <Typography variant="h5" style={{ fontSize: "2.6rem", fontWeight: "600",color:"#7a7ad4",marginBottom:"50px" }}>
+      <Box sx={{ width: "100vw", textAlign: "center", marginTop: "100px" }} className="header">
+        <Typography variant="h5" style={{ fontSize: "2.6rem", fontWeight: "600",marginBottom:"50px" }}>
           Clients Testimonials
         </Typography>
 
@@ -677,7 +680,7 @@ export const Home = () => {
 
       <Box
         sx={{
-          padding: { xs: "3%", lg: "10%", md: "10%", sm: "10%" },
+          padding: { xs: "3%", lg: "7%", md: "7%", sm: "10%" },
           fontSize: { xs: "20.4pt", lg: "20pt", sm: "23pt", md: "26pt" },
           fontWeight: "900",
           display: { xs: "none", lg: "block", md: "block", sm: "block" },
@@ -694,6 +697,7 @@ export const Home = () => {
           style={{ fontSize: "2.5rem", textAlign: "center" }}
           id="text002"
           ref={scrollRef5}
+          className="header"
         >
           Curious to Know How We Transform
           <br /> Businesses?

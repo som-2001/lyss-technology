@@ -205,6 +205,7 @@ export const About = () => {
       >
         {scrollPosition > 150 && (
           <Button
+           id="button"
             sx={{
               position: "fixed",
               bottom: "20px",
@@ -225,7 +226,7 @@ export const About = () => {
         )}
         <Grid container>
           <Grid item xs={12} sm={12} lg={6} md={6}>
-            <p style={{ fontSize: "3.9rem" }} id="hero">
+            <p style={{ fontSize: "3.9rem" }} id="hero" className="header">
               About us
             </p>
             <Typography
@@ -269,7 +270,7 @@ export const About = () => {
       </Box>
 
       <Box sx={{ width: "100vw", textAlign: "center", marginTop: "50px" }}>
-        <p style={{ fontSize: "2.5rem", marginTop: "20px" }}>Our Culture</p>
+        <p style={{ fontSize: "2.5rem", marginTop: "20px" }} className="header">Our Culture</p>
         <AboutSlider />
       </Box>
       <Box sx={{ width: "100vw", textAlign: "center", marginTop: "50px" }}>
@@ -277,7 +278,7 @@ export const About = () => {
           5 STEPS WORK PROCESS
         </span>
         <br />
-        <Typography component="div" color="text.secondary" sx={{ fontSize: "2.5rem", marginTop: "25px",marginBottom:"10px" }}>Working Process</Typography>
+        <Typography component="div" sx={{ fontSize: "2.5rem", marginTop: "25px",marginBottom:"10px" }} className="header">Working Process</Typography>
         <center>
           <Grid container rowGap={2} >
             {item.map((data, index) => (
@@ -295,7 +296,7 @@ export const About = () => {
       
       <Box sx={{ width: "100vw", textAlign: "center", marginTop: "100px", }}>
         <p style={{ fontSize: "1.7rem", fontWeight: "500",color:"#5e5eee" }}>Team</p>
-        <Typography variant="h2"  color="text.secondary" style={{ fontSize: "2.3rem", fontWeight: "500",marginBottom:"30px"}}>Our Leadership & Key Personnel</Typography>
+        <Typography variant="h2"  style={{ fontSize: "2.3rem", fontWeight: "500",marginBottom:"30px"}} className="header">Our Leadership & Key Personnel</Typography>
             
         <KeyPersonal />
             
@@ -329,7 +330,7 @@ export const About = () => {
              variant="h2"
              id="domainText"
              // ref={scrollRef7}
-             color="text.secondary"
+             className="header"
              sx={{
                fontSize: {
                  lg: "2.4rem",
@@ -349,7 +350,7 @@ export const About = () => {
              }}
            >
              Our Development Team<br/>
-             <span style={{fontSize:"1.1rem"}}>"Empowering Progress through Technology."</span>
+             <span style={{fontSize:"1.1rem",color:"black"}}>"Empowering Progress through Technology."</span>
            </Typography>
          </Grid>
        
@@ -365,7 +366,7 @@ export const About = () => {
               variant="h2"
               id="domainText"
               // ref={scrollRef7}
-              color="text.secondary"
+            
               sx={{
                 fontSize: {
                   lg: "2.4rem",
@@ -383,6 +384,7 @@ export const About = () => {
                 },
                 padding: "10px",
               }}
+              className="header"
             >
               Our Development Team
             </Typography>
@@ -405,7 +407,7 @@ export const About = () => {
       </Box>
 
       <Box sx={{ width: "100vw", textAlign: "center", marginTop: "100px" }}>
-        <p style={{ fontSize: "2.3rem", fontWeight: "600" }}>Our Clients</p>
+        <p style={{ fontSize: "2.3rem", fontWeight: "600" }} className="header">Our Clients</p>
         <Box id="text01">
           <CustomerSlider />
         </Box>
@@ -430,6 +432,7 @@ export const About = () => {
           style={{ fontSize: "2.5rem", textAlign: "center" }}
           id="text002"
           ref={scrollRef5}
+          className="header"
         >
           Curious to Know How We Transform
           <br /> Businesses?
