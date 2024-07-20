@@ -133,7 +133,9 @@ export const Navbar = () => {
                     borderRadius: "27px",
                     width: "83px",
                     color: "white",
-                    }}>
+                    }}
+                    onClick={(e) => navigate("/login")}  
+                  >
                   Login
                 </Button>
                 <IconButton sx={{ p: 0 }}>

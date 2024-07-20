@@ -134,7 +134,7 @@ export const Contact = () => {
         )}
         <Grid container>
           <Grid item xs={12} sm={12} lg={6} md={6}>
-            <p style={{ fontSize: "3.9rem" }} id="hero" className="header">
+            <p style={{ fontSize: "3.9rem",color:"white" }} id="hero" >
               Contact us
             </p>
             <Typography
@@ -176,7 +176,7 @@ export const Contact = () => {
         <br />
         <p style={{ fontSize: "3rem", marginTop: "15px" }} className="header">Contact Us</p>
 
-        <Grid container spacing={6} sx={{ padding: "10px" }}>
+        <Grid container spacing={6} sx={{ padding: "20px" }}>
           <Grid
             item
             xs={12}
