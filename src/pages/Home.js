@@ -4,7 +4,6 @@ import {
   Box,
   Button,
   CardMedia,
-  
   Grid,
   Slider,
   Typography,
@@ -18,7 +17,7 @@ import { useEffect, useRef, useState } from "react";
 import ClientSlider from "../components/ClientSlider";
 import { IoMdArrowRoundUp } from "react-icons/io";
 import { CustomerSlider } from "../components/CustomerSlider";
-import '../App.css'
+import "../App.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -290,19 +289,17 @@ export const Home = () => {
         fontFamily: "math",
       }}
     >
-     
       {scrollPosition > 150 && (
         <Button
-        id="button"
+          id="button"
           sx={{
             position: "fixed",
             bottom: "20px",
             right: "10px",
             zIndex: "10",
             fontSize: "1.5rem",
-            backgroundColor:"#7a7ad4",
-            borderRadius:'9px'
-            
+            backgroundColor: "#7a7ad4",
+            borderRadius: "9px",
           }}
           onClick={(e) => {
             window.scrollTo({
@@ -311,7 +308,7 @@ export const Home = () => {
             });
           }}
         >
-          <IoMdArrowRoundUp style={{color:"white"}}/>
+          <IoMdArrowRoundUp style={{ color: "white" }} />
         </Button>
       )}
       <Navbar />
@@ -352,7 +349,10 @@ export const Home = () => {
           </Grid>
           <Grid item lg={6} md={12} xs={12} sm={12} id="hero1">
             <center>
-              <p style={{ fontSize: "2.3rem", fontWeight: "600" }} className="header">
+              <p
+                style={{ fontSize: "2.3rem", fontWeight: "600" }}
+                className="header"
+              >
                 Lyss Technology
               </p>
               <p
@@ -360,13 +360,16 @@ export const Home = () => {
                   marginTop: "-28px",
                   fontSize: "1.0rem",
                   fontWeight: "600",
-                  
                 }}
                 className="header"
               >
                 A hybrid(Product+Service) based company{" "}
               </p>
-              <Typography variant="span" color="text.secondary" style={{ fontSize: "1.2rem" }}>
+              <Typography
+                variant="span"
+                color="text.secondary"
+                style={{ fontSize: "1.2rem" }}
+              >
                 At LYSS Technology, we actively find existing social problems
                 either by itself or by communicating with different classes of
                 people
@@ -425,7 +428,11 @@ export const Home = () => {
 
       <Box sx={{ width: "100vw", textAlign: "center", marginTop: "7rem" }}>
         <p
-          style={{ fontSize: "2.3rem", fontWeight: "600",color:'rgb(79 79 138)' }}
+          style={{
+            fontSize: "2.3rem",
+            fontWeight: "600",
+            color: "rgb(79 79 138)",
+          }}
           ref={scrollRef1}
           id="text00"
         >
@@ -495,8 +502,13 @@ export const Home = () => {
               sx={{
                 color: "blue",
                 fontSize: "1.2rem",
-                textAlign: {lg:"start",md:"start",xs:"center",sm:"center"},
-                marginLeft: {lg:"100px",xs:"0px",sm:"0px",md:"50px"}
+                textAlign: {
+                  lg: "start",
+                  md: "start",
+                  xs: "center",
+                  sm: "center",
+                },
+                marginLeft: { lg: "100px", xs: "0px", sm: "0px", md: "50px" },
               }}
             >
               ABOUT OUR COMPANY
@@ -505,9 +517,14 @@ export const Home = () => {
               variant="p"
               component="div"
               sx={{
-                fontSize: {lg:"2.7rem",xs:"1.9rem"},
+                fontSize: { lg: "2.7rem", xs: "1.9rem" },
                 fontWeight: "700",
-                textAlign: {lg:"start",md:"start",xs:"center",sm:"center"},
+                textAlign: {
+                  lg: "start",
+                  md: "start",
+                  xs: "center",
+                  sm: "center",
+                },
                 marginLeft: { lg: "100px", xs: "0px", md: "50px", sm: "0px" },
                 marginTop: "10px",
               }}
@@ -522,71 +539,120 @@ export const Home = () => {
                 fontSize: "1.2rem",
                 fontWeight: "400",
                 marginLeft: { lg: "92px", xs: "0px", md: "50px", sm: "0px" },
-                marginTop:"20px",
-                padding:'5px'
+                marginTop: "20px",
+                padding: "5px",
               }}
             >
               We are committed to providing transparent and quality services to
               businesses of all scales.
             </Typography>
 
-            <Box sx={{padding:{lg:"100px",xs:"20px"},marginTop:{lg:"-20px",xs:"0px"}}}>
-              <Box sx={{display:"flex",justifyContent:"space-between"}}>
-              <p style={{textAlign:"start",fontSize:"1.2rem",fontWeight:"600"}}>Believing in your success</p>
-              <p style={{marginTop:"30px",fontWeight:"700"}}>90%</p>
+            <Box
+              sx={{
+                padding: { lg: "100px", xs: "20px" },
+                marginTop: { lg: "-20px", xs: "0px" },
+              }}
+            >
+              <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+                <p
+                  style={{
+                    textAlign: "start",
+                    fontSize: "1.2rem",
+                    fontWeight: "600",
+                  }}
+                >
+                  Believing in your success
+                </p>
+                <p style={{ marginTop: "30px", fontWeight: "700" }}>90%</p>
               </Box>
               <center>
                 <Slider
+                  disabled
                   aria-label="Temperature"
                   defaultValue={90}
                   getAriaValueText={valuetext}
-                  sx={{color:"blue"}}
-                  
+                  sx={{
+                    "& .MuiSlider-thumb": {
+                      color: "blue",
+                    },
+                    "& .MuiSlider-track": {
+                      color: "blue",
+                    },
+                    "& .MuiSlider-rail": {
+                      color: "blue",
+                    },
+                  }}
                 />
               </center>
-              <Box sx={{display:"flex",justifyContent:"space-between"}}>
-              <p style={{textAlign:"start",fontSize:"1.2rem",fontWeight:"600"}}>Custom Solutions</p>
-              <p style={{marginTop:"30px",fontWeight:"700"}}>75%</p>
+              <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+                <p
+                  style={{
+                    textAlign: "start",
+                    fontSize: "1.2rem",
+                    fontWeight: "600",
+                  }}
+                >
+                  Custom Solutions
+                </p>
+                <p style={{ marginTop: "30px", fontWeight: "700" }}>75%</p>
               </Box>
               <center>
                 <Slider
                   aria-label="Temperature"
                   defaultValue={75}
-                  
+                  disabled
                   getAriaValueText={valuetext}
-                  sx={{color:"blue"}}
+                  sx={{
+                    "& .MuiSlider-thumb": {
+                      color: "blue",
+                    },
+                    "& .MuiSlider-track": {
+                      color: "blue",
+                    },
+                    "& .MuiSlider-rail": {
+                      color: "blue",
+                    },
+                  }}
                 />
               </center>
 
-              <Box sx={{display:"flex",justifyContent:"space-between"}}>
-              <p style={{textAlign:"start",fontSize:"1.2rem",fontWeight:"600"}}>Customer Support</p>
-              <p style={{marginTop:"30px",fontWeight:"700"}}>85%</p>
+              <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+                <p
+                  style={{
+                    textAlign: "start",
+                    fontSize: "1.2rem",
+                    fontWeight: "600",
+                  }}
+                >
+                  Customer Support
+                </p>
+                <p style={{ marginTop: "30px", fontWeight: "700" }}>85%</p>
               </Box>
               <center>
                 <Slider
                   aria-label="Temperature"
                   defaultValue={85}
+                  disabled
                   getAriaValueText={valuetext}
-                  sx={{color:"blue"}}
+                  sx={{ color: "blue" }}
                 />
               </center>
               <center>
-          <Button
-            variant="contained"
-            id="button"
-            sx={{
-              width: { lg: "30%", md: "40%", xs: "55%", sm: "40%" },
-              padding: "10px",
-              borderRadius: "25px",
-              backgroundColor: "#5656b9",
-              marginTop: "20px",
-            }}
-            onClick={(e) => (window.location.href = "/about")}
-          >
-            Learn More
-          </Button>
-        </center>
-
+                <Button
+                  variant="contained"
+                  id="button"
+                  sx={{
+                    width: { lg: "30%", md: "40%", xs: "55%", sm: "40%" },
+                    padding: "10px",
+                    borderRadius: "25px",
+                    backgroundColor: "#5656b9",
+                    marginTop: "20px",
+                  }}
+                  onClick={(e) => (window.location.href = "/about")}
+                >
+                  Learn More
+                </Button>
+              </center>
             </Box>
           </Grid>
           <Grid item xs={12} sm={12} md={6} lg={6}>
@@ -596,7 +662,7 @@ export const Home = () => {
                 src="./images/intro.jpg"
                 alt="Web Design & Development"
                 sx={{
-                  width: { lg: "40vw", xs: "95vw",md:"45vw",sm:"60vw" },
+                  width: { lg: "40vw", xs: "95vw", md: "45vw", sm: "60vw" },
                   height: "auto",
                   marginTop: { lg: "90px", xs: "10px", md: "90px", sm: "10px" },
                   marginBottom: {
@@ -612,7 +678,10 @@ export const Home = () => {
         </Grid>
       </Box>
 
-      <Box sx={{ width: "100vw", textAlign: "center", marginTop: "0rem" }} className="header">
+      <Box
+        sx={{ width: "100vw", textAlign: "center", marginTop: "0rem" }}
+        className="header"
+      >
         <CardMedia
           component="img"
           src="./images/picture2.png"
@@ -629,7 +698,6 @@ export const Home = () => {
             position: "relative",
             top: { lg: "-120px", xs: "0px", sm: "0px", md: "-120px" },
             left: { lg: "460px", xs: "0px", sm: "0px", md: "-260px" },
-            
           }}
         >
           Top-Notch Product Plus
@@ -638,29 +706,31 @@ export const Home = () => {
         </Typography>
 
         <Box>
-        <Typography
-          variant="h5"
-          id="text009"
-          ref={scrollRef9}
-          sx={{
-            fontSize: { xs: "15.4pt", lg: "30pt", sm: "23pt", md: "30pt" },
-            fontWeight: "600",
-            position: "relative",
-            top: { lg: "-620px", xs: "-250px", sm: "-395px", md: "-500px" },
-            left: { lg: "-360px", xs: "0px", sm: "0px", md: "-100px" },
-          
-          }}
-          className="header"
-        >
-          We offer efficient and 
-          <br />
-          well-functioning technology
-        </Typography>
+          <Typography
+            variant="h5"
+            id="text009"
+            ref={scrollRef9}
+            sx={{
+              fontSize: { xs: "15.4pt", lg: "30pt", sm: "23pt", md: "30pt" },
+              fontWeight: "600",
+              position: "relative",
+              top: { lg: "-620px", xs: "-250px", sm: "-395px", md: "-500px" },
+              left: { lg: "-360px", xs: "0px", sm: "0px", md: "-100px" },
+            }}
+            className="header"
+          >
+            We offer efficient and
+            <br />
+            well-functioning technology
+          </Typography>
         </Box>
       </Box>
 
       <Box sx={{ width: "100vw", textAlign: "center" }} className="header">
-        <Typography variant="h5" style={{ fontSize: "2.6rem", fontWeight: "600", marginTop: "-10px",}}>
+        <Typography
+          variant="h5"
+          style={{ fontSize: "2.6rem", fontWeight: "600", marginTop: "-10px" }}
+        >
           Our Clients
         </Typography>
         <Box ref={scrollRef2} id="text01" sx={{ marginTop: "60px" }}>
@@ -668,8 +738,18 @@ export const Home = () => {
         </Box>
       </Box>
 
-      <Box sx={{ width: "100vw", textAlign: "center", marginTop: "100px" }} className="header">
-        <Typography variant="h5" style={{ fontSize: "2.6rem", fontWeight: "600",marginBottom:"50px" }}>
+      <Box
+        sx={{ width: "100vw", textAlign: "center", marginTop: "100px" }}
+        className="header"
+      >
+        <Typography
+          variant="h5"
+          style={{
+            fontSize: "2.6rem",
+            fontWeight: "600",
+            marginBottom: "50px",
+          }}
+        >
           Clients Testimonials
         </Typography>
 
@@ -740,7 +820,7 @@ export const Home = () => {
         <p style={{ color: "blue", textAlign: "center" }}>
           WANT TO WORK WITH US?
         </p>
-       
+
         <center>
           <Button
             variant="contained"

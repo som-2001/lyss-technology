@@ -109,7 +109,7 @@ const Footer = () => {
 
         </FooterGrid>
       </Container>
-      <Typography variant="h6" align='center' color="text.secondary" mt={2} sx={{color:"white"}}>
+      <Typography variant="h6" align='center' color="text.secondary" mt={2} sx={{color:"white",fontSize:"1.0rem"}}>
             © Copyright {new Date().getFullYear()}. All Rights Reserved.
             </Typography>
     </FooterContainer>

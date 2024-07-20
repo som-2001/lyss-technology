@@ -13,9 +13,16 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import { useNavigate } from "react-router-dom";
 import { Divider } from "@mui/material";
-import { ArrowLeft, ArrowRight } from "@mui/icons-material";
+import { ArrowDropDown, ArrowLeft, ArrowRight } from "@mui/icons-material";
 
-const pages = ["Home", "About", "Contact Us", "Group Companies",'Gallary','Products'];
+const pages = [
+  "Home",
+  "About",
+  "Contact Us",
+  "Group Companies",
+  "Gallary",
+  "Products",
+];
 
 export const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -34,19 +41,18 @@ export const Navbar = () => {
 
   const handleNavigate = (page) => {
     if (page === "Contact Us") {
-      navigate("/contact");
+      window.location.href = "/contact";
     } else if (page === "About") {
-      navigate("/about");
+      window.location.href = "/about";
     } else if (page === "Home") {
-      navigate("/");
+      window.location.href = "/";
     } else if (page === "Login") {
-      navigate("/login");
-    }else if (page === "Gallary") {
-      navigate("/gallary");
-    }else if (page === "Products") {
-      navigate("/products");
+      window.location.href = "/login";
+    } else if (page === "Gallary") {
+      window.location.href = "/gallary";
+    } else if (page === "Products") {
+      window.location.href = "/products";
     }
-
   };
 
   const handleDropdownClick = () => {
@@ -82,7 +88,7 @@ export const Navbar = () => {
               >
                 <MenuIcon style={{ color: "black" }} />
               </IconButton>
-              
+
               <Menu
                 id="menu-appbar"
                 anchorEl={anchorElNav}
@@ -98,7 +104,14 @@ export const Navbar = () => {
                     {page === "Group Companies" ? (
                       <Typography textAlign="center">
                         Group Companies
-                        <ArrowRight onClick={(e) => setHide(false)} style={{position:"relative",top:"7px",left:"5px"}}/>
+                        <ArrowRight
+                          onClick={(e) => setHide(false)}
+                          style={{
+                            position: "relative",
+                            top: "7px",
+                            left: "5px",
+                          }}
+                        />
                       </Typography>
                     ) : (
                       <Typography textAlign="center">{page}</Typography>
@@ -106,22 +119,31 @@ export const Navbar = () => {
                   </MenuItem>
                 ))}
               </Menu>
-           
             </Box>
-            <Box sx={{display:{xs:"block",sm:"block",lg:"none",md:"none"}}}>
-           
-            <Tooltip title="Lyss Technology">
-            <Button sx={{color:"black",marginRight:"10px",
-              }} onClick={(e)=>navigate('/login')}>Login</Button>
-              <IconButton sx={{ p: 0 }}>
-                <Avatar
-                  alt="Remy Sharp"
-                  src="./images/logo.jpg"
-                  sx={{ width: "50px", height: "50px" }}
-                />
-              </IconButton>
-            </Tooltip>
-            
+            <Box
+              sx={{
+                display: { xs: "block", sm: "block", lg: "none", md: "none" },
+              }}
+            >
+              <Tooltip title="Lyss Technology">
+              <Button id="button" sx={{   
+                    marginRight: "20px",
+                    my: 2,
+                    backgroundColor:"#5656b9",
+                    borderRadius: "27px",
+                    width: "83px",
+                    color: "white",
+                    }}>
+                  Login
+                </Button>
+                <IconButton sx={{ p: 0 }}>
+                  <Avatar
+                    alt="Remy Sharp"
+                    src="./images/logo.jpg"
+                    sx={{ width: "50px", height: "50px" }}
+                  />
+                </IconButton>
+              </Tooltip>
             </Box>
             <Box
               sx={{
@@ -139,24 +161,49 @@ export const Navbar = () => {
                   }
                   sx={{ my: 2, color: "black", display: "block" }}
                 >
-                  {page}
+                  {page === "Group Companies" ? (
+                    <span style={{ position: "relative", top: "-4px" }}>
+                      Group Companies
+                      <ArrowDropDown
+                        style={{ position: "relative", top: "6px" }}
+                      />
+                    </span>
+                  ) : (
+                    <span>{page}</span>
+                  )}
                 </Button>
               ))}
-            
             </Box>
-            <Box sx={{display:{xs:"none",sm:"none",lg:"block",md:"block"}}}>
-            
-            <Tooltip title="Lyss Technology">
-            <Button sx={{color:"black",marginRight:"20px",my:2}} onClick={(e)=>navigate('/login')}>LOGIN</Button>
-              <IconButton sx={{ p: 0 }}>
-                <Avatar
-                  alt="Remy Sharp"
-                  src="./images/logo.jpg"
-                  sx={{ width: "50px", height: "50px" }}
-                />
-              </IconButton>
-            </Tooltip>
-           
+            <Box
+              sx={{
+                display: { xs: "none", sm: "none", lg: "block", md: "block" },
+              }}
+            >
+              <Tooltip title="Lyss Technology">
+                <Button
+                id="button"
+                  sx={{
+                    
+                    marginRight: "20px",
+                    my: 2,
+                    backgroundColor:"#5656b9",
+                    borderRadius: "27px",
+                    width: "83px",
+                    color: "white",
+                   
+                  }}
+                  onClick={(e) => navigate("/login")}
+                >
+                  Login
+                </Button>
+                <IconButton sx={{ p: 0 }}>
+                  <Avatar
+                    alt="Remy Sharp"
+                    src="./images/logo.jpg"
+                    sx={{ width: "50px", height: "50px" }}
+                  />
+                </IconButton>
+              </Tooltip>
             </Box>
             {dropdownOpen && (
               <Box
@@ -191,51 +238,66 @@ export const Navbar = () => {
       ) : (
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon style={{ color: "black" }} />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
-              keepMounted
-              transformOrigin={{ vertical: "top", horizontal: "left" }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{ display: { xs: "block", md: "none" }}}
-            >
-              <MenuItem><ArrowLeft onClick={(e)=>setHide(true)} style={{position:"relative",right:"5px"}}/>Group Companies</MenuItem>
-            
-              <MenuItem>ATPLC</MenuItem>
-              <MenuItem>ATPLC</MenuItem>
-              <MenuItem>ATPLC</MenuItem>
-            </Menu>
-          </Box>
-          <Box sx={{display:{xs:"block",sm:"block",lg:"none",md:"none"}}}>
-           
-            <Tooltip title="Lyss Technology">
-            <Button sx={{color:"black",marginRight:"10px",
-              }}>Login</Button>
-              <IconButton sx={{ p: 0 }}>
-                <Avatar
-                  alt="Remy Sharp"
-                  src="./images/logo.jpg"
-                  sx={{ width: "50px", height: "50px" }}
-                />
+            <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+              <IconButton
+                size="large"
+                aria-label="account of current user"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+                onClick={handleOpenNavMenu}
+                color="inherit"
+              >
+                <MenuIcon style={{ color: "black" }} />
               </IconButton>
-            </Tooltip>
-            
+              <Menu
+                id="menu-appbar"
+                anchorEl={anchorElNav}
+                anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
+                keepMounted
+                transformOrigin={{ vertical: "top", horizontal: "left" }}
+                open={Boolean(anchorElNav)}
+                onClose={handleCloseNavMenu}
+                sx={{ display: { xs: "block", md: "none" } }}
+              >
+                <MenuItem>
+                  <ArrowLeft
+                    onClick={(e) => setHide(true)}
+                    style={{ position: "relative", right: "5px" }}
+                  />
+                  Group Companies
+                </MenuItem>
+
+                <MenuItem>ATPLC</MenuItem>
+                <MenuItem>ATPLC</MenuItem>
+                <MenuItem>ATPLC</MenuItem>
+              </Menu>
+            </Box>
+            <Box
+              sx={{
+                display: { xs: "block", sm: "block", lg: "none", md: "none" },
+              }}
+            >
+              <Tooltip title="Lyss Technology">
+                <Button id="button" sx={{   
+                    marginRight: "20px",
+                    my: 2,
+                    backgroundColor:"#5656b9",
+                    borderRadius: "27px",
+                    width: "83px",
+                    color: "white",
+                    }}>
+                  Login
+                </Button>
+                <IconButton sx={{ p: 0 }}>
+                  <Avatar
+                    alt="Remy Sharp"
+                    src="./images/logo.jpg"
+                    sx={{ width: "50px", height: "50px" }}
+                  />
+                </IconButton>
+              </Tooltip>
             </Box>
           </Toolbar>
-          
         </Container>
       )}
     </AppBar>

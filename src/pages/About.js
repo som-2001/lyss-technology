@@ -278,7 +278,7 @@ export const About = () => {
           5 STEPS WORK PROCESS
         </span>
         <br />
-        <Typography component="div" sx={{ fontSize: "2.5rem", marginTop: "25px",marginBottom:"10px" }} className="header">Working Process</Typography>
+        <p  style={{ fontSize: "2.5rem", marginTop: "25px",marginBottom:"10px" }} className="header">Working Process</p>
         <center>
           <Grid container rowGap={2} >
             {item.map((data, index) => (

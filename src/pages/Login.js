@@ -8,6 +8,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import '../App.css'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -148,10 +149,10 @@ export const Login = () => {
               alt="Logo"
               sx={{ width: {lg:"20%",md:"15%",xs:"35%",sm:"15%"}, height: "auto", marginBottom: "20px",marginTop:{lg:"0%",md:"0%",sm:"0%",xs:"10%"} }}
             />
-            <Typography variant="body2" align="center" sx={{ mb: 1,fontSize:"1.8rem",color:"#5e5eee" }} id="hero1">
+            <Typography variant="body2" align="center" sx={{ mb: 1,fontSize:"1.8rem"}} id="hero1" className="header">
               Welcome to Lyss Technology
             </Typography>
-            <center><Typography id="hero2" variant="span" sx={{fontWeight:"600",color:"#5e5eee",}}>A hybrid(Product+Service) based company</Typography></center>
+            <center><Typography id="hero2" variant="span" sx={{fontWeight:"600"}} className="header">A hybrid(Product+Service) based company</Typography></center>
             <Box sx={{width:{lg:"70%",md:"70%",sm:"70%",xs:"95%"}}}>
           
 
@@ -200,7 +201,7 @@ export const Login = () => {
                 }}
               />
             </Box>
-            <center><Button id="button" variant="outlined" sx={{ width: '40%',borderRadius:"20px" }}>
+            <center><Button id="button" variant="contained" sx={{ width: '40%',borderRadius:"20px",backgroundColor:"#5656b9" }}>
               Login
             </Button></center>
             </Box>
