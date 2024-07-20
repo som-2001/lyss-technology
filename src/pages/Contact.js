@@ -53,7 +53,7 @@ export const Contact = () => {
       {
         opacity: 1,
         y: 0,
-        delay: 1.5,
+        delay: 1.0,
       }
     );
   }, []);
@@ -68,7 +68,7 @@ export const Contact = () => {
       {
         opacity: 1,
         y: 0,
-        delay: 1.8,
+        delay: 1.2,
       }
     );
   }, []);
@@ -82,7 +82,7 @@ export const Contact = () => {
       {
         opacity: 1,
         y: 0,
-        delay: 2.2,
+        delay: 1.5,
       }
     );
   }, []);

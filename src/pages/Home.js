@@ -19,6 +19,7 @@ import ClientSlider from "../components/ClientSlider";
 import { IoMdArrowRoundUp } from "react-icons/io";
 import { CustomerSlider } from "../components/CustomerSlider";
 
+
 gsap.registerPlugin(ScrollTrigger);
 
 export const Home = () => {
@@ -289,6 +290,7 @@ export const Home = () => {
         fontFamily: "math",
       }}
     >
+     
       {scrollPosition > 150 && (
         <Button
         id="button"
@@ -366,7 +368,7 @@ export const Home = () => {
               <p style={{ fontSize: "1.2rem" }}>
                 At LYSS Technology, we actively find existing social problems
                 either by itself or by communicating with different classes of
-                people,
+                people
                 <br />{" "}
                 <Typography
                   variant="p"
