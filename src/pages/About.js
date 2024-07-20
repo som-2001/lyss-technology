@@ -9,6 +9,8 @@ import { CustomerSlider } from "../components/CustomerSlider";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import KeyPersonal from "../components/KeyPersonal";
+import OurTeam from "../components/ourTeam";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -245,6 +247,7 @@ export const About = () => {
                 },
                 fontWeight: "500",
               }}
+              color="text.secondary"
               id="hero1"
             >
               We are a team of passionate individuals working towards adding
@@ -274,7 +277,7 @@ export const About = () => {
           5 STEPS WORK PROCESS
         </span>
         <br />
-        <p style={{ fontSize: "2.5rem", marginTop: "15px" }}>Working Process</p>
+        <Typography component="div" color="text.secondary" sx={{ fontSize: "2.5rem", marginTop: "25px",marginBottom:"10px" }}>Working Process</Typography>
         <center>
           <Grid container rowGap={2} >
             {item.map((data, index) => (
@@ -288,6 +291,119 @@ export const About = () => {
           </Grid>
         </center>
       </Box>
+
+      
+      <Box sx={{ width: "100vw", textAlign: "center", marginTop: "100px", }}>
+        <p style={{ fontSize: "1.7rem", fontWeight: "500",color:"#5e5eee" }}>Team</p>
+        <Typography variant="h2"  color="text.secondary" style={{ fontSize: "2.3rem", fontWeight: "500",marginBottom:"30px"}}>Our Leadership & Key Personnel</Typography>
+            
+        <KeyPersonal />
+            
+      </Box>
+
+
+
+
+
+
+      <Box sx={{ width: "100vw", textAlign: "center", marginTop: "100px",display:{lg:"block",md:"block",sm:"none",xs:"none"} }}>
+       
+       <Grid container>
+       <Grid
+           item
+           lg={5}
+           sm={12}
+           xs={12}
+           md={6}
+           sx={{
+             marginTop: { xs: "20px", md: "20px", sm: "20px", lg: "0px" },
+           }}
+         >
+           
+             <OurTeam />
+         
+         </Grid>
+       
+       <Grid item lg={7} xs={12} sm={12} md={6}>
+           <Typography
+             variant="h2"
+             id="domainText"
+             // ref={scrollRef7}
+             color="text.secondary"
+             sx={{
+               fontSize: {
+                 lg: "2.4rem",
+                 xs: "1.0rem",
+                 sm: "1.0rem",
+                 md: "1.9rem",
+               },
+               fontWeight: "500",
+
+               margin: {
+                 lg: "130px 0px 20px 30px",
+                 xs: "30px 0px 20px 0px",
+                 md: "190px 0px 0px 0px",
+                 sm: "30px 0px 0px 0px",
+               },
+               padding: "10px",
+             }}
+           >
+             Our Development Team<br/>
+             <span style={{fontSize:"1.1rem"}}>"Empowering Progress through Technology."</span>
+           </Typography>
+         </Grid>
+       
+       
+       </Grid>
+     </Box>
+
+      <Box sx={{ width: "100vw", textAlign: "center", marginTop: "20px",display:{lg:"none",md:"none",sm:"block",xs:"block"} }}>
+       
+        <Grid container>
+          <Grid item lg={5} xs={12} sm={12} md={12}>
+            <Typography
+              variant="h2"
+              id="domainText"
+              // ref={scrollRef7}
+              color="text.secondary"
+              sx={{
+                fontSize: {
+                  lg: "2.4rem",
+                  xs: "2.3rem",
+                  sm: "2.3rem",
+                  md: "1.9rem",
+                },
+                fontWeight: "500",
+
+                margin: {
+                  lg: "130px 0px 20px 30px",
+                  xs: "30px 0px 20px 0px",
+                  md: "30px 0px 0px 0px",
+                  sm: "30px 0px 0px 0px",
+                },
+                padding: "10px",
+              }}
+            >
+              Our Development Team
+            </Typography>
+          </Grid>
+          <Grid
+            item
+            lg={7}
+            sm={12}
+            xs={12}
+            md={12}
+            sx={{
+              marginTop: { xs: "20px", md: "20px", sm: "20px", lg: "0px" },
+            }}
+          >
+            
+              <OurTeam />
+          
+          </Grid>
+        </Grid>
+      </Box>
+
       <Box sx={{ width: "100vw", textAlign: "center", marginTop: "100px" }}>
         <p style={{ fontSize: "2.3rem", fontWeight: "600" }}>Our Clients</p>
         <Box id="text01">

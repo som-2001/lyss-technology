@@ -365,13 +365,13 @@ export const Home = () => {
               >
                 A hybrid(Product+Service) based company{" "}
               </p>
-              <p style={{ fontSize: "1.2rem" }}>
+              <Typography variant="span" color="text.secondary" style={{ fontSize: "1.2rem" }}>
                 At LYSS Technology, we actively find existing social problems
                 either by itself or by communicating with different classes of
                 people
                 <br />{" "}
                 <Typography
-                  variant="p"
+                  variant="span"
                   color="color.secondary"
                   sx={{
                     display: {
@@ -386,13 +386,13 @@ export const Home = () => {
                   do market research and based on that we discuss and plan to
                   develop products for that problems.
                 </Typography>{" "}
-              </p>
+              </Typography>
 
               <img
                 src="./images/picture1.png"
                 alt=""
                 id="hero1"
-                style={{ width: "340px", marginTop: "-40px" }}
+                style={{ width: "340px", marginTop: "-10px" }}
               />
             </center>
           </Grid>
