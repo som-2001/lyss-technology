@@ -629,12 +629,22 @@ export const Home = () => {
                 <p style={{ marginTop: "30px", fontWeight: "700" }}>85%</p>
               </Box>
               <center>
-                <Slider
+              <Slider
                   aria-label="Temperature"
                   defaultValue={85}
                   disabled
                   getAriaValueText={valuetext}
-                  sx={{ color: "blue" }}
+                  sx={{
+                    "& .MuiSlider-thumb": {
+                      color: "blue",
+                    },
+                    "& .MuiSlider-track": {
+                      color: "blue",
+                    },
+                    "& .MuiSlider-rail": {
+                      color: "blue",
+                    },
+                  }}
                 />
               </center>
               <center>
