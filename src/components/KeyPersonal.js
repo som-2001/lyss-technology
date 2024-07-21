@@ -54,8 +54,8 @@ const KeyPersonal = () => {
     'Electrical Engineer'
   ]
   const Tagline=[
-    'Founder & CEO',
-    'Founder & CTO',
+    'Founder',
+    'Director',
     "Director",
     
   ]

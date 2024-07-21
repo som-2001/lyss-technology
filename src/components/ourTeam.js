@@ -48,6 +48,13 @@ const OurTeam = () => {
     'Md Mushfikur Talukdar'
   ];
 
+  const Address = [
+    'Hydrabadh',
+    'Bankura,west Bengal',
+    'Uttarpradesh',
+    'Dhaka,Bangladesh'
+  ];
+
   const Tagline=[
     'Backend Developer',
     "Frontend Developer",
@@ -111,6 +118,9 @@ const OurTeam = () => {
                       <Divider style={{padding:"1px",backgroundColor:"rgb(79 79 138)",width:"80px",marginBottom:"10px"}}/>
                       <Typography gutterBottom variant="p" color="text.secondary" sx={{fontSize:'1.0rem'}}>
                         {Tagline[index]}
+                      </Typography><br/>
+                      <Typography gutterBottom variant="p" color="text.secondary" sx={{fontSize:'1.0rem'}}>
+                        {Address[index]}
                       </Typography>
                     
                     </CardContent>
