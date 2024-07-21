@@ -48,6 +48,11 @@ const KeyPersonal = () => {
     
   ];
 
+  const Degree=[
+    'Mechanical Engineer',
+    'Software Engineer',
+    'Electrical Engineer'
+  ]
   const Tagline=[
     'Founder & CEO',
     'Founder & CTO',
@@ -107,6 +112,9 @@ const KeyPersonal = () => {
                       <Divider style={{padding:"1px",backgroundColor:"rgb(79 79 138)",width:"80px",marginBottom:"10px"}}/>
                       <Typography gutterBottom variant="p" color="text.secondary" sx={{fontSize:'1.0rem'}}>
                         {Tagline[index]}
+                      </Typography><br/>
+                      <Typography gutterBottom variant="p" color="text.secondary" sx={{fontSize:'1.0rem'}}>
+                        {Degree[index]}
                       </Typography>
                     
                     </CardContent>

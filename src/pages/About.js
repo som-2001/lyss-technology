@@ -447,7 +447,7 @@ export const About = () => {
         }}
       >
         <p
-          style={{ fontWeight: "500", fontSize: "2.6rem", textAlign: "center" }}
+          style={{ fontWeight: "600", fontSize: "2.6rem", textAlign: "center" }}
         >
           Why US ??
         </p>
@@ -456,7 +456,7 @@ export const About = () => {
             <center>
               <CardMedia
                 component="img"
-                src="../images/whoweare.jpg"
+                src="../images/meeting.jpg"
                 alt=""
                 sx={{
                   width: { lg: "42vw", xs: "90vw", md: "40vw", sm: "60vw" },
@@ -467,18 +467,24 @@ export const About = () => {
             </center>
           </Grid>
 
-          <Grid item lg={6} md={6} xs={12} sm={12} sx={{ marginTop: "0%" }}>
+          <Grid item lg={6} md={6} xs={12} sm={12} sx={{ marginTop: "-2%" }}>
             <Box sx={{padding:"20px"}}>
             <p
               style={{
-                fontSize: "1.2rem",
+                fontSize: "1.4rem",
                 fontWeight: "400",
                 lineHeight: "1.5",
                 marginBottom: "1rem",
               }}
             >
               <strong>Unmatched Quality and Innovation</strong>
-              <br />
+            </p>
+            <p style={{
+                fontSize: "1.2rem",
+                fontWeight: "400",
+                lineHeight: "1.3",
+                marginBottom: "1rem",
+              }}>
               At Lyss Technology Pvt. Ltd., we pride ourselves on delivering
               products and services that set industry standards. Our commitment
               to quality ensures that every product you receive is meticulously
@@ -490,14 +496,20 @@ export const About = () => {
 
             <p
               style={{
-                fontSize: "1.2rem",
+                fontSize: "1.5rem",
                 fontWeight: "400",
                 lineHeight: "1.5",
                 marginBottom: "1rem",
               }}
             >
               <strong>Comprehensive Solutions</strong>
-              <br />
+              </p>
+              <p style={{
+                fontSize: "1.2rem",
+                fontWeight: "400",
+                lineHeight: "1.3",
+                marginBottom: "1rem",
+              }}>
               We understand that your needs are unique, and a one-size-fits-all
               approach doesn't work. That's why we offer comprehensive solutions
               that combine top-tier products with personalized services. Our
@@ -508,14 +520,20 @@ export const About = () => {
 
             <p
               style={{
-                fontSize: "1.2rem",
+                fontSize: "1.5rem",
                 fontWeight: "400",
                 lineHeight: "1.5",
                 marginBottom: "1rem",
               }}
             >
               <strong>Customer-Centric Approach</strong>
-              <br />
+              </p>
+              <p style={{
+                fontSize: "1.2rem",
+                fontWeight: "400",
+                lineHeight: "1.3",
+                marginBottom: "1rem",
+              }}>
               Your satisfaction is our priority. We believe in building
               long-term relationships with our customers, based on trust,
               transparency, and exceptional service. Our customer support team
@@ -523,19 +541,7 @@ export const About = () => {
               us is seamless and enjoyable from start to finish.
             </p>
 
-            <p
-              style={{
-                fontSize: "1.2rem",
-                fontWeight: "400",
-                lineHeight: "1.5",
-                marginBottom: "1rem",
-              }}
-            >
-              <strong> Sustainability and Responsibility</strong>
-              <br />
-             
-              We are committed to making a positive impact on the environment and society. Our sustainable practices ensure that our operations are eco-friendly, and our products are responsibly sourced and manufactured. We strive to contribute to the well-being of our community and the planet, making us a partner you can feel good about working with.
-            </p>
+           
             </Box>
             
           </Grid>
