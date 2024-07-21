@@ -264,12 +264,8 @@ export const About = () => {
           </Grid>
 
           <Grid item xs={12} sm={12} lg={6} md={6}>
-            
-             <center> <CardMedia component="img" alt="" image="./images/aboutPic.png" sx={{
-                width:{lg:"530px",xs:"320px",md:"400px",sm:"400px"},
-              
-              }} id="hero2"/>
-           </center>
+          
+           
           </Grid>
         </Grid>
       </Box>
@@ -299,7 +295,7 @@ export const About = () => {
       </Box>
 
       
-      <Box sx={{ width: "100vw", textAlign: "center", marginTop: "100px", }}>
+      <Box sx={{ width: "100vw", textAlign: "center", marginTop: "100px" }}>
         <p style={{ fontSize: "1.7rem", fontWeight: "500",color:"#5e5eee" }}>Team</p>
         <Typography variant="h2"  style={{ fontSize: "2.3rem", fontWeight: "500",marginBottom:"30px"}} className="header">Our Leadership & Key Personnel</Typography>
         <Typography variant="h6"  sx={{ display:{lg:"block",md:"block",sm:"block",xs:"none"}, fontSize: "1.3rem", fontWeight: "500",marginBottom:"30px"}} ><TagLine/></Typography>

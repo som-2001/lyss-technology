@@ -158,6 +158,7 @@ export const Contact = () => {
                   sm: "10px",
                   md: "0px",
                 },
+                marginTop:"-50px",
                 fontWeight: "500",
                 color:"white"
               }}
