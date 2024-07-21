@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { Box,  Card, CardContent, CardMedia, Grid, Typography } from '@mui/material';
+import { Box,  Card, CardContent, CardMedia, Divider, Grid, Typography } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { styled } from '@mui/system';
@@ -106,6 +106,7 @@ const OurTeam = () => {
                       <Typography gutterBottom variant="p" color="text.secondary" component="div" sx={{fontSize:'1.4rem'}}>
                         {Cards[index]}
                       </Typography>
+                      <Divider style={{padding:"1px",backgroundColor:"rgb(79 79 138)",width:"80px",marginBottom:"10px"}}/>
                       <Typography gutterBottom variant="p" color="text.secondary" sx={{fontSize:'1.0rem'}}>
                         {Tagline[index]}
                       </Typography>

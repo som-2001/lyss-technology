@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { Box,  Card, CardContent, CardMedia, Typography } from '@mui/material';
+import { Box,  Card, CardContent, CardMedia, Divider, Typography } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { styled } from '@mui/system';
@@ -35,9 +35,9 @@ const KeyPersonal = () => {
   };
 
   const images = [
- 'https://via.placeholder.com/300',
-  'https://via.placeholder.com/300',
-  'https://via.placeholder.com/300',
+ '../images/rajiv.png',
+  '../images/atul.png',
+  '../images/anjali.png',
    
   ];
 
@@ -51,7 +51,7 @@ const KeyPersonal = () => {
   const Tagline=[
     'Founder & CEO',
     'Founder & CTO',
-    "Chief Human Resource Officer",
+    "Director",
     
   ]
 
@@ -78,21 +78,22 @@ const KeyPersonal = () => {
               <center>
                   <Card className='hoverCard' sx={{width:{lg:"400px",xs:"300px",md:"400px",sm:"350px"}}} >
                     <center>
+
                         <CardMedia
                       component="img"
                       alt={`Card ${index + 1}`}
                       
                       image={image}
-                      sx={{ objectFit: "cover",
+                      sx={{ objectFit: "contain",paddingTop:"10px",
                         height:{
-                            xs:230,
-                            lg:290,
+                            xs:300,
+                            lg:400,
                             md:400,
-                            sm:300
+                            sm:350
                         },
                         width:{
                             xs:300,
-                            lg:427,
+                            lg:388,
                             md:400,
                             sm:350
                         }
@@ -103,6 +104,7 @@ const KeyPersonal = () => {
                       <Typography gutterBottom variant="p" color="text.secondary" component="div" sx={{fontSize:'1.4rem'}}>
                         {Cards[index]}
                       </Typography>
+                      <Divider style={{padding:"1px",backgroundColor:"rgb(79 79 138)",width:"80px",marginBottom:"10px"}}/>
                       <Typography gutterBottom variant="p" color="text.secondary" sx={{fontSize:'1.0rem'}}>
                         {Tagline[index]}
                       </Typography>
