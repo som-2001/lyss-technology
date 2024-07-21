@@ -44,7 +44,7 @@ const KeyPersonal = () => {
   const Cards = [
     'Rajiv Ranjan',
     'Atul Kumar',
-    'Anjali Singh Rajpoot',
+    'Anjali Singh',
     
   ];
 

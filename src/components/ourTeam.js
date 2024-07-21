@@ -49,9 +49,9 @@ const OurTeam = () => {
   ];
 
   const Address = [
-    'Hydrabadh',
-    'Bankura,west Bengal',
-    'Uttarpradesh',
+    'hyderabad,India',
+    'west Bengal,India',
+    'Uttarpradesh,India',
     'Dhaka,Bangladesh'
   ];
 
