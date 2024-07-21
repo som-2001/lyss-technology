@@ -18,7 +18,7 @@ export const TagLine = () => {
           "Building Success, Elevating Standards",
         ]}
         speed={100}
-        eraseDelay={100}
+        eraseDelay={1000}
       />
     </div>
   );

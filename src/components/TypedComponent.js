@@ -19,7 +19,7 @@ export const TypedComponent = () => {
           "Experience the Future of Innovation",
         ]}
         speed={100}
-        eraseDelay={300}
+        eraseDelay={1000}
       />
     </div>
   );
