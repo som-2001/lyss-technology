@@ -189,7 +189,7 @@ export const About = () => {
         fontFamily: "math",
       }}
     >
-       <Helmet>
+      <Helmet>
         <title>Lyss Technology Pvt. Ltd. | About</title>
       </Helmet>
       <Navbar />
@@ -210,14 +210,14 @@ export const About = () => {
       >
         {scrollPosition > 150 && (
           <Button
-           id="button"
+            id="button"
             sx={{
               position: "fixed",
               bottom: "20px",
               right: "10px",
               zIndex: "10",
               fontSize: "1.5rem",
-              backgroundColor:"#7a7ad4"
+              backgroundColor: "#7a7ad4",
             }}
             onClick={(e) => {
               window.scrollTo({
@@ -226,7 +226,7 @@ export const About = () => {
               });
             }}
           >
-            <IoMdArrowRoundUp style={{color:"white"}} />
+            <IoMdArrowRoundUp style={{ color: "white" }} />
           </Button>
         )}
         <Grid container>
@@ -263,15 +263,14 @@ export const About = () => {
             </Typography>
           </Grid>
 
-          <Grid item xs={12} sm={12} lg={6} md={6}>
-          
-           
-          </Grid>
+          <Grid item xs={12} sm={12} lg={6} md={6}></Grid>
         </Grid>
       </Box>
 
       <Box sx={{ width: "100vw", textAlign: "center", marginTop: "50px" }}>
-        <p style={{ fontSize: "2.5rem", marginTop: "20px" }} className="header">Our Culture</p>
+        <p style={{ fontSize: "2.5rem", marginTop: "20px" }} className="header">
+          Our Culture
+        </p>
         <AboutSlider />
       </Box>
       <Box sx={{ width: "100vw", textAlign: "center", marginTop: "50px" }}>
@@ -279,96 +278,128 @@ export const About = () => {
           5 STEPS WORK PROCESS
         </span>
         <br />
-        <p  style={{ fontSize: "2.5rem", marginTop: "25px",marginBottom:"10px" }} className="header">Working Process</p>
+        <p
+          style={{
+            fontSize: "2.5rem",
+            marginTop: "25px",
+            marginBottom: "10px",
+          }}
+          className="header"
+        >
+          Working Process
+        </p>
         <center>
-          <Grid container rowGap={2} >
+          <Grid container rowGap={2}>
             {item.map((data, index) => (
-              
-              <Grid item xs={12} sm={12} md={6} lg={4} sx={{ padding: "10px"}}>
+              <Grid item xs={12} sm={12} md={6} lg={4} sx={{ padding: "10px" }}>
                 <AboutCards item={data} key={index} />
-                
               </Grid>
-             
             ))}
           </Grid>
         </center>
       </Box>
 
-      
       <Box sx={{ width: "100vw", textAlign: "center", marginTop: "100px" }}>
-        <p style={{ fontSize: "1.7rem", fontWeight: "500",color:"#5e5eee" }}>Team</p>
-        <Typography variant="h2"  style={{ fontSize: "2.3rem", fontWeight: "500",marginBottom:"30px"}} className="header">Our Leadership & Key Personnel</Typography>
-        <Typography variant="h6"  sx={{ display:{lg:"block",md:"block",sm:"block",xs:"none"}, fontSize: "1.3rem", fontWeight: "500",marginBottom:"30px"}} ><TagLine/></Typography>
-            
+        <p style={{ fontSize: "1.7rem", fontWeight: "500", color: "#5e5eee" }}>
+          Team
+        </p>
+        <Typography
+          variant="h2"
+          style={{
+            fontSize: "2.3rem",
+            fontWeight: "500",
+            marginBottom: "30px",
+          }}
+          className="header"
+        >
+          Our Leadership & Key Personnel
+        </Typography>
+        <Typography
+          variant="h6"
+          sx={{
+            display: { lg: "block", md: "block", sm: "block", xs: "none" },
+            fontSize: "1.3rem",
+            fontWeight: "500",
+            marginBottom: "30px",
+          }}
+        >
+          <TagLine />
+        </Typography>
+
         <KeyPersonal />
-            
       </Box>
 
+      <Box
+        sx={{
+          width: "100vw",
+          textAlign: "center",
+          marginTop: "100px",
+          display: { lg: "block", md: "block", sm: "none", xs: "none" },
+        }}
+      >
+        <Grid container>
+          <Grid
+            item
+            lg={5}
+            sm={12}
+            xs={12}
+            md={6}
+            sx={{
+              marginTop: { xs: "20px", md: "20px", sm: "20px", lg: "0px" },
+            }}
+          >
+            <OurTeam />
+          </Grid>
 
+          <Grid item lg={7} xs={12} sm={12} md={6}>
+            <Typography
+              variant="h2"
+              id="domainText"
+              // ref={scrollRef7}
+              className="header"
+              sx={{
+                fontSize: {
+                  lg: "2.4rem",
+                  xs: "1.0rem",
+                  sm: "1.0rem",
+                  md: "1.9rem",
+                },
+                fontWeight: "500",
 
+                margin: {
+                  lg: "130px 0px 20px 30px",
+                  xs: "30px 0px 20px 0px",
+                  md: "190px 0px 0px 0px",
+                  sm: "30px 0px 0px 0px",
+                },
+                padding: "10px",
+              }}
+            >
+              Our Development Team
+              <br />
+              <span style={{ fontSize: "1.1rem", color: "black" }}>
+                "Empowering Progress through Technology."
+              </span>
+            </Typography>
+          </Grid>
+        </Grid>
+      </Box>
 
-
-
-      <Box sx={{ width: "100vw", textAlign: "center", marginTop: "100px",display:{lg:"block",md:"block",sm:"none",xs:"none"} }}>
-       
-       <Grid container>
-       <Grid
-           item
-           lg={5}
-           sm={12}
-           xs={12}
-           md={6}
-           sx={{
-             marginTop: { xs: "20px", md: "20px", sm: "20px", lg: "0px" },
-           }}
-         >
-           
-             <OurTeam />
-         
-         </Grid>
-       
-       <Grid item lg={7} xs={12} sm={12} md={6}>
-           <Typography
-             variant="h2"
-             id="domainText"
-             // ref={scrollRef7}
-             className="header"
-             sx={{
-               fontSize: {
-                 lg: "2.4rem",
-                 xs: "1.0rem",
-                 sm: "1.0rem",
-                 md: "1.9rem",
-               },
-               fontWeight: "500",
-
-               margin: {
-                 lg: "130px 0px 20px 30px",
-                 xs: "30px 0px 20px 0px",
-                 md: "190px 0px 0px 0px",
-                 sm: "30px 0px 0px 0px",
-               },
-               padding: "10px",
-             }}
-           >
-             Our Development Team<br/>
-             <span style={{fontSize:"1.1rem",color:"black"}}>"Empowering Progress through Technology."</span>
-           </Typography>
-         </Grid>
-       
-       
-       </Grid>
-     </Box>
-
-      <Box sx={{ width: "100vw", textAlign: "center", marginTop: "20px",display:{lg:"none",md:"none",sm:"block",xs:"block"} }}>
-       
+      <Box
+        sx={{
+          width: "100vw",
+          textAlign: "center",
+          marginTop: "20px",
+          display: { lg: "none", md: "none", sm: "block", xs: "block" },
+        }}
+      >
         <Grid container>
           <Grid item lg={5} xs={12} sm={12} md={12}>
             <Typography
               variant="h2"
               id="domainText"
               // ref={scrollRef7}
-            
+
               sx={{
                 fontSize: {
                   lg: "2.4rem",
@@ -401,15 +432,120 @@ export const About = () => {
               marginTop: { xs: "20px", md: "20px", sm: "20px", lg: "0px" },
             }}
           >
+            <OurTeam />
+          </Grid>
+        </Grid>
+      </Box>
+
+     
+
+      <Box
+        sx={{
+          background: "linear-gradient(to left, #8181ed, whitesmoke)",
+          padding: { lg: "20px", xs: "10px" },
+          marginTop: "30px",
+        }}
+      >
+        <p
+          style={{ fontWeight: "500", fontSize: "2.6rem", textAlign: "center" }}
+        >
+          Why US ??
+        </p>
+        <Grid container>
+          <Grid item lg={6} md={6} xs={12} sm={12}>
+            <center>
+              <CardMedia
+                component="img"
+                src="../images/whoweare.jpg"
+                alt=""
+                sx={{
+                  width: { lg: "42vw", xs: "90vw", md: "40vw", sm: "60vw" },
+                  marginTop: "5%",
+                  borderRadius: "20px",
+                }}
+              />
+            </center>
+          </Grid>
+
+          <Grid item lg={6} md={6} xs={12} sm={12} sx={{ marginTop: "0%" }}>
+            <Box sx={{padding:"20px"}}>
+            <p
+              style={{
+                fontSize: "1.2rem",
+                fontWeight: "400",
+                lineHeight: "1.5",
+                marginBottom: "1rem",
+              }}
+            >
+              <strong>Unmatched Quality and Innovation</strong>
+              <br />
+              At Lyss Technology Pvt. Ltd., we pride ourselves on delivering
+              products and services that set industry standards. Our commitment
+              to quality ensures that every product you receive is meticulously
+              crafted, rigorously tested, and built to exceed your expectations.
+              We are dedicated to innovation, continuously integrating
+              cutting-edge technology and creative solutions to meet the
+              evolving needs of our customers.
+            </p>
+
+            <p
+              style={{
+                fontSize: "1.2rem",
+                fontWeight: "400",
+                lineHeight: "1.5",
+                marginBottom: "1rem",
+              }}
+            >
+              <strong>Comprehensive Solutions</strong>
+              <br />
+              We understand that your needs are unique, and a one-size-fits-all
+              approach doesn't work. That's why we offer comprehensive solutions
+              that combine top-tier products with personalized services. Our
+              team works closely with you to understand your specific
+              requirements, tailoring our offerings to provide the perfect fit
+              for your business or personal needs.
+            </p>
+
+            <p
+              style={{
+                fontSize: "1.2rem",
+                fontWeight: "400",
+                lineHeight: "1.5",
+                marginBottom: "1rem",
+              }}
+            >
+              <strong>Customer-Centric Approach</strong>
+              <br />
+              Your satisfaction is our priority. We believe in building
+              long-term relationships with our customers, based on trust,
+              transparency, and exceptional service. Our customer support team
+              is always ready to assist you, ensuring that your experience with
+              us is seamless and enjoyable from start to finish.
+            </p>
+
+            <p
+              style={{
+                fontSize: "1.2rem",
+                fontWeight: "400",
+                lineHeight: "1.5",
+                marginBottom: "1rem",
+              }}
+            >
+              <strong> Sustainability and Responsibility</strong>
+              <br />
+             
+              We are committed to making a positive impact on the environment and society. Our sustainable practices ensure that our operations are eco-friendly, and our products are responsibly sourced and manufactured. We strive to contribute to the well-being of our community and the planet, making us a partner you can feel good about working with.
+            </p>
+            </Box>
             
-              <OurTeam />
-          
           </Grid>
         </Grid>
       </Box>
 
       <Box sx={{ width: "100vw", textAlign: "center", marginTop: "100px" }}>
-        <p style={{ fontSize: "2.3rem", fontWeight: "600" }} className="header">Our Clients</p>
+        <p style={{ fontSize: "2.3rem", fontWeight: "600" }} className="header">
+          Our Clients
+        </p>
         <Box id="text01">
           <CustomerSlider />
         </Box>
@@ -477,7 +613,7 @@ export const About = () => {
         <p style={{ color: "blue", textAlign: "center" }}>
           WANT TO WORK WITH US?
         </p>
-       
+
         <center>
           <Button
             variant="contained"

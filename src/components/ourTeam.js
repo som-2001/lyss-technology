@@ -59,6 +59,7 @@ const OurTeam = () => {
   return (
     <Box>
       <SliderContainer>
+       
         <Swiper
           ref={swiperRef}
           slidesPerView={1}
@@ -74,6 +75,7 @@ const OurTeam = () => {
           }}
           modules={[Autoplay]}
         >
+           
           {images.map((image, index) => (
             <SwiperSlide key={index} >
               <Grid container justifyContent="center">
