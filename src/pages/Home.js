@@ -19,6 +19,8 @@ import { IoMdArrowRoundUp } from "react-icons/io";
 import { CustomerSlider } from "../components/CustomerSlider";
 import "../App.css";
 import { Helmet } from "react-helmet";
+import { TypedComponent } from "../components/TypedComponent";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -376,7 +378,7 @@ export const Home = () => {
               >
                 At LYSS Technology, we actively find existing social problems
                 either by itself or by communicating with different classes of
-                people
+                people.
                 <br />{" "}
                 <Typography
                   variant="span"
@@ -385,14 +387,15 @@ export const Home = () => {
                     display: {
                       lg: "block",
                       md: "block",
-                      sm: "none",
-                      xs: "none",
+                      sm: "block",
+                      xs: "block",
                     },
-                    fontSize: "1.2rem",
+                    fontSize: "1.7rem",
+                    marginTop:"10px"
                   }}
                 >
-                  do market research and based on that we discuss and plan to
-                  develop products for that problems.
+                 
+                  <TypedComponent/>
                 </Typography>{" "}
               </Typography>
 
@@ -741,12 +744,12 @@ export const Home = () => {
       </Box>
 
       <Box sx={{ width: "100vw", textAlign: "center" }} className="header">
-        <Typography
-          variant="h5"
+        <p
+          
           style={{ fontSize: "2.6rem", fontWeight: "600", marginTop: "-10px" }}
         >
           Our Clients
-        </Typography>
+        </p>
         <Box ref={scrollRef2} id="text01" sx={{ marginTop: "60px" }}>
           <CustomerSlider />
         </Box>
@@ -756,8 +759,8 @@ export const Home = () => {
         sx={{ width: "100vw", textAlign: "center", marginTop: "100px" }}
         className="header"
       >
-        <Typography
-          variant="h5"
+        <p
+         
           style={{
             fontSize: "2.6rem",
             fontWeight: "600",
@@ -765,7 +768,7 @@ export const Home = () => {
           }}
         >
           Clients Testimonials
-        </Typography>
+        </p>
 
         <Box ref={scrollRef2} id="text01">
           <ClientSlider />
