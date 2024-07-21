@@ -49,10 +49,10 @@ const OurTeam = () => {
   ];
 
   const Address = [
-    'hyderabad,India',
-    'west Bengal,India',
-    'Uttarpradesh,India',
-    'Dhaka,Bangladesh'
+    'hyderabad, India',
+    'west Bengal, India',
+    'Uttarpradesh, India',
+    'Dhaka, Bangladesh'
   ];
 
   const Tagline=[
