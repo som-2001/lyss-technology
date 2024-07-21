@@ -6,6 +6,7 @@ import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { IoMdArrowRoundUp } from "react-icons/io";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -78,6 +79,9 @@ export const Gallary = () => {
         fontFamily: "math",
       }}
     >
+      <Helmet>
+        <title>Lyss Technology Pvt. Ltd. | Gallary</title>
+      </Helmet>
       <Navbar />
       {scrollPosition > 150 && (
           <Button

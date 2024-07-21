@@ -22,6 +22,7 @@ import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import '../App.css'
+import { Helmet } from "react-helmet";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -96,6 +97,9 @@ export const Contact = () => {
         fontFamily: "math",
       }}
     >
+      <Helmet>
+        <title>Lyss Technology Pvt. Ltd. | Contact</title>
+      </Helmet>
       <Navbar />
       <Box
         sx={{

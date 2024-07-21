@@ -11,6 +11,7 @@ import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import KeyPersonal from "../components/KeyPersonal";
 import OurTeam from "../components/ourTeam";
+import { Helmet } from "react-helmet";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -187,6 +188,9 @@ export const About = () => {
         fontFamily: "math",
       }}
     >
+       <Helmet>
+        <title>Lyss Technology Pvt. Ltd. | About</title>
+      </Helmet>
       <Navbar />
       <Box
         sx={{

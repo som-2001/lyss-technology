@@ -2,10 +2,14 @@ import { Box, Typography } from "@mui/material";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import { Navbar } from "../components/Navbar";
+import { Helmet } from "react-helmet";
 
 export const Error=()=>{
     return (
         <Box className="fullArea">
+          <Helmet>
+        <title>Lyss Technology Pvt. Ltd. | Error</title>
+      </Helmet>
           <Navbar />
           <Box
             display="flex"

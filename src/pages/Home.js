@@ -18,6 +18,7 @@ import ClientSlider from "../components/ClientSlider";
 import { IoMdArrowRoundUp } from "react-icons/io";
 import { CustomerSlider } from "../components/CustomerSlider";
 import "../App.css";
+import { Helmet } from "react-helmet";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -289,6 +290,9 @@ export const Home = () => {
         fontFamily: "math",
       }}
     >
+      <Helmet>
+        <title>Lyss Technology Pvt. Ltd. | Home</title>
+      </Helmet>
       {scrollPosition > 150 && (
         <Button
           id="button"

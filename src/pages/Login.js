@@ -9,6 +9,7 @@ import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import '../App.css'
+import { Helmet } from "react-helmet";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -104,6 +105,9 @@ export const Login = () => {
   }, []);
   return (
     <Box style={{backgroundColor:"white"}}>
+      <Helmet>
+        <title>Lyss Technology Pvt. Ltd. | Login</title>
+      </Helmet>
       <Navbar />
       <Box>
       <CardMedia 
