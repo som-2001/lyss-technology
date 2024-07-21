@@ -21,7 +21,6 @@ import "../App.css";
 import { Helmet } from "react-helmet";
 import { TypedComponent } from "../components/TypedComponent";
 
-
 gsap.registerPlugin(ScrollTrigger);
 
 export const Home = () => {
@@ -388,22 +387,39 @@ export const Home = () => {
                       lg: "block",
                       md: "block",
                       sm: "block",
-                      xs: "block",
+                      xs: "none",
                     },
                     fontSize: "1.7rem",
-                    marginTop:"10px"
+                    marginTop: "10px",
                   }}
                 >
-                 
-                  <TypedComponent/>
+                  <TypedComponent />
+                </Typography>{" "}
+                <Typography
+                  variant="span"
+                  color="color.secondary"
+                  sx={{
+                    display: {
+                      lg: "none",
+                      md: "none",
+                      sm: "none",
+                      xs: "block",
+                    },
+                    position: "absolute",
+                    fontSize: "1.7rem",
+                    marginTop: "10px",
+                  }}
+                >
+                  <TypedComponent />
                 </Typography>{" "}
               </Typography>
 
-              <img
+              <CardMedia
+                component="img"
                 src="./images/picture1.png"
                 alt=""
                 id="hero1"
-                style={{ width: "340px", marginTop: "-10px" }}
+                sx={{ width: "340px", marginTop: {xs:"30px",lg:"-10px",sm:"-10px",md:"-10px"}}}
               />
             </center>
           </Grid>
@@ -636,7 +652,7 @@ export const Home = () => {
                 <p style={{ marginTop: "30px", fontWeight: "700" }}>85%</p>
               </Box>
               <center>
-              <Slider
+                <Slider
                   aria-label="Temperature"
                   defaultValue={85}
                   disabled
@@ -745,7 +761,6 @@ export const Home = () => {
 
       <Box sx={{ width: "100vw", textAlign: "center" }} className="header">
         <p
-          
           style={{ fontSize: "2.6rem", fontWeight: "600", marginTop: "-10px" }}
         >
           Our Clients
@@ -760,7 +775,6 @@ export const Home = () => {
         className="header"
       >
         <p
-         
           style={{
             fontSize: "2.6rem",
             fontWeight: "600",

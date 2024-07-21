@@ -92,10 +92,10 @@ const KeyPersonal = () => {
                             sm:350
                         },
                         width:{
-                            xs:300,
+                            xs:290,
                             lg:388,
-                            md:400,
-                            sm:350
+                            md:390,
+                            sm:340
                         }
                        }}
                       onError={() => console.error(`Failed to load image: ${image}`)}

@@ -12,6 +12,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import KeyPersonal from "../components/KeyPersonal";
 import OurTeam from "../components/ourTeam";
 import { Helmet } from "react-helmet";
+import { TagLine } from "../components/TagLine";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -301,6 +302,7 @@ export const About = () => {
       <Box sx={{ width: "100vw", textAlign: "center", marginTop: "100px", }}>
         <p style={{ fontSize: "1.7rem", fontWeight: "500",color:"#5e5eee" }}>Team</p>
         <Typography variant="h2"  style={{ fontSize: "2.3rem", fontWeight: "500",marginBottom:"30px"}} className="header">Our Leadership & Key Personnel</Typography>
+        <Typography variant="h6"  sx={{ display:{lg:"block",md:"block",sm:"block",xs:"none"}, fontSize: "1.3rem", fontWeight: "500",marginBottom:"30px"}} ><TagLine/></Typography>
             
         <KeyPersonal />
             
