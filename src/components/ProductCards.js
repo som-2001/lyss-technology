@@ -34,7 +34,7 @@ export default function ProductCard() {
       {heading.map((title, index) => (
        
         <Grid item key={index} xs={12} sm={6} md={6} lg={6} >
-          <Card className='hoverCard' sx={{ width: { lg: 550, xs: 320, md: 400, sm: 350 },marginBottom:"20px"}}>
+          <Card  sx={{ width: { lg: 550, xs: 320, md: 400, sm: 350 },marginBottom:"20px"}}>
             <Box display="flex" justifyContent="center">
               <CardMedia
                 component="img"
@@ -68,7 +68,7 @@ export default function ProductCard() {
               </Typography>
               <br />
               <CardActions>
-                <Button variant='contained' sx={{width: { lg: "30%", md: "40%", xs: "55%", sm: "40%" },
+                <Button variant='contained' id='button' sx={{width: { lg: "30%", md: "40%", xs: "55%", sm: "40%" },
                     padding: "10px",
                     borderRadius: "25px",
                     backgroundColor: "#5656b9",}} onClick={(e)=>window.location.href=Links[index]}>View Product</Button>

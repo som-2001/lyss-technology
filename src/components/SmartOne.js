@@ -46,7 +46,7 @@ export const SmartOne = () => {
           textAlign: "center",
           marginTop: "50px",
           backgroundImage:
-            "url(https://www.freemind.media/wp-content/uploads/2022/10/bg-webdesign.jpg)",
+            "url(https://images.pexels.com/photos/5940721/pexels-photo-5940721.jpeg)",
           backgroundRepeat: "no-repeat",
           backgroundPosition: {
             xs: "bottom-center",
@@ -83,7 +83,7 @@ export const SmartOne = () => {
         )}
         <Grid container>
           <Grid item xs={12} sm={12} lg={6} md={6}>
-            <p style={{ fontSize: "3.9rem", color: "white" }} id="hero">
+            <p style={{ fontSize: "3.9rem",  }} id="hero" className="header">
               SmartOne
             </p>
             <Typography
@@ -104,7 +104,7 @@ export const SmartOne = () => {
                   md: "0px",
                 },
                 fontWeight: "500",
-                color: "white",
+                color: "black",
                 marginTop: "-20px",
               }}
               id="hero1"
