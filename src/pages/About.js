@@ -234,6 +234,9 @@ export const About = () => {
             <p style={{ fontSize: "3.9rem" }} id="hero" className="header">
               About us
             </p>
+            <center>
+         
+        </center>
             <Typography
               variant="h1"
               sx={{
@@ -271,6 +274,7 @@ export const About = () => {
         <p style={{ fontSize: "2.5rem", marginTop: "20px" }} className="header">
           Our Culture
         </p>
+       
         <AboutSlider />
       </Box>
       <Box sx={{ width: "100vw", textAlign: "center", marginTop: "50px" }}>

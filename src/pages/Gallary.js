@@ -1,4 +1,4 @@
-import { Box, Button, Grid, Typography } from "@mui/material";
+import { Box, Button, Divider, Grid, Typography } from "@mui/material";
 import { Navbar } from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useGSAP } from "@gsap/react";
@@ -147,6 +147,17 @@ export const Gallary = () => {
 
       <Box>
         <p style={{marginTop:"-0%",textAlign:"center",fontSize:"2.5rem",fontWeight:"600"}} id="text001" className="header">Showroom</p>
+        <center>
+          <Divider
+            style={{
+              padding: "0.5px",
+              backgroundColor: "rgb(79 79 138)",
+              width: "80px",
+              marginTop: "-29px",
+              marginBottom: "40px",
+            }}
+          />
+        </center>
         <p style={{marginTop:"-2%",textAlign:"center",fontSize:"1.2rem",fontWeight:"600"}} id="text001">A Visual Journey Through Our World.</p>
       </Box>
 
