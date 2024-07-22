@@ -11,8 +11,6 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import { useNavigate } from "react-router-dom";
-import { Divider } from "@mui/material";
 import { ArrowDropDown, ArrowLeft, ArrowRight } from "@mui/icons-material";
 
 const pages = [
@@ -37,7 +35,7 @@ export const Navbar = () => {
     setAnchorElNav(null);
   };
 
-  const navigate = useNavigate();
+
 
   const handleNavigate = (page) => {
     if (page === "Contact Us") {
@@ -59,10 +57,10 @@ export const Navbar = () => {
     setDropdownOpen(!dropdownOpen);
   };
 
-  const handleCompanyNavigate = (path) => {
-    navigate(path);
-    setDropdownOpen(false);
-  };
+  // const handleCompanyNavigate = (path) => {
+  //   navigate(path);
+  //   setDropdownOpen(false);
+  // };
 
   return (
     <AppBar
@@ -225,17 +223,11 @@ export const Navbar = () => {
                   width: "14%",
                 }}
               >
-                <MenuItem onClick={() => handleCompanyNavigate("/company1")}>
-                  Company 1
+                <MenuItem onClick={() => window.location.href="https://www.atplc.in"}>
+                  ATPLC
                 </MenuItem>
-                <Divider />
-                <MenuItem onClick={() => handleCompanyNavigate("/company2")}>
-                  Company 2
-                </MenuItem>
-                <Divider />
-                <MenuItem onClick={() => handleCompanyNavigate("/company3")}>
-                  Company 3
-                </MenuItem>
+                
+               
               </Box>
             )}
           </Toolbar>
@@ -272,9 +264,8 @@ export const Navbar = () => {
                   Group Companies
                 </MenuItem>
 
-                <MenuItem>ATPLC</MenuItem>
-                <MenuItem>ATPLC</MenuItem>
-                <MenuItem>ATPLC</MenuItem>
+                <MenuItem onClick={(e)=>window.location.href="https://www.atplc.in"}>ATPLC</MenuItem>
+               
               </Menu>
             </Box>
             <Box
