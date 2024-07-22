@@ -6,6 +6,7 @@ import { Error } from './pages/404';
 import { Contact } from './pages/Contact';
 import { Gallary } from './pages/Gallary';
 import { Login } from './pages/Login';
+import { Product } from './pages/Product';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/gallary' element={<Gallary/>}/>
       <Route path='/login' element={<Login/>}/>
+      <Route path='/products' element={<Product/>}/>
       <Route path='*' element={<Error/>}/>
     </Routes>
    </Router>
