@@ -58,6 +58,20 @@ export const Atplc = () => {
       }
     );
   }, []);
+  useGSAP(() => {
+    gsap.fromTo(
+      "#button",
+      {
+        opacity: 0,
+        y: -150,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        delay: 1.4,
+      }
+    );
+  }, []);
   return (
     <Box
       style={{
@@ -142,6 +156,11 @@ export const Atplc = () => {
             >
               Empowering Tech Students Beyond the Classroom
             </Typography>
+            <Button variant='contained' id='button' sx={{width: { lg: "30%", md: "40%", xs: "55%", sm: "40%" },
+                    padding: "10px",
+                    borderRadius: "25px",
+                    marginTop:"10px",
+                    backgroundColor: "#5656b9",}} onClick={(e)=>window.location.href="https://www.atplc.in"}>Visit Now</Button>
           </Grid>
 
           <Grid item xs={12} sm={12} lg={6} md={6}></Grid>
