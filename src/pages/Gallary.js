@@ -26,6 +26,35 @@ export const Gallary = () => {
     };
   }, []);
 
+  useGSAP(() => {
+    gsap.fromTo(
+      "#hero",
+      {
+        opacity: 0,
+        y: -150,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        delay: 1.0,
+      }
+    );
+  }, []);
+
+  useGSAP(() => {
+    gsap.fromTo(
+      "#hero1",
+      {
+        opacity: 0,
+        y: -150,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        delay: 1.2,
+      }
+    );
+  }, []);
     useGSAP(() => {
         gsap.fromTo(
           "#text00",
@@ -104,48 +133,82 @@ export const Gallary = () => {
             <IoMdArrowRoundUp style={{color:"white"}}/>
           </Button>
         )}
-      <Box
+     
+     <Box
         sx={{
-          backgroundImage: "url(./images/chairs.jpg)",
           width: "100vw",
           textAlign: "center",
           marginTop: "50px",
+          backgroundImage:
+            "url(https://bynder.southbankcentre.co.uk/m/39ace083e6934d96/original/03-Installation-view-of-Bridget-Riley-at-Hayward-Gallery-2019-Bridget-Riley-2019-Photo-Stephen-White-Co-1.jpg)",
           backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
+          backgroundPosition: {xs:"left",lg:"center",md:"center",sm:"center"},
           backgroundSize: "cover",
           overflowX: "none",
-          paddingTop: { xs: "24vw", sm: "18vw", md: "15vw", lg: "12vw" },
-          paddingBottom: { xs: "20vw", sm: "15vw", md: "12vw", lg: "12vw" },
-          filter: "brightness(0.5)",
-          height: "30vh",
-        }}
-      ></Box>
+          padding: "6.3rem 0rem 15rem 0rem",
 
-      <Box
-        sx={{
-          fontSize: { xs: "15.4pt", sm: "23pt", md: "26pt", lg: "30pt" },
-          fontWeight: "600",
-          position: "relative",
-          top: { xs: "-220px", sm: "-220px", md: "-350px", lg: "-320px" },
-          left: { xs: "0px", sm: "0px", md: "0px", lg: "0px" },
-          color: "white",
-          textAlign: { xs: "center", lg: "center" },
+          height: "100%",
         }}
       >
-        <Typography variant="h4" sx={{ fontSize: {lg:"3.5rem",xs:"2.0rem",md:"3.5rem",sm:"2.0rem" }}}  id="text00" >
-        Lyss Technology Gallery
-        </Typography>
+        {scrollPosition > 150 && (
+          <Button
+            id="button"
+            sx={{
+              position: "fixed",
+              bottom: "20px",
+              right: "10px",
+              zIndex: "10",
+              fontSize: "1.5rem",
+              backgroundColor: "#7a7ad4",
+            }}
+            onClick={(e) => {
+              window.scrollTo({
+                top: "0px",
+                behavior: "smooth",
+              });
+            }}
+          >
+            <IoMdArrowRoundUp style={{ color: "white" }} />
+          </Button>
+        )}
+        <Grid container>
+          <Grid item xs={12} sm={12} lg={6} md={6}>
+            <p style={{ fontSize: "2.6rem",color:"black" }} id="hero" className="header">
+            Lyss Technology Gallery
+            </p>
+            <Typography
+              variant="h1"
+              sx={{
+                paddingBottom: "20px",
+                fontSize: "1.2rem",
+                marginLeft: {
+                  lg: "20px",
+                  xs: "0px",
+                  sm: "0px",
+                  md: "20px",
+                },
+                padding: {
+                  lg: "0px",
+                  xs: "20px",
+                  sm: "10px",
+                  md: "0px",
+                },
+                fontWeight: "500",
+                color: "black",
+                marginTop: "-20px",
+              }}
+              id="hero1"
+            >
+             You'll find a collection of images that showcase
+             our innovative projects, cutting-edge technology, and vibrant work environment.
+            </Typography>
+          </Grid>
 
-        <Typography variant="body1" sx={{ display:{xs:"none",md:"block",sm:"block",lg:"block"}, fontSize: "1.2rem",marginLeft:{lg:"40px"} }}  id="text001">
-        You'll find a collection of images that showcase<br/> our innovative projects, cutting-edge technology, and vibrant work environment.
-        </Typography>
-
-        <Typography variant="body1" sx={{ display:{xs:"block",md:"none",sm:"none",lg:"none"}, fontSize: "1.2rem",marginLeft:{lg:"40px",xs:"0px",sm:"0px",md:"0px"},padding:"10px",wordWrap:"break-word",wordBreak:"break-word" }}  id="text001">
-        You'll find a collection of images <br/> of our Company.
-        </Typography>
+          <Grid item xs={12} sm={12} lg={6} md={6}></Grid>
+        </Grid>
       </Box>
 
-      <Box sx={{marginTop:{xs:"-25%",md:"-5%",lg:"-5%",sm:"-5%"}}}>
+      <Box sx={{marginTop:"20px"}}>
         <p style={{marginTop:"-0%",textAlign:"center",fontSize:"2.5rem",fontWeight:"600"}} id="text001" className="header">Showroom</p>
         <center>
           <Divider
