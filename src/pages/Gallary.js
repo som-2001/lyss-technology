@@ -145,7 +145,7 @@ export const Gallary = () => {
         </Typography>
       </Box>
 
-      <Box>
+      <Box sx={{marginTop:{xs:"-25%",md:"-5%",lg:"-5%",sm:"-5%"}}}>
         <p style={{marginTop:"-0%",textAlign:"center",fontSize:"2.5rem",fontWeight:"600"}} id="text001" className="header">Showroom</p>
         <center>
           <Divider

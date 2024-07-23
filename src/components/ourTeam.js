@@ -49,8 +49,8 @@ const OurTeam = () => {
   ];
 
   const Address = [
-    'hyderabad, India',
-    'west Bengal, India',
+    'Hyderabad, India',
+    'West Bengal, India',
     'Uttarpradesh, India',
     'Dhaka, Bangladesh'
   ];

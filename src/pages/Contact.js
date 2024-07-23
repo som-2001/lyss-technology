@@ -21,15 +21,13 @@ import { useEffect, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import '../App.css'
+import "../App.css";
 import { Helmet } from "react-helmet";
-
 
 gsap.registerPlugin(ScrollTrigger);
 
 export const Contact = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
-  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -106,7 +104,8 @@ export const Contact = () => {
           width: "100vw",
           textAlign: "center",
           marginTop: "50px",
-          backgroundImage: "url(https://images.unsplash.com/photo-1612831197310-ff5cf7a211b6?fm=jpg&w=3000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
+          backgroundImage:
+            "url(https://images.unsplash.com/photo-1612831197310-ff5cf7a211b6?fm=jpg&w=3000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundSize: "cover",
@@ -124,7 +123,7 @@ export const Contact = () => {
               right: "10px",
               zIndex: "10",
               fontSize: "1.5rem",
-              backgroundColor:"#7a7ad4"
+              backgroundColor: "#7a7ad4",
             }}
             onClick={(e) => {
               window.scrollTo({
@@ -133,12 +132,12 @@ export const Contact = () => {
               });
             }}
           >
-            <IoMdArrowRoundUp style={{color:"white"}}/>
+            <IoMdArrowRoundUp style={{ color: "white" }} />
           </Button>
         )}
         <Grid container>
           <Grid item xs={12} sm={12} lg={6} md={6}>
-            <p style={{ fontSize: "3.9rem",color:"white" }} id="hero" >
+            <p style={{ fontSize: "3.9rem", color: "white" }} id="hero">
               Contact us
             </p>
             <Typography
@@ -158,9 +157,9 @@ export const Contact = () => {
                   sm: "10px",
                   md: "0px",
                 },
-                marginTop:"-50px",
+                marginTop: "-50px",
                 fontWeight: "500",
-                color:"white"
+                color: "white",
               }}
               id="hero1"
             >
@@ -170,16 +169,16 @@ export const Contact = () => {
             </Typography>
           </Grid>
 
-          <Grid item xs={12} sm={12} lg={6} md={6}>
-           
-          </Grid>
+          <Grid item xs={12} sm={12} lg={6} md={6}></Grid>
         </Grid>
       </Box>
 
       <Box sx={{ width: "100vw", textAlign: "center", marginTop: "50px" }}>
         <span style={{ color: "blue", fontSize: "1.2rem" }}>Let's Connect</span>
         <br />
-        <p style={{ fontSize: "3rem", marginTop: "15px" }} className="header">Contact Us</p>
+        <p style={{ fontSize: "3rem", marginTop: "15px" }} className="header">
+          Contact Us
+        </p>
 
         <Grid container spacing={6} sx={{ padding: "20px" }}>
           <Grid
@@ -263,11 +262,10 @@ export const Contact = () => {
                 id="button"
                 sx={{
                   width: { lg: "30%", md: "40%", xs: "50%", sm: "40%" },
-                  padding:"10px",
-                  borderRadius:"25px",
-                  backgroundColor:"#5656b9"
+                  padding: "10px",
+                  borderRadius: "25px",
+                  backgroundColor: "#5656b9",
                 }}
-               
               >
                 Send Message
               </Button>
@@ -280,9 +278,13 @@ export const Contact = () => {
             sm={12}
             md={6}
             lg={6}
-            sx={{ flexDirection: "column", textAlign: "initial",marginLeft:{xs:"20px",lg:"0px",sm:"30px",md:"0px"} }}
+            sx={{
+              flexDirection: "column",
+              textAlign: "initial",
+              marginLeft: { xs: "20px", lg: "0px", sm: "30px", md: "0px" },
+            }}
           >
-            <Typography variant="h4"  mb={2} className="header">
+            <Typography variant="h4" mb={2} className="header">
               Get in touch
             </Typography>
             <Divider
@@ -292,7 +294,7 @@ export const Contact = () => {
                 fontWeight: "700",
               }}
             />
-            <Box my={2} >
+            <Box my={2}>
               <Typography variant="h6" color="textPrimary">
                 <Box
                   style={{
@@ -358,6 +360,25 @@ export const Contact = () => {
           </Grid>
         </Grid>
       </Box>
+
+      <Box sx={{display:{lg:"block",sm:"none",md:"block",xs:"none"}}}>
+        <center>
+          <p style={{ fontSize: "1.5rem" }}>Our Location</p>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2487.8442894520326!2d86.05868206913091!3d26.360327754064386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39edcd395751078b%3A0x68c5636fd77c7b84!2sGopal%20Bhawan!5e0!3m2!1sen!2sin!4v1721764446264!5m2!1sen!2sin"
+            width="750"
+            height="400"
+            title="map"
+            style={{borderRadius:"15px",zoom:1.1 }}
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+           
+          ></iframe>
+        </center>
+      </Box>
+
+     
       <Footer />
     </Box>
   );
