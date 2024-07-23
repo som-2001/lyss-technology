@@ -9,6 +9,9 @@ import { Login } from './pages/Login';
 import { Product } from './pages/Product';
 import { SmartOne } from './components/SmartOne';
 import { Atplc } from './pages/Atplc';
+import { Crcs } from './pages/Crcs';
+import { Samp } from './pages/Samp';
+import { UnderDevelopment } from './pages/Underdevelopment';
 
 function App() {
   return (
@@ -23,6 +26,9 @@ function App() {
       <Route path='/products' element={<Product/>}/>
       <Route path='/smartOne' element={<SmartOne/>}/>
       <Route path='/atplc' element={<Atplc/>}/>
+      <Route path='/CRCS' element={<Crcs/>}/>
+      <Route path='/Samp' element={<Samp/>}/>
+      <Route path='/underdevelopment' element={<UnderDevelopment/>}/>
       <Route path='*' element={<Error/>}/>
     </Routes>
    </Router>

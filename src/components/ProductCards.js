@@ -7,24 +7,34 @@ import { Button, CardActions, Divider, Grid, Box } from '@mui/material';
 
 const heading = [
   'SmartOne',
-  'ATPLC'
+  'ATPLC',
+  'Company Registration and Compliances Services (CRCS)',
+  'Startup Awareness and Mentorship Program (SAMP)'
 ];
 
 const Links=[
   '/smartOne',
-  '/Atplc'
+  '/Atplc',
+  '/Crcs',
+  '/Samp'
 ]
 
 const images=[
  
     'https://cdn.azeusconvene.com/wp-content/uploads/01222020_University_Banner.jpg',
-    'https://images.unsplash.com/photo-1498050108023-c5249f4df085?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dGVjaHxlbnwwfHwwfHx8MA%3D%3D'
+    'https://images.unsplash.com/photo-1498050108023-c5249f4df085?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dGVjaHxlbnwwfHwwfHx8MA%3D%3D',
+    'https://www.cleo.com/sites/default/files/corporate-compliance-mandates.jpg',
+    'https://img.freepik.com/premium-vector/mentoring-world-cloud-background-mental-health-awareness-vector-illustration-design-concept_616200-2693.jpg'
 ]
 
 const para = [
   'SmartOne is an online platform designed to revolutionize the campus experience with advanced technology and seamless connectivity.Our solution ensures that students and staff stay connected and engaged like never before.',
 
-  'ATPLC is a club to enhance practical learning among tech-students in their field of interest.Initiated in 2020, this club aim at enhancing and motivating students to learn proper stack of skills apart from semester syllabus to become professionally fit.'
+  'ATPLC is a club to enhance practical learning among tech-students in their field of interest.Initiated in 2020, this club aim at enhancing and motivating students to learn proper stack of skills apart from semester syllabus to become professionally fit.',
+
+  'Company registration and compliances services (CRCS) specialize in providing comprehensive company registration and compliance services. Our expert team is dedicated to simplifying the business setup process for you, ensuring that all legal and regulatory requirements are met efficiently.',
+
+  'Startup Awareness and Mentorship Program (SAMP) – your gateway to entrepreneurial success. SAMP is designed to equip aspiring entrepreneurs with the knowledge, skills, and guidance needed to turn innovative ideas into thriving businesses. Our program offers comprehensive awareness sessions on startup essentials. '
 ];
 
 export default function ProductCard() {
@@ -39,7 +49,7 @@ export default function ProductCard() {
               <CardMedia
                 component="img"
                 alt={`Card ${index + 1}`}
-                image={images[index]} // Replace this with your actual image URL
+                image={images[index]} 
                 sx={{
                   objectFit: "cover",
                   height: {
