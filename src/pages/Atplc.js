@@ -326,6 +326,7 @@ export const Atplc = () => {
                   marginTop: { lg: "200px", xs: "0px", md: "200px" },
                   height: "35vh",
                   objectFit: "contain",
+                  display:{lg:"block",md:"block",sm:"none",xs:"none"}
                 }}
                 alt=""
               />
@@ -387,6 +388,23 @@ export const Atplc = () => {
                 your goals without unnecessary delays or complications.
               </p>
             </div>
+          </Grid>
+          <Grid item xs={12} sm={12} md={6} lg={5}>
+            <center>
+              {" "}
+              <CardMedia
+                component="img"
+                src="../images/smartOne4.png"
+                sx={{
+                  width: { lg: "30vw", xs: "90vw", md: "40vw", sm: "90vw" },
+                  marginTop: { lg: "200px", xs: "0px", md: "200px" },
+                  height: "35vh",
+                  objectFit: "contain",
+                  display:{lg:"none",md:"none",sm:"block",xs:"block"}
+                }}
+                alt=""
+              />
+            </center>
           </Grid>
         </Grid>
       </Box>
