@@ -12,7 +12,7 @@ const heading = [
 
 const Links=[
   '/smartOne',
-  '/'
+  '/Atplc'
 ]
 
 const images=[

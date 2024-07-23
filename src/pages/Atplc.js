@@ -6,15 +6,15 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
-import { IoMdArrowRoundUp } from "react-icons/io";
-import { Navbar } from "./Navbar";
-import { Helmet } from "react-helmet";
 import { useEffect, useState } from "react";
-import Footer from "./Footer";
+import Footer from "../components/Footer";
+import { IoMdArrowRoundUp } from "react-icons/io";
+import { Helmet } from "react-helmet";
+import { Navbar } from "../components/Navbar";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap/dist/gsap";
 
-export const SmartOne = () => {
+export const Atplc = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
   useEffect(() => {
     const handleScroll = () => {
@@ -58,7 +58,6 @@ export const SmartOne = () => {
       }
     );
   }, []);
-
   return (
     <Box
       style={{
@@ -115,8 +114,8 @@ export const SmartOne = () => {
         )}
         <Grid container>
           <Grid item xs={12} sm={12} lg={6} md={6}>
-            <p style={{ fontSize: "3.9rem",  }} id="hero" className="header">
-              SmartOne
+            <p style={{ fontSize: "3.9rem" }} id="hero" className="header">
+              ATPLC
             </p>
             <Typography
               variant="h1"
@@ -141,9 +140,7 @@ export const SmartOne = () => {
               }}
               id="hero1"
             >
-              SmartOne is an online platform designed to revolutionize the
-              campus experience with advanced technology and seamless
-              connectivity.
+              Empowering Tech Students Beyond the Classroom
             </Typography>
           </Grid>
 
@@ -169,17 +166,12 @@ export const SmartOne = () => {
           />
         </center>
         <Typography component="div"
-          sx={{ padding: "30px", fontSize: "1.2rem", textAlign: {lg:"justify",md:"justify",xs:"initial" } }}
+          sx={{ padding: "30px", fontSize: "1.1rem", textAlign: {lg:"justify",md:"justify",xs:"initial" }}}
         >
-          SmartOne is an innovative online platform designed to transform the
-          campus experience through advanced technology and seamless
-          connectivity. Our platform provides an integrated solution for
-          students, faculty, and administration, ensuring efficient
-          communication, streamlined processes, and enhanced engagement. With
-          SmartOne, users can easily access campus resources, stay updated with
-          real-time notifications. Our mission is to create a smarter, more
-          connected campus environment that fosters collaboration and success
-          for everyone involved.
+          ATPLC is a club to enhance practical learning among tech-students in
+          their field of interest.Initiated in 2020, this club aim at enhancing
+          and motivating students to learn proper stack of skills apart from
+          semester syllabus to become professionally fit.
         </Typography>
         <center>
         <p style={{ fontSize: "1.5rem",fontWeight:"600" }}>Key Features Of The App </p>
@@ -194,13 +186,13 @@ export const SmartOne = () => {
             }}
           />
         </center>
-        <Grid container sx={{ padding: { lg: "50px" } }} spacing={4}>
+        <Grid container sx={{ padding: { lg: "30px" } }} spacing={4}>
           <Grid item xs={12} sm={12} md={6} lg={5}>
             <center>
               {" "}
               <CardMedia
                 component="img"
-                src="../images/smartOne.png"
+                src="../images/smartOne3.png"
                 sx={{
                   width: { lg: "30vw", xs: "90vw", md: "40vw", sm: "90vw" },
                   marginTop: { lg: "200px", xs: "0px", md: "200px" },
@@ -219,40 +211,43 @@ export const SmartOne = () => {
                 padding: "20px",
               }}
             >
-              <h2 style={{ color: "#2E3B55" }}>
-                Apply for Bonafide Certificate with SmartOne
-              </h2>
+              <h2 style={{ color: "#2E3B55" }}>Train yourself with ATPLC</h2>
               <p>
-                SmartOne simplifies the process of applying for a bonafide
-                certificate, ensuring students can easily obtain the necessary
-                documentation for various purposes. Here's how it works:
+                ATPLC simplifies the process of enrolling in training courses,
+                ensuring students can easily access the necessary resources for
+                various learning purposes. Here's how it works:
               </p>
               <h3 style={{ color: "#4A90E2" }}>User-Friendly Interface</h3>
               <p>
-                Our intuitive interface guides students through the application
+                Our intuitive interface guides students through the enrollment
                 process, making it accessible for all users.
               </p>
-              <h3 style={{ color: "#4A90E2" }}>Easy Application Process</h3>
+
+              <h3 style={{ color: "#4A90E2" }}>Efficient Course Management</h3>
               <p>
-                Students can log in to their SmartOne accounts and navigate to
-                the 'Bonafide Certificate' section. Fill out a simple online
-                form with essential details such as name, enrollment number,
-                course, and purpose of the certificate. Review the entered
-                information to ensure accuracy before submission.
+                Our platform ensures that courses are managed promptly by the
+                training staff. ATPLC streamlines the workflow, reducing manual
+                intervention and speeding up the course delivery process.
               </p>
-              <h3 style={{ color: "#4A90E2" }}>Real-Time Status Updates</h3>
+
+              <h3 style={{ color: "#4A90E2" }}>Secure and Confidential</h3>
               <p>
-                Once submitted, students receive real-time updates on the status
-                of their application. Notifications are sent at each stage of
-                the process, from application received to certificate ready for
-                collection.
+                ATPLC prioritizes the security and confidentiality of student
+                information. All data entered into the platform is encrypted and
+                securely stored, ensuring privacy and compliance with
+                institutional policies.
               </p>
-              <h3 style={{ color: "#4A90E2" }}>Efficient Processing</h3>
+              <h3 style={{ color: "#4A90E2" }}>Help and Support</h3>
               <p>
-                Our platform ensures that applications are processed promptly by
-                the administrative staff. SmartOne streamlines the workflow,
-                reducing manual intervention and speeding up the issuance of
-                certificates.
+                Our dedicated support team is available to assist students with
+                any questions or issues during the enrollment process.
+                Comprehensive FAQs and guides are also accessible within the
+                platform for additional support.
+              </p>
+              <p>
+                With SmartOne, enrolling in training courses is a hassle-free
+                experience, allowing students to focus on their learning goals
+                without unnecessary delays or complications.
               </p>
             </div>
           </Grid>
@@ -266,37 +261,21 @@ export const SmartOne = () => {
                 padding: "20px",
               }}
             >
-              <h2 style={{ color: "#2E3B55" }}>
-                Apply for Overall No Dues with SmartOne
-              </h2>
-              <p>
-                SmartOne simplifies the process of applying for a Overall No Dues, ensuring students can easily obtain the necessary
-                documentation for various purposes. Here's how it works:
-              </p>
-              <h3 style={{ color: "#4A90E2" }}>User-Friendly Interface</h3>
-              <p>
-                Our intuitive interface guides students through the application
-                process, making it accessible for all users.
-              </p>
-              <h3 style={{ color: "#4A90E2" }}>Easy Application Process</h3>
-              <p>
-                Students can log in to their SmartOne accounts and navigate to
-                the Overall No Dues section. Review the entered
-                information to ensure accuracy before submission.
-              </p>
-              <h3 style={{ color: "#4A90E2" }}>Real-Time Status Updates</h3>
-              <p>
-                Once submitted, students receive real-time updates on the status
-                of their application. Notifications are sent at each stage of
-                the process, from application received to approved by all departments.
-              </p>
-              <h3 style={{ color: "#4A90E2" }}>Efficient Processing</h3>
-              <p>
-                Our platform ensures that applications are processed promptly by
-                the administrative staff. SmartOne streamlines the workflow,
-                reducing manual intervention and speeding up the overall of
-                work.
-              </p>
+              <h2 style={{ color: "#2E3B55" }}>Courses</h2>
+              Sure, here’s a rewritten version that conveys the same information
+              in a more narrative style: ATPLC is your gateway to enhancing your
+              skills and knowledge through a variety of specialized courses.
+              With our user-friendly interface, enrolling in any of our courses
+              is a seamless experience. Simply log in to your ATPLC account,
+              navigate to the 'Training Courses' section, and fill out a
+              straightforward online form with essential details like your name,
+              enrollment number, chosen course, and preferred training schedule.
+              Once you've reviewed your information for accuracy, submit your
+              application and get ready to embark on your learning journey. Our
+              platform keeps you updated every step of the way. You'll receive
+              real-time notifications on the status of your enrollment, from
+              confirmation to course completion. This ensures you're always
+              informed and can plan your learning activities effectively.
             </div>
           </Grid>
           <Grid item xs={12} sm={12} md={6} lg={5}>
@@ -304,10 +283,10 @@ export const SmartOne = () => {
               {" "}
               <CardMedia
                 component="img"
-                src="../images/smartOne1.png"
+                src="../images/smartOne5.png"
                 sx={{
                   width: { lg: "30vw", xs: "90vw", md: "40vw", sm: "90vw" },
-                  marginTop: { lg: "200px", xs: "0px", md: "200px" },
+                  marginTop: { lg: "60px", xs: "0px", md: "120px" },
                   height: "35vh",
                   objectFit: "contain",
                 }}
@@ -322,7 +301,7 @@ export const SmartOne = () => {
               {" "}
               <CardMedia
                 component="img"
-                src="../images/smartOne2.png"
+                src="../images/smartOne4.png"
                 sx={{
                   width: { lg: "30vw", xs: "90vw", md: "40vw", sm: "90vw" },
                   marginTop: { lg: "200px", xs: "0px", md: "200px" },
@@ -342,37 +321,51 @@ export const SmartOne = () => {
               }}
             >
               <h2 style={{ color: "#2E3B55" }}>
-                Apply for Hostel Request with SmartOne
+                Responsive & Interactive Dashboard
               </h2>
               <p>
-                SmartOne simplifies the process of applying for a Hostel Request, ensuring students can easily obtain the necessary
-                documentation for various purposes. Here's how it works:
+                Our dashboard simplifies the management of your activities,
+                providing a seamless and efficient user experience. Here's how
+                it works:
               </p>
               <h3 style={{ color: "#4A90E2" }}>User-Friendly Interface</h3>
               <p>
-                Our intuitive interface guides students through the application
-                process, making it accessible for all users.
+                Our intuitive interface allows users to navigate through various
+                functionalities effortlessly, making it accessible for all
+                users.
               </p>
-              <h3 style={{ color: "#4A90E2" }}>Easy Application Process</h3>
+            
+              <h3 style={{ color: "#4A90E2" }}>Real-Time Data Visualization</h3>
               <p>
-                Students can log in to their SmartOne accounts and navigate to
-                the 'Hostel Request' section. Fill out a simple online
-                form with essential details such as name, enrollment number,
-                course, and How many members. Review the entered
-                information to ensure accuracy before submission.
+                The dashboard provides real-time data visualization, allowing
+                users to see up-to-date information and trends. This feature
+                helps in making informed decisions quickly and effectively.
               </p>
-              <h3 style={{ color: "#4A90E2" }}>Real-Time Status Updates</h3>
+              <h3 style={{ color: "#4A90E2" }}>Efficient Task Management</h3>
               <p>
-                Once submitted, students receive real-time updates on the status
-                of their application. Notifications are sent at each stage of
-                the process, from application received to certificate ready for
-                collection.
+                Our platform streamlines task management by allowing users to
+                create, assign, and track tasks efficiently. The interactive
+                elements make it easy to update task statuses and collaborate
+                with team members.
               </p>
-              <h3 style={{ color: "#4A90E2" }}>Efficient Processing</h3>
+              
+              <h3 style={{ color: "#4A90E2" }}>Data Security</h3>
               <p>
-                Our platform ensures that applications are processed promptly by
-                the administrative staff. SmartOne streamlines the workflow,
-                reducing manual intervention and speeding up overall work.
+                We prioritize the security and confidentiality of your data. All
+                information is encrypted and securely stored, ensuring privacy
+                and compliance with institutional policies.
+              </p>
+              <h3 style={{ color: "#4A90E2" }}>Help & Support</h3>
+              <p>
+                Our dedicated support team is available to assist with any
+                questions or issues you might encounter while using the
+                dashboard. Comprehensive FAQs and guides are also available
+                within the platform for additional support.
+              </p>
+              <p>
+                With our responsive and interactive dashboard, managing your
+                activities is a hassle-free experience, allowing you to focus on
+                your goals without unnecessary delays or complications.
               </p>
             </div>
           </Grid>

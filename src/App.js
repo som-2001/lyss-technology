@@ -8,6 +8,7 @@ import { Gallary } from './pages/Gallary';
 import { Login } from './pages/Login';
 import { Product } from './pages/Product';
 import { SmartOne } from './components/SmartOne';
+import { Atplc } from './pages/Atplc';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Route path='/login' element={<Login/>}/>
       <Route path='/products' element={<Product/>}/>
       <Route path='/smartOne' element={<SmartOne/>}/>
+      <Route path='/atplc' element={<Atplc/>}/>
       <Route path='*' element={<Error/>}/>
     </Routes>
    </Router>
