@@ -10,7 +10,7 @@ const CustomButton = ({ goTo }) => {
 
   return (
     <Button variant='contained' sx={{borderRadius:"20px",backgroundColor:"whitesmoke",color:"black"}} id='Button' onClick={() =>  window.location.href = `${goTo}`}>
-      Visit Now
+      Visit Now 
     </Button>
   );
 };
