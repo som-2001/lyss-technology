@@ -20,6 +20,8 @@ import { CustomerSlider } from "../components/CustomerSlider";
 import "../App.css";
 import { Helmet } from "react-helmet";
 import { TypedComponent } from "../components/TypedComponent";
+import { ReactChatBot } from "../components/ReactChatBot";
+import { BsRobot } from "react-icons/bs";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -33,6 +35,7 @@ export const Home = () => {
   const scrollRef7 = useRef(null);
   const scrollRef9 = useRef(null);
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [bot,setBot]=useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -304,7 +307,7 @@ export const Home = () => {
             zIndex: "10",
             fontSize: "1.5rem",
             backgroundColor: "#7a7ad4",
-            borderRadius: "9px",
+            borderRadius: "59px",
           }}
           onClick={(e) => {
             window.scrollTo({
@@ -316,6 +319,26 @@ export const Home = () => {
           <IoMdArrowRoundUp style={{ color: "white" }} />
         </Button>
       )}
+
+       {bot && <ReactChatBot/>}
+       
+       <Button
+          id="button"
+          sx={{
+            position: "fixed",
+            bottom: "20px",
+            left: "20px",
+            zIndex: "10",
+            fontSize: "1.5rem",
+            backgroundColor: "#7a7ad4",
+            borderRadius: "59px",
+          }}
+          onClick={(e) => {
+           setBot(!bot);
+          }}
+        >
+          <BsRobot style={{ color: "white" }} />
+        </Button>
       <Navbar />
       <Box sx={{ width: "100vw", textAlign: "center", marginTop: "50px" }}>
         <Grid

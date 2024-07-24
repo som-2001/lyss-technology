@@ -124,6 +124,7 @@ export const Contact = () => {
               zIndex: "10",
               fontSize: "1.5rem",
               backgroundColor: "#7a7ad4",
+              borderRadius: "59px",
             }}
             onClick={(e) => {
               window.scrollTo({
