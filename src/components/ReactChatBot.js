@@ -163,7 +163,7 @@ const steps = [
   },
   {
     id: 'about',
-    message: 'Learn more about us on our About  page.',
+    message: 'We are a dynamic service and product-based company, Lyss Technology, established in 2024. Discover more about our mission and vision on our About page.',
     trigger: 'about-button',
   },
   {
@@ -174,7 +174,7 @@ const steps = [
   },
   {
     id: 'gallery',
-    message: 'Check out our gallery on the Gallery page.',
+    message: 'Check out our latest images on the Gallery page.',
     trigger: 'gallery-button',
     
   },
