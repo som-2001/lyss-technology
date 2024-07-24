@@ -105,7 +105,7 @@ export const Product = () => {
         <Grid container>
           <Grid item xs={12} sm={12} lg={6} md={6}>
             <p style={{ fontSize: "3.9rem",color:"white" }} id="hero">
-              Products
+             Our Products
             </p>
             <Typography
               variant="h1"
@@ -149,7 +149,7 @@ export const Product = () => {
           }}
           className="header"
         >
-          Products
+          Our Products
         </p>
         <center>
           <Divider 

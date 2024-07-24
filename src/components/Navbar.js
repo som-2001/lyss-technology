@@ -16,10 +16,10 @@ import { ArrowDropDown, ArrowLeft, ArrowRight } from "@mui/icons-material";
 const pages = [
   "Home",
   "About",
-  "Contact Us",
+  "Our Products",
   "Group Companies",
   "Gallary",
-  "Products",
+  "Contact Us",
 ];
 
 export const Navbar = () => {
@@ -48,7 +48,7 @@ export const Navbar = () => {
       window.location.href = "/login";
     } else if (page === "Gallary") {
       window.location.href = "/gallary";
-    } else if (page === "Products") {
+    } else if (page === "Our Products") {
       window.location.href = "/products";
     }
   };
