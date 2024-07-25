@@ -339,6 +339,7 @@ export const Home = () => {
        
        <Button
           id="button"
+          title="Lyss Technology Bot"
           sx={{
             position: "fixed",
             bottom: "20px",
@@ -407,7 +408,7 @@ export const Home = () => {
                 }}
                 className="header"
               >
-                A hybrid(Product+Service) based company{" "}
+                A Hybrid(Product+Service) Based Company{" "}
               </p>
               <Typography
                 variant="span"
@@ -887,9 +888,11 @@ export const Home = () => {
           marginTop: "50px",
         }}
       >
-        <p style={{ color: "blue", textAlign: "center" }}>
+        <p style={{ color: "blue", textAlign: "center",fontSize:"1.5rem" }}>
           WANT TO WORK WITH US?
         </p>
+
+        <p style={{ textAlign: "center" }}>"Transforming businesses with innovative design, development, and dedicated project management."</p>
 
         <center>
           <Button
