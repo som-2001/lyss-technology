@@ -268,6 +268,21 @@ export const Home = () => {
 
   useGSAP(() => {
     gsap.fromTo(
+      "#button",
+      {
+        opacity: 0,
+        y: -150,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        delay: 2.4,
+      }
+    );
+  }, []);
+
+  useGSAP(() => {
+    gsap.fromTo(
       "#hero2",
       {
         opacity: 0,
@@ -333,6 +348,7 @@ export const Home = () => {
             backgroundColor: "#7a7ad4",
             borderRadius: "59px",
           }}
+
           onClick={(e) => {
            setBot(!bot);
           }}

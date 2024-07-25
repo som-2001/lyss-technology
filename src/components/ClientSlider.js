@@ -87,7 +87,7 @@ const ClientSlider = () => {
                 <Box>
                   <Card sx={{ maxWidth: "880px" }}>
                     <Grid container>
-                      <Grid item lg={4} sm={12} xs={12} md={12}>
+                      <Grid item lg={4} sm={12} xs={12} md={4}>
                         <center>
                           <CardMedia
                             component="img"
@@ -98,13 +98,13 @@ const ClientSlider = () => {
                               height: {
                                 xs: 230,
                                 lg: 320,
-                                md: 400,
+                                md: 320,
                                 sm: 300,
                               },
                               width: {
                                 xs: 350,
                                 lg: 300,
-                                md: 400,
+                                md: 300,
                                 sm: 300,
                               },
                               marginRight: {
@@ -125,7 +125,7 @@ const ClientSlider = () => {
                         lg={8}
                         sm={12}
                         xs={12}
-                        md={12}
+                        md={8}
                         textAlign="center"
                       >
                         <CardContent >
@@ -143,7 +143,8 @@ const ClientSlider = () => {
                             variant="body2"
                             color="text.secondary"
                             sx={{ fontSize: "1.0rem",marginTop:{
-                              lg:"50px"
+                              lg:"50px",
+                              md:"50px"
                             } }}
                           >
                             {Tagline[index]}
