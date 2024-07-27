@@ -1,4 +1,13 @@
-import { Box, Button, Grid, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Grid,
+  Typography,
+  Card,
+  CardContent,
+  CardMedia,
+  Divider,
+} from "@mui/material";
 import { IoMdArrowRoundUp } from "react-icons/io";
 import { Navbar } from "../components/Navbar";
 import { Helmet } from "react-helmet";
@@ -71,7 +80,7 @@ export const Technologies = () => {
           textAlign: "center",
           marginTop: "50px",
           backgroundImage:
-            "url(https://www.freemind.media/wp-content/uploads/2022/10/bg-webdesign.jpg)",
+            "url(https://cdn.prod.website-files.com/6420f704f2602a2ee7f79d26/646d4bb79ff76f75b218a08a_listicles-tech-image-large.jpg)",
           backgroundRepeat: "no-repeat",
           backgroundPosition: {
             xs: "bottom-center",
@@ -81,7 +90,7 @@ export const Technologies = () => {
           },
           backgroundSize: "cover",
           overflowX: "none",
-          padding: "5.3rem 0rem 13rem 0rem",
+          padding: "8.3rem 0rem 13rem 0rem",
 
           height: "100%",
         }}
@@ -110,7 +119,7 @@ export const Technologies = () => {
         )}
         <Grid container>
           <Grid item xs={12} sm={12} lg={6} md={6}>
-            <p style={{ fontSize: "3.9rem", color: "white" }} id="hero">
+            <p style={{ fontSize: "3.2rem", color: "white" }} id="hero">
               Our Technologies
             </p>
             <Typography
@@ -136,129 +145,242 @@ export const Technologies = () => {
               }}
               id="hero1"
             >
-              Explore our advanced technologies, all crafted to transform your business and address your specific requirements.
+              Explore our advanced technologies, all crafted to transform your
+              business and address your specific requirements.
             </Typography>
           </Grid>
           <Grid item xs={12} sm={12} lg={6} md={6}></Grid>
         </Grid>
       </Box>
       <Box sx={{ width: "100vw", textAlign: "center", marginTop: "7rem" }}>
-        <Grid container spacing={3}>
-          <Grid item xs={12} sm={12} lg={6} md={6}>
-            <img src="../images/html.png" alt="HTML" style={{ width: "140px" }} />
+        <p
+          style={{
+            fontSize: "2.5rem",
+            marginTop: "20px",
+          }}
+          className="header"
+        >
+          Our Technologies
+        </p>
+
+        <center>
+          <Divider
+            style={{
+              padding: "0.5px",
+              backgroundColor: "rgb(79 79 138)",
+              width: "150px",
+              marginTop: "-20px",
+              marginBottom: "40px",
+            }}
+          />
+        </center>
+        <Grid container spacing={3} sx={{ padding: "20px" }}>
+          <Grid item xs={12} sm={6} lg={4} md={4}>
+            <Card>
+              <CardMedia
+                component="img"
+                alt="HTML"
+                height="140"
+                image="../images/html.png"
+                style={{ width: "140px", margin: "0 auto", paddingTop: "20px" }}
+              />
+              <CardContent>
+                <Typography variant="body2" color="text.secondary">
+                  HTML is the standard markup language for creating web pages.
+                  It describes the structure of a webpage.
+                </Typography>
+              </CardContent>
+            </Card>
           </Grid>
-          <Grid item xs={12} sm={12} lg={6} md={6}>
-           
-            <Typography variant="body1">
-              HTML is the standard markup language for creating web pages.<br/> It describes the structure of a webpage.
-            </Typography>
+          <Grid item xs={12} sm={6} lg={4} md={4}>
+            <Card>
+              <CardMedia
+                component="img"
+                alt="CSS"
+                height="140"
+                image="../images/css.png"
+                style={{ width: "140px", margin: "0 auto", paddingTop: "20px" }}
+              />
+              <CardContent>
+                <Typography variant="body2" color="text.secondary">
+                  CSS is used to control the style and layout of web pages. It
+                  allows you to create visually appealing web pages.
+                </Typography>
+              </CardContent>
+            </Card>
           </Grid>
-          
-          <Grid item xs={12} sm={12} lg={6} md={6}>
-            <img src="../images/css.png" alt="CSS" style={{ width: "140px" }} />
+          <Grid item xs={12} sm={6} lg={4} md={4}>
+            <Card>
+              <CardMedia
+                component="img"
+                alt="JavaScript"
+                height="140"
+                image="../images/js.png"
+                style={{ width: "165px", margin: "0 auto", paddingTop: "20px" }}
+              />
+              <CardContent>
+                <Typography variant="body2" color="text.secondary">
+                  JavaScript is a programming language that allows you to
+                  implement complex features on web pages.
+                </Typography>
+              </CardContent>
+            </Card>
           </Grid>
-          <Grid item xs={12} sm={12} lg={6} md={6}>
-                       <Typography variant="body1">
-              CSS is used to control the style and layout of web pages.<br/> It allows you to create visually appealing web pages.
-            </Typography>
+          <Grid item xs={12} sm={6} lg={4} md={4}>
+            <Card>
+              <CardMedia
+                component="img"
+                alt="Tailwind CSS"
+                height="140"
+                image="../images/tailwind.png"
+                style={{ width: "150px", margin: "0 auto", paddingTop: "20px" }}
+              />
+              <CardContent>
+                <Typography variant="body2" color="text.secondary">
+                  Tailwind CSS is a utility-first CSS framework for rapidly
+                  building custom designs.
+                </Typography>
+              </CardContent>
+            </Card>
           </Grid>
-          
-          <Grid item xs={12} sm={12} lg={6} md={6}>
-            <img src="../images/js.png" alt="JavaScript" style={{ width: "165px" }} />
+          <Grid item xs={12} sm={6} lg={4} md={4}>
+            <Card>
+              <CardMedia
+                component="img"
+                alt="JSX"
+                height="140"
+                image="../images/jsx.png"
+                style={{ width: "200px", margin: "0 auto", paddingTop: "20px" }}
+              />
+              <CardContent>
+                <Typography variant="body2" color="text.secondary">
+                  JSX is a syntax extension for JavaScript that looks similar to
+                  XML or HTML. It is used with React to describe the UI.
+                </Typography>
+              </CardContent>
+            </Card>
           </Grid>
-          <Grid item xs={12} sm={12} lg={6} md={6}>
-            
-            <Typography variant="body1">
-              JavaScript is a programming language that allows you to implement complex features on web pages.
-            </Typography>
+          <Grid item xs={12} sm={6} lg={4} md={4}>
+            <Card>
+              <CardMedia
+                component="img"
+                alt="Material-UI"
+                height="140"
+                image="../images/Mui.png"
+                style={{ width: "180px", margin: "0 auto", paddingTop: "20px" }}
+              />
+              <CardContent>
+                <Typography variant="body2" color="text.secondary">
+                  Material-UI is a popular React UI framework that implements
+                  Google's Material Design.
+                </Typography>
+              </CardContent>
+            </Card>
           </Grid>
-          
-          <Grid item xs={12} sm={12} lg={6} md={6}>
-            <img src="../images/tailwind.png" alt="Tailwind CSS" style={{ width: "150px" }} />
+          <Grid item xs={12} sm={6} lg={4} md={4}>
+            <Card>
+              <CardMedia
+                component="img"
+                alt="React"
+                height="140"
+                image="../images/react.png"
+                style={{ width: "150px", margin: "0 auto", paddingTop: "20px" }}
+              />
+              <CardContent>
+                <Typography variant="body2" color="text.secondary">
+                  React is a JavaScript library for building user interfaces,
+                  maintained by Facebook and a community of developers.
+                </Typography>
+              </CardContent>
+            </Card>
           </Grid>
-          <Grid item xs={12} sm={12} lg={6} md={6}>
-            
-            <Typography variant="body1">
-              Tailwind CSS is a utility-first CSS framework for rapidly building custom designs.
-            </Typography>
+          <Grid item xs={12} sm={6} lg={4} md={4}>
+            <Card>
+              <CardMedia
+                component="img"
+                alt="Django"
+                height="140"
+                image="../images/django.png"
+                style={{ width: "230px", margin: "0 auto", paddingTop: "20px" }}
+              />
+              <CardContent>
+                <Typography variant="body2" color="text.secondary">
+                  Django is a high-level Python web framework that encourages
+                  rapid development and clean, pragmatic design.
+                </Typography>
+              </CardContent>
+            </Card>
           </Grid>
-          
-          <Grid item xs={12} sm={12} lg={6} md={6}>
-            <img src="../images/jsx.png" alt="JSX" style={{ width: "180px" }} />
+          <Grid item xs={12} sm={6} lg={4} md={4}>
+            <Card>
+              <CardMedia
+                component="img"
+                alt="DynamoDB"
+                height="140"
+                image="../images/dynamo.png"
+                style={{ width: "250px", margin: "0 auto", paddingTop: "20px" }}
+              />
+              <CardContent>
+                <Typography variant="body2" color="text.secondary">
+                  Amazon DynamoDB is a key-value and document database that
+                  delivers single-digit millisecond performance at any scale.
+                </Typography>
+              </CardContent>
+            </Card>
           </Grid>
-          <Grid item xs={12} sm={12} lg={6} md={6}>
-                       <Typography variant="body1">
-              JSX is a syntax extension for JavaScript that looks similar to XML or HTML. It is used with React to describe the UI.
-            </Typography>
+          <Grid item xs={12} sm={6} lg={4} md={4}>
+            <Card>
+              <CardMedia
+                component="img"
+                alt="Docker"
+                height="140"
+                image="../images/Docker.png"
+                style={{ width: "180px", margin: "0 auto", paddingTop: "20px" }}
+              />
+              <CardContent>
+                <Typography variant="body2" color="text.secondary">
+                  Docker is a set of platform-as-a-service products that use
+                  OS-level virtualization to deliver software in packages called
+                  containers.
+                </Typography>
+              </CardContent>
+            </Card>
           </Grid>
-          
-          <Grid item xs={12} sm={12} lg={6} md={6}>
-            <img src="../images/Mui.png" alt="Material-UI" style={{ width: "180px" }} />
+          <Grid item xs={12} sm={6} lg={4} md={4}>
+            <Card>
+              <CardMedia
+                component="img"
+                alt="GSAP"
+                height="140"
+                image="../images/Gsap.png"
+                style={{ width: "160px", margin: "0 auto", paddingTop: "20px" }}
+              />
+              <CardContent>
+                <Typography variant="body2" color="text.secondary">
+                  GSAP (GreenSock Animation Platform) is a suite of tools for
+                  creating scripted, high-performance animations that work in
+                  every major browser.
+                </Typography>
+              </CardContent>
+            </Card>
           </Grid>
-          <Grid item xs={12} sm={12} lg={6} md={6}>
-            
-            <Typography variant="body1">
-              Material-UI is a popular React UI framework that implements Google's Material Design.
-            </Typography>
-          </Grid>
-          
-          <Grid item xs={12} sm={12} lg={6} md={6}>
-            <img src="../images/react.png" alt="React" style={{ width: "150px" }} />
-          </Grid>
-          <Grid item xs={12} sm={12} lg={6} md={6}>
-            
-            <Typography variant="body1">
-              React is a JavaScript library for building user interfaces, maintained by Facebook and a community of developers.
-            </Typography>
-          </Grid>
-          
-          <Grid item xs={12} sm={12} lg={6} md={6}>
-            <img src="../images/django.png" alt="Django" style={{ width: "150px" }} />
-          </Grid>
-          <Grid item xs={12} sm={12} lg={6} md={6}>
-            
-            <Typography variant="body1">
-              Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design.
-            </Typography>
-          </Grid>
-          
-          <Grid item xs={12} sm={12} lg={6} md={6}>
-            <img src="../images/dynamo.png" alt="DynamoDB" style={{ width: "200px" }} />
-          </Grid>
-          <Grid item xs={12} sm={12} lg={6} md={6}>
-            
-            <Typography variant="body1">
-              Amazon DynamoDB is a key-value and document database that delivers single-digit millisecond performance at any scale.
-            </Typography>
-          </Grid>
-          
-          <Grid item xs={12} sm={12} lg={6} md={6}>
-            <img src="../images/Docker.png" alt="Docker" style={{ width: "150px" }} />
-          </Grid>
-          <Grid item xs={12} sm={12} lg={6} md={6}>
-            
-            <Typography variant="body1">
-              Docker is a set of platform-as-a-service products that use OS-level virtualization to deliver software in packages called containers.
-            </Typography>
-          </Grid>
-          
-          <Grid item xs={12} sm={12} lg={6} md={6}>
-            <img src="../images/Gsap.png" alt="GSAP" style={{ width: "150px" }} />
-          </Grid>
-          <Grid item xs={12} sm={12} lg={6} md={6}>
-                        <Typography variant="body1">
-              GSAP (GreenSock Animation Platform) is a suite of tools for creating scripted, high-performance animations that work in every major browser.
-            </Typography>
-          </Grid>
-          
-          <Grid item xs={12} sm={12} lg={6} md={6}>
-            <img src="../images/canva.png" alt="Canva" style={{ width: "150px" }} />
-          </Grid>
-          <Grid item xs={12} sm={12} lg={6} md={6}>
-            
-            <Typography variant="body1">
-              Canva is an online graphic design platform, used to create social media graphics, presentations, posters, documents, and other visual content.
-            </Typography>
+          <Grid item xs={12} sm={6} lg={4} md={4}>
+            <Card>
+              <CardMedia
+                component="img"
+                alt="Canva"
+                height="140"
+                image="../images/canva.png"
+                style={{ width: "250px", margin: "0 auto", paddingTop: "20px" }}
+              />
+              <CardContent>
+                <Typography variant="body2" color="text.secondary">
+                  Canva is an online graphic design platform, used to create
+                  social media graphics, presentations, posters, documents, and
+                  other visual content.
+                </Typography>
+              </CardContent>
+            </Card>
           </Grid>
         </Grid>
       </Box>
