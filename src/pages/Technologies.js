@@ -249,7 +249,7 @@ export const Technologies = () => {
                 component="img"
                 alt="JSX"
                 height="140"
-                image="../images/jsx.png"
+                image="../images/framer.png"
                 style={{ width: "200px", margin: "0 auto", paddingTop: "20px" }}
               />
               <CardContent>
