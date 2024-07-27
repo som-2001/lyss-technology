@@ -12,6 +12,7 @@ import { Atplc } from './pages/Atplc';
 import { Crcs } from './pages/Crcs';
 import { Samp } from './pages/Samp';
 import { UnderDevelopment } from './pages/Underdevelopment';
+import { Technologies } from './pages/Technologies';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
       <Route path='/atplc' element={<Atplc/>}/>
       <Route path='/CRCS' element={<Crcs/>}/>
       <Route path='/Samp' element={<Samp/>}/>
+      <Route path='/technologies' element={<Technologies/>}/>
       <Route path='/underdevelopment' element={<UnderDevelopment/>}/>
       <Route path='*' element={<Error/>}/>
     </Routes>
