@@ -751,6 +751,81 @@ export const Home = () => {
         </Grid>
       </Box>
 
+
+      <Box sx={{ width: "100vw", textAlign: "center", marginTop: "7rem",marginBottom:{lg:"7rem",xs:"10rem",md:"7rem",sm:"7rem"} }}  className="header">
+      <p
+          style={{
+            fontSize: "2.3rem",
+            fontWeight: "600",
+            marginBottom: "50px",
+          }}
+        >
+          Our Technologies
+        </p>
+
+        <Box>
+          <Grid container spacing={3} >
+            <Grid item lg={2} md={4} sm={6} xs={6}>
+            <img src="../images/html.png" alt="" style={{width:"140px"}}/>
+            </Grid>
+            <Grid item lg={2} md={4} sm={6} xs={6}>
+            <img src="../images/css.png" alt="" style={{width:"140px"}}/>
+            </Grid>
+            <Grid item lg={2} md={4} sm={6} xs={6}>
+            <img src="../images/js.png" alt="" style={{width:"165px"}}/>
+            </Grid>
+            <Grid item lg={2} md={4} sm={6} xs={6}>
+            <img src="../images/tailwind.png" alt="" style={{width:"150px"}}/>
+            </Grid>
+            <Grid item lg={2} md={4} sm={6} xs={6}>
+            <img src="../images/jsx.png" alt="" style={{width:"180px"}}/>
+            </Grid>
+            <Grid item lg={2} md={4} sm={6} xs={6}>
+            <img src="../images/Mui.png" alt="" style={{width:"180px"}}/>
+            </Grid>
+            <Grid item lg={2} md={4} sm={6} xs={6}>
+            <img src="../images/react.png" alt="" style={{width:"150px"}}/>
+            </Grid>
+            
+            <Grid item lg={2} md={4} sm={6} xs={6}>
+            <img src="../images/django.png" alt="" style={{width:"150px"}}/>
+            </Grid>
+            <Grid item lg={2} md={4} sm={6} xs={6}>
+            <img src="../images/dynamo.png" alt="" style={{width:"200px"}}/>
+            </Grid>
+            <Grid item lg={2} md={4} sm={6} xs={6}>
+            <img src="../images/Docker.png" alt="" style={{width:"150px"}}/>
+            </Grid>
+            <Grid item lg={2} md={4} sm={6} xs={6}>
+            <img src="../images/Gsap.png" alt="" style={{width:"150px"}}/>
+            </Grid>
+            <Grid item lg={2} md={4} sm={6} xs={6}>
+            <img src="../images/canva.png" alt="" style={{width:"150px"}}/>
+            </Grid>
+          </Grid>
+          
+          
+        </Box>
+
+        <center>
+                <Button
+                  variant="contained"
+                  id="button"
+                  sx={{
+                    width: { lg: "10%", md: "40%", xs: "55%", sm: "40%" },
+                    padding: "10px",
+                    borderRadius: "25px",
+                    backgroundColor: "#5656b9",
+                    marginTop: "40px",
+                  }}
+                  onClick={(e) => (window.location.href = "/technologies")}
+                >
+                  Learn More
+                </Button>
+              </center>
+      </Box>
+
+
       <Box
         sx={{ width: "100vw", textAlign: "center", marginTop: "0rem" }}
         className="header"
