@@ -777,9 +777,9 @@ export const Home = () => {
             <Grid item lg={2} md={4} sm={6} xs={6}>
             <img src="../images/tailwind.png" alt="" style={{width:"150px"}}/>
             </Grid>
-            {/* <Grid item lg={2} md={4} sm={6} xs={6}>
-            <img src="../images/jsx.png" alt="" style={{width:"180px"}}/>
-            </Grid> */}
+            <Grid item lg={2} md={4} sm={6} xs={6}>
+            <img src="../images/jsx.png" alt="" style={{width:"200px"}}/>
+            </Grid>
             <Grid item lg={2} md={4} sm={6} xs={6}>
             <img src="../images/Mui.png" alt="" style={{width:"180px"}}/>
             </Grid>

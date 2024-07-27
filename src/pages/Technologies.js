@@ -243,7 +243,7 @@ export const Technologies = () => {
               </CardContent>
             </Card>
           </Grid>
-          {/* <Grid item xs={12} sm={6} lg={4} md={4}>
+          <Grid item xs={12} sm={6} lg={4} md={4}>
             <Card>
               <CardMedia
                 component="img"
@@ -254,12 +254,13 @@ export const Technologies = () => {
               />
               <CardContent>
                 <Typography variant="body2" color="text.secondary">
-                  JSX is a syntax extension for JavaScript that looks similar to
-                  XML or HTML. It is used with React to describe the UI.
+                  Framer Motion is a is a suite of tools for
+                  creating scripted, high-performance animations that work in
+                  every major browser.
                 </Typography>
               </CardContent>
             </Card>
-          </Grid> */}
+          </Grid>
           <Grid item xs={12} sm={6} lg={4} md={4}>
             <Card>
               <CardMedia
