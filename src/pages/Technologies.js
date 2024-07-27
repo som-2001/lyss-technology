@@ -175,7 +175,7 @@ export const Technologies = () => {
           />
         </center>
         <Grid container spacing={3} sx={{ padding: "20px" }}>
-          <Grid item xs={12} sm={6} lg={4} md={4}>
+          <Grid item xs={12} sm={6} lg={4} md={6}>
             <Card>
               <CardMedia
                 component="img"
@@ -192,7 +192,7 @@ export const Technologies = () => {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={12} sm={6} lg={4} md={4}>
+          <Grid item xs={12} sm={6} lg={4} md={6}>
             <Card>
               <CardMedia
                 component="img"
@@ -209,7 +209,7 @@ export const Technologies = () => {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={12} sm={6} lg={4} md={4}>
+          <Grid item xs={12} sm={6} lg={4} md={6}>
             <Card>
               <CardMedia
                 component="img"
@@ -226,7 +226,7 @@ export const Technologies = () => {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={12} sm={6} lg={4} md={4}>
+          <Grid item xs={12} sm={6} lg={4} md={6}>
             <Card>
               <CardMedia
                 component="img"
@@ -237,13 +237,12 @@ export const Technologies = () => {
               />
               <CardContent>
                 <Typography variant="body2" color="text.secondary">
-                  Tailwind CSS is a utility-first CSS framework for rapidly
-                  building custom designs.
+                Tailwind CSS is a utility-first CSS framework for rapidly building custom designs and responsive user interfaces.
                 </Typography>
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={12} sm={6} lg={4} md={4}>
+          <Grid item xs={12} sm={6} lg={4} md={6}>
             <Card>
               <CardMedia
                 component="img"
@@ -261,7 +260,7 @@ export const Technologies = () => {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={12} sm={6} lg={4} md={4}>
+          <Grid item xs={12} sm={6} lg={4} md={6}>
             <Card>
               <CardMedia
                 component="img"
@@ -272,13 +271,12 @@ export const Technologies = () => {
               />
               <CardContent>
                 <Typography variant="body2" color="text.secondary">
-                  Material-UI is a popular React UI framework that implements
-                  Google's Material Design.
+                Material-UI is a popular React UI framework that implements Google's Material Design principles seamlessly.
                 </Typography>
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={12} sm={6} lg={4} md={4}>
+          <Grid item xs={12} sm={6} lg={4} md={6}>
             <Card>
               <CardMedia
                 component="img"
@@ -295,7 +293,7 @@ export const Technologies = () => {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={12} sm={6} lg={4} md={4}>
+          <Grid item xs={12} sm={6} lg={4} md={6}>
             <Card>
               <CardMedia
                 component="img"
@@ -312,7 +310,7 @@ export const Technologies = () => {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={12} sm={6} lg={4} md={4}>
+          <Grid item xs={12} sm={6} lg={4} md={6}>
             <Card>
               <CardMedia
                 component="img"
@@ -329,7 +327,7 @@ export const Technologies = () => {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={12} sm={6} lg={4} md={4}>
+          <Grid item xs={12} sm={6} lg={4} md={6}>
             <Card>
               <CardMedia
                 component="img"
@@ -341,13 +339,12 @@ export const Technologies = () => {
               <CardContent>
                 <Typography variant="body2" color="text.secondary">
                   Docker is a set of platform-as-a-service products that use
-                  OS-level virtualization to deliver software in packages called
-                  containers.
+                  OS-level virtualization to deliver software in packages .
                 </Typography>
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={12} sm={6} lg={4} md={4}>
+          <Grid item xs={12} sm={6} lg={4} md={6}>
             <Card>
               <CardMedia
                 component="img"
@@ -365,7 +362,7 @@ export const Technologies = () => {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={12} sm={6} lg={4} md={4}>
+          <Grid item xs={12} sm={6} lg={4} md={6}>
             <Card>
               <CardMedia
                 component="img"
