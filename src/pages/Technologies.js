@@ -243,7 +243,7 @@ export const Technologies = () => {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={12} sm={6} lg={4} md={4}>
+          {/* <Grid item xs={12} sm={6} lg={4} md={4}>
             <Card>
               <CardMedia
                 component="img"
@@ -259,7 +259,7 @@ export const Technologies = () => {
                 </Typography>
               </CardContent>
             </Card>
-          </Grid>
+          </Grid> */}
           <Grid item xs={12} sm={6} lg={4} md={4}>
             <Card>
               <CardMedia
