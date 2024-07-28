@@ -415,7 +415,7 @@ export const Home = () => {
                 color="text.secondary"
                 style={{ fontSize: "1.2rem" }}
               >
-                At LYSS Technology we actively find existing social problems
+                At LYSS Technology, we actively find existing social problems
                 either by itself or by communicating with different classes of
                 people.
                 <br />{" "}
