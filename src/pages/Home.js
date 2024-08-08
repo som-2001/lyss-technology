@@ -310,7 +310,7 @@ export const Home = () => {
       }}
     >
       <Helmet>
-        <title>Lyss Technology Pvt. Ltd. | Home</title>
+        <title>Lyss Technology Pvt. Ltd.</title>
       </Helmet>
       {scrollPosition > 150 && (
         <Button
