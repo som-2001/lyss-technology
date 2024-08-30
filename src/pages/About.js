@@ -33,7 +33,7 @@ export const About = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, []); 
 
   useGSAP(
     () => {
