@@ -111,7 +111,7 @@ export const Contact = () => {
           backgroundSize: "cover",
           overflowX: "none",
           paddingTop: "12vw",
-          paddingBottom: "10vw",
+          paddingBottom: "13vw",
         }}
       >
         {scrollPosition > 150 && (

@@ -160,12 +160,13 @@ const Footer = () => {
           onClick={(e)=>window.location.href="/refund-policy"}
           color="textSecondary"
           textAlign="center"
+          style={{cursor:"pointer"}}
           
         >
           Refund Policy 
         </span>
         <span>|</span>
-        <span href="#" color="textSecondary" textAlign="center">
+        <span href="#" color="textSecondary" textAlign="center"    style={{cursor:"pointer"}}>
            Terms & Condition
         </span>
       </Box>

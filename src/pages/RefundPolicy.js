@@ -79,7 +79,6 @@ export const RefundPolicy = () => {
     </Box>
       <Box sx={{ padding: {lg:"50px",xs:"20px",sm:"20px",md:"40px"} }}>
    
-
         <Box sx={{ marginTop: "20px" }}>
           <Typography variant="h5" gutterBottom>
             1. Overview
