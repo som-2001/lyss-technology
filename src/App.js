@@ -13,6 +13,7 @@ import { Crcs } from './pages/Crcs';
 import { Samp } from './pages/Samp';
 import { UnderDevelopment } from './pages/Underdevelopment';
 import { Technologies } from './pages/Technologies';
+import { RefundPolicy } from './pages/RefundPolicy';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
       <Route path='/CRCS' element={<Crcs/>}/>
       <Route path='/Samp' element={<Samp/>}/>
       <Route path='/technologies' element={<Technologies/>}/>
+      <Route path='/refund-policy' element={<RefundPolicy/>}/>
       <Route path='/underdevelopment' element={<UnderDevelopment/>}/>
       <Route path='*' element={<Error/>}/>
     </Routes>
