@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 
 export const RefundPolicy = () => {
   return (
-    <Box style={{overflowX:"hidden"}}>
+    <Box style={{overflowX:"hidden",fontFamily: "math",}}>
       <Navbar />
 
       <Box

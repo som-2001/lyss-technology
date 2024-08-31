@@ -88,21 +88,21 @@ const Footer = () => {
             <Box display="flex" alignItems="center" mb={1}>
               <MdEmail style={{ marginRight: "8px" }} />
               <FooterLink
-                href="mailto:contact2atplc@gmail.com"
+                href="mailto:lyssstartup24@gmail.com"
                 color="textSecondary"
               >
-                contact2atplc@gmail.com
+                lyssstartup24@gmail.com
               </FooterLink>
             </Box>
             <Box display="flex" alignItems="center" mb={1}>
               <MdPhone style={{ marginRight: "8px" }} />
-              <FooterLink href="tel:+91 6205695667" color="textSecondary">
-                +91 6205695667
+              <FooterLink href="tel:+91 06114469461" color="textSecondary">
+                +91 06114469461
               </FooterLink>
             </Box>
             <Box display="flex" alignItems="center" mb={1}>
               <FaGithub style={{ marginRight: "8px" }} />
-              <FooterLink href="#" color="textSecondary">
+              <FooterLink href="https://github.com/lyss-technology" color="textSecondary">
                 GitHub
               </FooterLink>
             </Box>
@@ -151,8 +151,7 @@ const Footer = () => {
         textAlign="center"
         style={{ marginTop: "20px" }}
       >
-        Address-3/365, Aryan Bhawan Lakho Binda Campus, Santunagar,
-        <br /> Madhubani (Bihar)-India Pin-847211
+        NH-83, Boond Vihar Colony, Street no.- 02, Near Jehanabad Court Halt,<br/> Jehanabad, Bihar, India - 804417
       </Typography>
 
       <Box style={{ marginTop: "10px", display: "flex", gap: "5px",justifyContent:"center" }}>
