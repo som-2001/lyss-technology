@@ -217,7 +217,7 @@ import Footer from "../components/Footer";
                 <Pie data={pieData} options={{ responsive: true }} style={{}} />
               </Box>
             </Grid>
-            <Grid item xs={12} lg={6} md={6} sm={12}>
+            <Grid item xs={12} lg={6} md={6} sm={12} sx={{padding:{lg:"20px",md:"20px",sm:"0px",xs:"0px"}}}>
               <Box
                 sx={{
                   marginTop: 4,
