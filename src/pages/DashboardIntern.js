@@ -37,7 +37,7 @@ import Footer from "../components/Footer";
     additionalInfo: Yup.string().max(
       500,
       "Additional information cannot exceed 500 characters"
-    ),
+    ).required("Please write a description"),
   });
   
   export const DashboardIntern= () => {
