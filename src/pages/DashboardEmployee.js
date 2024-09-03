@@ -26,6 +26,7 @@ import {
   import { Pie } from "react-chartjs-2";
   import "chart.js/auto";
 import { DrawSharp } from "@mui/icons-material";
+import Footer from "../components/Footer";
   
   const validationSchema = Yup.object({
     from: Yup.date().required("From date is required"),
@@ -373,6 +374,7 @@ import { DrawSharp } from "@mui/icons-material";
           </TableContainer>
         </Box>
         </center>
+        <Footer/>
       </Box>
     );
   };
