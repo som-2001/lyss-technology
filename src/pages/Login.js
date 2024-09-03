@@ -1,4 +1,12 @@
-import { Box, Button, CardMedia, Grid, InputAdornment, TextField, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  CardMedia,
+  Grid,
+  InputAdornment,
+  TextField,
+  Typography,
+} from "@mui/material";
 import { Navbar } from "../components/Navbar";
 import Footer from "../components/Footer";
 import { RiLockPasswordFill } from "react-icons/ri";
@@ -8,14 +16,17 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import '../App.css'
+import "../App.css";
 import { Helmet } from "react-helmet";
+// import axios from "axios";
+// import { useNavigate } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export const Login = () => {
+  const [hide, setHide] = useState(false);
+  // const navigate=useNavigate();
 
-  const [hide,setHide]=useState(false);
   useGSAP(() => {
     gsap.fromTo(
       "#hero",
@@ -59,7 +70,7 @@ export const Login = () => {
       }
     );
   }, []);
- 
+
   useGSAP(() => {
     gsap.fromTo(
       "#hero3",
@@ -103,37 +114,61 @@ export const Login = () => {
       }
     );
   }, []);
+
+  // const onSubmit = () => {
+  //   axios
+  //     .post("/login", {
+  //       email: email,
+  //       password: password,
+  //     })
+  //     .then((res) => {
+  //       sessionStorage.setItem("accesstoken", res.token.accesstoken);
+  //       sessionStorage.setItem("refreshtoken", res.token.refreshtoken);
+
+  //       if (res.token.role === "Employee") {
+  //         navigate("/dashboard-employee");
+  //       } else if (res.token.role === "Intern") {
+  //         navigate("/dashboard-intern");
+  //       }
+  //     });
+  // };
+
   return (
-    <Box style={{backgroundColor:"white"}}>
+    <Box style={{ backgroundColor: "white" }}>
       <Helmet>
         <title>Lyss Technology Pvt. Ltd. | Login</title>
       </Helmet>
       <Navbar />
       <Box>
-      <CardMedia 
-      id="hero"
-              component="img"
-              src="https://blog.ahgora.com/wp-content/uploads/2020/04/Como-fazer-a-gestao-do-trabalho-home-office-de-um-modo-eficaz.jpg"
-              alt="Logo"
-              sx={{ display:{lg:"none",xs:"none",sm:"block",md:"none"},width: {lg:"20%",md:"15%",xs:"100%",sm:"100%"},  }}
-            />
+        <CardMedia
+          id="hero"
+          component="img"
+          src="https://blog.ahgora.com/wp-content/uploads/2020/04/Como-fazer-a-gestao-do-trabalho-home-office-de-um-modo-eficaz.jpg"
+          alt="Logo"
+          sx={{
+            display: { lg: "none", xs: "none", sm: "block", md: "none" },
+            width: { lg: "20%", md: "15%", xs: "100%", sm: "100%" },
+          }}
+        />
       </Box>
-      <Grid container spacing={4} sx={{ height: "100vh", alignItems: "center" }}>
+      <Grid
+        container
+        spacing={4}
+        sx={{ height: "100vh", alignItems: "center" }}
+      >
         <Grid
           item
           xs={12}
           sm={12}
           md={6}
           lg={5}
-          sx={{ display: { xs: "none", md: "block" }, mt: { md: "1.2%" }}}
+          sx={{ display: { xs: "none", md: "block" }, mt: { md: "1.2%" } }}
         >
-       
           <img
             src="https://blog.ahgora.com/wp-content/uploads/2020/04/Como-fazer-a-gestao-do-trabalho-home-office-de-um-modo-eficaz.jpg"
             alt="Registration"
-            style={{ width: "110%", height: "100vh" ,objectFit:"cover"}}
+            style={{ width: "110%", height: "100vh", objectFit: "cover" }}
           />
-         
         </Grid>
         <Grid item xs={12} sm={12} md={6} lg={7}>
           <Box
@@ -147,70 +182,102 @@ export const Login = () => {
             }}
           >
             <CardMedia
-            id="hero"
+              id="hero"
               component="img"
               src="../images/logo.jpg"
               alt="Logo"
-              sx={{ width: {lg:"20%",md:"15%",xs:"35%",sm:"15%"}, height: "auto", marginBottom: "20px",marginTop:{lg:"0%",md:"0%",sm:"0%",xs:"10%"} }}
+              sx={{
+                width: { lg: "20%", md: "15%", xs: "35%", sm: "15%" },
+                height: "auto",
+                marginBottom: "20px",
+                marginTop: { lg: "0%", md: "0%", sm: "0%", xs: "10%" },
+              }}
             />
-            <Typography variant="body2" align="center" sx={{ mb: 1,fontSize:"1.8rem"}} id="hero1" className="header">
+            <Typography
+              variant="body2"
+              align="center"
+              sx={{ mb: 1, fontSize: "1.8rem" }}
+              id="hero1"
+              className="header"
+            >
               Welcome to Lyss Technology
             </Typography>
-            <center><Typography id="hero2" variant="span" sx={{fontWeight:"600"}} className="header">A hybrid(Product+Service) based company</Typography></center>
-            <Box sx={{width:{lg:"70%",md:"70%",sm:"70%",xs:"95%"}}}>
-          
-
-            <Box sx={{ mb: 2, width: '100%',marginTop:"40px" }}  id="hero3">
-              <TextField
-                type="text"
-                label="Email"
-               
-                InputProps={{
+            <center>
+              <Typography
+                id="hero2"
+                variant="span"
+                sx={{ fontWeight: "600" }}
+                className="header"
+              >
+                A hybrid(Product+Service) based company
+              </Typography>
+            </center>
+            <Box sx={{ width: { lg: "70%", md: "70%", sm: "70%", xs: "95%" } }}>
+              <Box sx={{ mb: 2, width: "100%", marginTop: "40px" }} id="hero3">
+                <TextField
+                  type="text"
+                  label="Email"
+                  InputProps={{
                     startAdornment: (
                       <InputAdornment position="start">
                         <CgProfile />
                       </InputAdornment>
                     ),
                   }}
-                placeholder="Email..."
-                fullWidth
-                variant="outlined"
-              />
-            </Box> 
-           
-            <Box sx={{ mb: 2, width: '100%' }}  id="hero4">
-           
-              <TextField
-             
-                type="password"
-                label="Password"
-                placeholder="Password..."
-                fullWidth
-                variant="outlined"
-                InputProps={{
+                  placeholder="Email..."
+                  fullWidth
+                  variant="outlined"
+                />
+              </Box>
+
+              <Box sx={{ mb: 2, width: "100%" }} id="hero4">
+                <TextField
+                  type="password"
+                  label="Password"
+                  placeholder="Password..."
+                  fullWidth
+                  variant="outlined"
+                  InputProps={{
                     startAdornment: (
                       <InputAdornment position="start">
                         <RiLockPasswordFill />
                       </InputAdornment>
                     ),
                     endAdornment: (
-                        <InputAdornment position="end">
-                          {hide ? <FaEyeSlash className='cursor-pointer' onClick={(e)=>
-                            setHide(!hide)
-                          }/>:<FaEye className='cursor-pointer' onClick={(e)=>
-                            setHide(!hide)
-                          }/>}
-                        </InputAdornment>
-                      ),
-                }}
-              />
-            </Box>
-            <center><Button id="button" variant="contained" sx={{ width: '40%',borderRadius:"20px",backgroundColor:"#5656b9" }}>
-              Login
-            </Button></center>
+                      <InputAdornment position="end">
+                        {hide ? (
+                          <FaEyeSlash
+                            className="cursor-pointer"
+                            onClick={(e) => setHide(!hide)}
+                          />
+                        ) : (
+                          <FaEye
+                            className="cursor-pointer"
+                            onClick={(e) => setHide(!hide)}
+                          />
+                        )}
+                      </InputAdornment>
+                    ),
+                  }}
+                />
+              </Box>
+              <center>
+                <Button
+                  // onClick={onSubmit}
+                  id="button"
+                  type="submit"
+                  variant="contained"
+                  sx={{
+                    width: "40%",
+                    borderRadius: "20px",
+                    backgroundColor: "#5656b9",
+                  }}
+                >
+                  Login
+                </Button>
+              </center>
             </Box>
           </Box>
-          
         </Grid>
       </Grid>
       <Footer />

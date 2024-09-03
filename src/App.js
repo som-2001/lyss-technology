@@ -14,6 +14,9 @@ import { Samp } from './pages/Samp';
 import { UnderDevelopment } from './pages/Underdevelopment';
 import { Technologies } from './pages/Technologies';
 import { RefundPolicy } from './pages/RefundPolicy';
+import { DashboardEmployee } from './pages/DashboardEmployee';
+import { DashboardIntern } from './pages/DashboardIntern';
+
 
 function App() {
   return (
@@ -32,6 +35,8 @@ function App() {
       <Route path='/Samp' element={<Samp/>}/>
       <Route path='/technologies' element={<Technologies/>}/>
       <Route path='/refund-policy' element={<RefundPolicy/>}/>
+      <Route path='/dashboard-employee' element={<DashboardEmployee/>}/>
+      <Route path='/dashboard-intern' element={<DashboardIntern/>}/>
       <Route path='/underdevelopment' element={<UnderDevelopment/>}/>
       <Route path='*' element={<Error/>}/>
     </Routes>
