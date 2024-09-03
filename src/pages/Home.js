@@ -499,7 +499,7 @@ export const Home = () => {
           ref={scrollRef1}
           id="text00"
         >
-          Our Domains
+          Our Domain
         </p>
         <Grid container>
           <Grid item lg={5} xs={12} sm={12} md={12}>
