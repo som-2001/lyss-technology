@@ -200,6 +200,13 @@ import Footer from "../components/Footer";
           >
             Role: Intern
           </Typography>
+          <Typography
+            variant="body1"
+            sx={{ fontSize: "1.2rem", marginTop: "20px" }}
+            className="header"
+          >
+          To Download your certificate click <span style={{textDecoration:"underline",cursor:"pointer"}} onClick={(e)=>window.location.href="/intern-certificate"}>here</span>
+          </Typography>
         </Box>
   
         <Box sx={{ width: "100vw", marginTop: "50px" }}>

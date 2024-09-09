@@ -16,6 +16,7 @@ import { Technologies } from './pages/Technologies';
 import { RefundPolicy } from './pages/RefundPolicy';
 import { DashboardEmployee } from './pages/DashboardEmployee';
 import { DashboardIntern } from './pages/DashboardIntern';
+import InternCertificate from './pages/InternCertificate';
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
       <Route path='/dashboard-employee' element={<DashboardEmployee/>}/>
       <Route path='/dashboard-intern' element={<DashboardIntern/>}/>
       <Route path='/underdevelopment' element={<UnderDevelopment/>}/>
+      <Route path='/intern-certificate' element={<InternCertificate/>}/>
       <Route path='*' element={<Error/>}/>
     </Routes>
    </Router>
