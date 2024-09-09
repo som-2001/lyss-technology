@@ -24,7 +24,7 @@ const InternCertificate = () => {
         <Box
           id="certificate"
           sx={{
-            border: "2px solid #3f51b5",
+           
             borderRadius: "12px",
             padding: "14px",
             marginTop: "14%",
